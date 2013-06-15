@@ -121,11 +121,11 @@ generalStore = [
 
 //Name, Price, Vehicle
 BuildStoreArray = [
-	["Land_Barrel_water", 25, "Land_Barrel_water"],
+	["Land_Barrel_water", 300, "Land_Barrel_water"],
 	["Land_leseni2x", 25, "Land_leseni2x"],
 	["Fort_Crate_wood", 25, "Fort_Crate_wood"],
 	["Land_CamoNet_NATO", 25, "Land_CamoNet_NATO"],
-	["Land_stand_small_EP1", 25, "Land_stand_small_EP1"],
+	["Land_stand_small_EP1", 300, "Land_stand_small_EP1"],
 	["Base_WarfareBBarrier10xTall", 25, "Base_WarfareBBarrier10xTall"],
 	["Base_WarfareBBarrier10x", 25, "Base_WarfareBBarrier10x"],
 	["Base_WarfareBBarrier5x", 25, "Base_WarfareBBarrier5x"],
@@ -154,7 +154,8 @@ BuildStoreArray = [
 	["Land_Campfire_burning", 25, "Land_Campfire_burning"],
 	["Land_GuardShed", 25, "Land_GuardShed"],
 	["Land_tent_east", 25, "Land_tent_east"],
-	["Land_ConcreteBlock", 25, "Land_ConcreteBlock"]
+	["Land_ConcreteBlock", 25, "Land_ConcreteBlock"],
+	["Land_Misc_Cargo1D", 300, "Land_Misc_Cargo1D"]
 ];
 
 // Chernarus town and city array

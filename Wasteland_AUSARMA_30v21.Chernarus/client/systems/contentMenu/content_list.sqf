@@ -133,6 +133,8 @@ _contentListIndex = _contentList lbAdd format["12$ Land_CncBlock"];
 _contentList lbSetData [(lbSize _contentList)-1, "Land_CncBlock"];
 _contentListIndex = _contentList lbAdd format["12$ Barrack2"];
 _contentList lbSetData [(lbSize _contentList)-1, "Barrack2"];
+_contentListIndex = _contentList lbAdd format["12$ Land_Misc_Cargo1D"];
+_contentList lbSetData [(lbSize _contentList)-1, "Land_Misc_Cargo1D"];
 
 
 _contentListIndex = _contentList lbAdd format["12$ Land_Misc_Rubble_EP1"];

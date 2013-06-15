@@ -24,17 +24,18 @@ class Mission
 	};
 	addOnsAuto[]=
 	{
-		"ca_modules_functions",
-		"cacharacters_e",
-		"cacharacters_baf",
+		"cacharacters_pmc",
 		"cacharacters2",
+		"cacharacters_e",
+		"ca_modules_functions",
+		"cacharacters_baf",
 		"camisc3",
-		"warfarebuildings",
+		"caweapons_ammoboxes",
 		"cabuildings",
-		"camp_armory_misc_concrete_wall",
+		"CAWater",
+		"cawater2_fishing_boat",
+		"warfarebuildings",
 		"camisc_e",
-		"CAMisc",
-		"camp_armory_misc_laptop",
 		"chernarus"
 	};
 	randomSeed=10079095;
@@ -53,7 +54,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=94;
+		items=96;
 		class Item0
 		{
 			side="GUER";
@@ -70,8 +71,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer1";
-					description="PLAYER 1: (MILITIA ENGINEER)";
 					init="removeAllWeapons this;";
+					description="PLAYER 1: (MILITIA ENGINEER)";
 				};
 			};
 		};
@@ -91,8 +92,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer2";
-					description="PLAYER 2: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 2: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -112,8 +113,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer3";
-					description="PLAYER 3: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 3: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -133,8 +134,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer4";
-					description="PLAYER 4: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 4: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -154,8 +155,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer5";
-					description="PLAYER 5: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 5: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -175,8 +176,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer6";
-					description="PLAYER 7: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 7: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -196,8 +197,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer7";
-					description="PLAYER 8: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 8: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -217,8 +218,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer8";
-					description="PLAYER 9: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 9: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -238,8 +239,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer9";
-					description="PLAYER 10: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 10: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -259,8 +260,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer10";
-					description="PLAYER 10: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 10: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -280,8 +281,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer11";
-					description="PLAYER 11: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 11: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -301,8 +302,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer12";
-					description="PLAYER 12: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 12: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -322,8 +323,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer13";
-					description="PLAYER 13: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 13: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -343,8 +344,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer14";
-					description="PLAYER 14: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 14: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -364,8 +365,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer15";
-					description="PLAYER 15: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 15: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -385,8 +386,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer16";
-					description="PLAYER 16: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 16: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -406,8 +407,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer17";
-					description="PLAYER 17: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 17: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -427,8 +428,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer18";
-					description="PLAYER 18: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 18: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -448,8 +449,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer19";
-					description="PLAYER 19: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 19: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -469,8 +470,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer20";
-					description="PLAYER 20: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 20: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -688,8 +689,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer21";
-					description="PLAYER 21: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 21: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -709,8 +710,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer22";
-					description="PLAYER 22: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 22: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -730,8 +731,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer23";
-					description="PLAYER 23: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 23: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -751,8 +752,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer24";
-					description="PLAYER 24: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 24: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -772,8 +773,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer25";
-					description="PLAYER 25: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 25: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -793,8 +794,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer26";
-					description="PLAYER 26: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 26: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -814,8 +815,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer27";
-					description="PLAYER 27: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 27: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -835,8 +836,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer28";
-					description="PLAYER 28: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 28: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -856,8 +857,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer29";
-					description="PLAYER 29: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 29: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -877,8 +878,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer30";
-					description="PLAYER 30: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 30: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -898,8 +899,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer31";
-					description="PLAYER 31: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 31: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -919,8 +920,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer32";
-					description="PLAYER 32: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 32: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -940,8 +941,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer33";
-					description="PLAYER 33: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 33: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -961,8 +962,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer34";
-					description="PLAYER 34: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 34: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -982,8 +983,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer35";
-					description="PLAYER 35: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 35: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1003,8 +1004,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer36";
-					description="PLAYER 36: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 36: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1024,8 +1025,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer37";
-					description="PLAYER 37: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 37: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1045,8 +1046,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer38";
-					description="PLAYER 38: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 38: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1066,8 +1067,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer39";
-					description="PLAYER 39: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 39: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1087,8 +1088,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer40";
-					description="PLAYER 40: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 40: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1104,12 +1105,12 @@ class Mission
 					id=86;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
-					player="PLAY CDG";					
+					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="guer41";
-					description="PLAYER 41: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 41: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1129,8 +1130,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer42";
-					description="PLAYER 42: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 42: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1150,8 +1151,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer43";
-					description="PLAYER 42: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 42: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1171,8 +1172,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer44";
-					description="PLAYER 44: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 44: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1192,8 +1193,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer45";
-					description="PLAYER 45: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 45: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1213,8 +1214,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer46";
-					description="PLAYER 46: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 46: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1234,8 +1235,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer47";
-					description="PLAYER 47: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 47: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1255,8 +1256,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer48";
-					description="PLAYER 48: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 48: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1276,8 +1277,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer49";
-					description="PLAYER 49: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 49: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1297,8 +1298,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer50";
-					description="PLAYER 50: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 50: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1318,8 +1319,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer51";
-					description="PLAYER 51: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 51: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1339,8 +1340,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer52";
-					description="PLAYER 52: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 52: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1360,8 +1361,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer53";
-					description="PLAYER 53: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 53: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1381,8 +1382,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer54";
-					description="PLAYER 54: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 54: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1402,8 +1403,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer55";
-					description="PLAYER 55: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 55: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1423,8 +1424,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer56";
-					description="PLAYER 56: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 56: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1444,8 +1445,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer57";
-					description="PLAYER 57: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 57: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1465,8 +1466,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer58";
-					description="PLAYER 58: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 58: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1486,8 +1487,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer59";
-					description="PLAYER 59: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 59: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1507,8 +1508,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer60";
-					description="PLAYER 60: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 60: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1528,8 +1529,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer61";
-					description="PLAYER 61: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 61: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1549,8 +1550,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer62";
-					description="PLAYER 62: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 62: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1570,8 +1571,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer63";
-					description="PLAYER 63: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 63: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1591,8 +1592,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer64";
-					description="PLAYER 64: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 64: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1612,8 +1613,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer65";
-					description="PLAYER 65: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 65: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1633,8 +1634,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer66";
-					description="PLAYER 66: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 66: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1654,8 +1655,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer67";
-					description="PLAYER 67: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 67: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1675,8 +1676,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer68";
-					description="PLAYER 68: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 68: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1696,8 +1697,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer69";
-					description="PLAYER 69: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 69: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1717,8 +1718,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer70";
-					description="PLAYER 70: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 70: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1738,8 +1739,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer71";
-					description="PLAYER 71: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 71: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1759,8 +1760,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer72";
-					description="PLAYER 72: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 72: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1780,8 +1781,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer73";
-					description="PLAYER 73: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 73: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1801,8 +1802,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer74";
-					description="PLAYER 74: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 74: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1822,8 +1823,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer75";
-					description="PLAYER 75: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 75: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1843,8 +1844,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer76";
-					description="PLAYER 76: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 76: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1864,8 +1865,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer77";
-					description="PLAYER 77: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 77: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1885,8 +1886,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer78";
-					description="PLAYER 78: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 78: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1906,8 +1907,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer79";
-					description="PLAYER 79: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 79: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -1927,8 +1928,8 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="guer80";
-					description="PLAYER 80: (MILITIA MEDIC)";
 					init="removeAllWeapons this;";
+					description="PLAYER 80: (MILITIA MEDIC)";
 				};
 			};
 		};
@@ -2009,6 +2010,40 @@ class Mission
 					skill=0.60000002;
 					text="bs4";
 					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; removeAllWeapons this;";
+				};
+			};
+		};
+		class Item94
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={31692.195,25.201468,24990.559};
+					id=215;
+					side="WEST";
+					vehicle="USMC_Soldier";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item95
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={24011.266,17.267172,-21.333618};
+					id=216;
+					side="EAST";
+					vehicle="RU_Soldier";
+					leader=1;
+					skill=0.60000002;
 				};
 			};
 		};

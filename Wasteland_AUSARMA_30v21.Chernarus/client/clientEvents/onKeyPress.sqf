@@ -46,7 +46,7 @@ switch _key do
         
         _gunStore = nearestObjects [_currPos, ["CIV_Contractor1_BAF"], _storeInteractionZone];    
         _genStore = nearestObjects [_currPos, ["TK_CIV_Takistani04_EP1"], _storeInteractionZone]; 
-	_buildStore = nearestObjects [_currPos, ["Ins_Worker2"], _storeInteractionZone];
+	_buildStore = nearestObjects [_currPos, ["SatPhone"], _storeInteractionZone];
         
         if (!isNull (_gunStore select 0)) then {
         	_relativeDir = [player, _gunStore select 0] call BIS_fnc_relativeDirTo;

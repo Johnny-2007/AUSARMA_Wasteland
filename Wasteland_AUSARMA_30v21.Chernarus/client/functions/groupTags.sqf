@@ -49,13 +49,13 @@ while {true} do
         
     private ["_storeInteractionBuffer","_storeInteractionZone","_currPos","_store","_relativeDir","_absoluteDir"];
           
-    _storeInteractionBuffer = 10;
-    _storeInteractionZone = 3; // The furthest away the player can be from a store to interact with it. Higher = further.
+    _storeInteractionBuffer = 15;
+    _storeInteractionZone = 5; // The furthest away the player can be from a store to interact with it. Higher = further.
     _currPos = getPosATL player;
         
     _gunStore = nearestObjects [_currPos, ["CIV_Contractor1_BAF"], _storeInteractionZone];    
     _genStore = nearestObjects [_currPos, ["TK_CIV_Takistani04_EP1"], _storeInteractionZone];  
-    _buildStore = nearestObjects [_currPos, ["Ins_Worker2"], _storeInteractionZone];	
+    _buildStore = nearestObjects [_currPos, ["SatPhone"], _storeInteractionZone];	
      
     if (!isNull (_gunStore select 0)) then {  
         _relativeDir = [player, _gunStore select 0] call BIS_fnc_relativeDirTo;
