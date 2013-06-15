@@ -13,7 +13,7 @@ if (isnil {_player getVariable "cmoney"}) then {
 _player = (_this select 0) select 0;
 _killer = (_this select 0) select 1;
 // _killer addscore 2; // -- Markus : addScore can only be ran on the server... -->
-MD_GuerTK = [_player, _killer];
+MD_GuerTK = [name _player, name _killer];
 publicVariableServer "MD_GuerTK";
 // <-- Markus
 _playerMoney = _player getVariable["cmoney",0];

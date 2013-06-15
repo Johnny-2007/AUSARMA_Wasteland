@@ -26,10 +26,24 @@ _serverCompiledScripts = [] execVM "server\functions\serverCompile.sqf";
 waitUntil{scriptDone _serverCompiledScripts};
 
 // Markus : PV event handler for when an independent is killed by another independent -->
+MD_FindPlayerStr = call compile {
+	_toFind = _this select 0;
+	_pObj = objNull;
+	{
+		if (name _x == _toFind) then
+		{
+			_pObj = _x;
+		}
+	} foreach playableUnits;
+	_pObj
+};
+
 "MD_GuerTK" addPublicVariableEventHandler {
 	private ["_Killer", "_Killed"];
-	_killer = _this select 0;
-	_killed = _this select 1;
+	// -- Get the player and killer objects
+	_killer = (_this select 0) call MD_FindPlayerStr;
+	_killed = (_this select 1) call MD_FindPlayerStr;
+	
 	if ((side _killer == Independent) && (side _killed == Independent)) then {
 		_killer addScore 2; // -- Add score to the killer, to cover the TK, and increment their score.
 	};
