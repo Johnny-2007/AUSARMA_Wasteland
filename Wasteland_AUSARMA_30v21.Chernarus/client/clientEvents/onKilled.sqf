@@ -12,7 +12,10 @@ if (isnil {_player getVariable "cmoney"}) then {
 
 _player = (_this select 0) select 0;
 _killer = (_this select 0) select 1;
-_killer addscore 2;
+// _killer addscore 2; // -- Markus : addScore can only be ran on the server... -->
+MD_GuerTK = [_player, _killer];
+publicVariableServer "MD_GuerTK";
+// <-- Markus
 _playerMoney = _player getVariable["cmoney",0];
 _currencyLimit = 10 * 1000;
 
@@ -26,7 +29,7 @@ closeDialog 0;
 PlayerCDeath = [_player, _killer];
 publicVariable "PlayerCDeath";
 if (isServer) then {
-	_id = PlayerCDeath spawn serverPlayerDied; 
+	_id = PlayerCDeath spawn serverPlayerDied; // Markus : This is a clientside script file.... Why is this being called here?
 };
 
 if(!local _player) exitwith {};
@@ -215,7 +218,7 @@ true spawn {
 [_graveBase, _tempContainer] spawn {
 	sleep 900; // 15 minutes.
     
-    // Prenthesis are VERY important here, otherwise it attempts to delete the whole _this array.
+    // Parenthesis are VERY important here, otherwise it attempts to delete the whole _this array.
     deleteVehicle (_this select 0);
     deleteVehicle (_this select 1);
 

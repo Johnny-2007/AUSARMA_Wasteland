@@ -25,26 +25,37 @@ _serverCompiledScripts = [] execVM "server\functions\serverCompile.sqf";
 //[] execVM "server\functions\antiCheatServer.sqf";
 waitUntil{scriptDone _serverCompiledScripts};
 
-diag_log format["WASTELAND SERVER - Server Complie Finished"];
+// Markus : PV event handler for when an independent is killed by another independent -->
+"MD_GuerTK" addPublicVariableEventHandler {
+	private ["_Killer", "_Killed"];
+	_killer = _this select 0;
+	_killed = _this select 1;
+	if ((side _killer == Independent) && (side _killed == Independent)) then {
+		_killer addScore 2; // -- Add score to the killer, to cover the TK, and increment their score.
+	};
+ };
+// <-- Markus
+
+diag_log format["WASTELAND SERVER - Server Compile Finished"];
 
 #ifdef __DEBUG__
 #else
+
+// Markus : call compile preprocessFileLineNumbers "script.sqf" is much faster, and, runs in series, vs parallel like execVM. No need for the waitUntil -->
 //Execute Server Spawning.
+
+Compile preprocessFileLineNumbers "client\functions\clientInitEventHandlers.sqf";
 if (serverSpawning == 1) then {
     diag_log format["WASTELAND SERVER - Initilizing Server Spawning"];
-    _vehSpawn = [] ExecVM "server\functions\vehicleSpawning.sqf";
-    waitUntil{sleep 0.1; scriptDone _vehSpawn};
-    _objSpawn = [] ExecVM "server\functions\objectsSpawning.sqf";
-    waitUntil{sleep 0.1; scriptDone _objSpawn};
-    _boxSpawn = [] ExecVM "server\functions\boxSpawning.sqf";
-    waitUntil{sleep 0.1; scriptDone _boxSpawn};
-    _gunSpawn = [] ExecVM "server\functions\staticGunSpawning.sqf";
-    waitUntil{sleep 0.1; scriptDone _gunSpawn};
-    _heliSpawn = [] ExecVM "server\functions\staticHeliSpawning.sqf";
-    waitUntil{sleep 0.1; scriptDone _heliSpawn};
-    _markerClean = [] ExecVM "server\functions\cleanMarkers.sqf";
-    waitUntil{sleep 0.1; scriptDone _markerClean};
+	call Compile preprocessFileLineNumbers "server\functions\vehicleSpawning.sqf";
+	call Compile preprocessFileLineNumbers "server\functions\objectsSpawning.sqf";
+	call Compile preprocessFileLineNumbers "server\functions\boxSpawning.sqf";
+	call Compile preprocessFileLineNumbers "server\functions\staticGunSpawning.sqf";
+	call Compile preprocessFileLineNumbers "server\functions\staticHeliSpawning.sqf";
+	call Compile preprocessFileLineNumbers "server\functions\cleanMarkers.sqf";
 };
+
+// <-- Markus
 #endif
 //Execute Server Missions.
 if (sideMissions == 1) then {
