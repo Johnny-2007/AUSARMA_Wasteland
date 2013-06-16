@@ -26,7 +26,7 @@ _serverCompiledScripts = [] execVM "server\functions\serverCompile.sqf";
 waitUntil{scriptDone _serverCompiledScripts};
 
 // Markus : PV event handler for when an independent is killed by another independent -->
-MD_FindPlayerStr = call compile {
+MD_FindPlayerStr = compile  "{
 	_toFind = _this select 0;
 	_pObj = objNull;
 	{
@@ -36,7 +36,7 @@ MD_FindPlayerStr = call compile {
 		}
 	} foreach playableUnits;
 	_pObj
-};
+};";
 
 "MD_GuerTK" addPublicVariableEventHandler {
 	private ["_Killer", "_Killed"];
