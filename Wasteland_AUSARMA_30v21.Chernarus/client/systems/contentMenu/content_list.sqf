@@ -65,7 +65,6 @@ _contentListIndex = _contentList lbAdd format["12$ SmallTable"];
 _contentList lbSetData [(lbSize _contentList)-1, "SmallTable"];
 _contentListIndex = _contentList lbAdd format["12$ Notebook"];
 _contentList lbSetData [(lbSize _contentList)-1, "Notebook"];
-
 _contentListIndex = _contentList lbAdd format["12$ Land_Barrel_water"];
 _contentList lbSetData [(lbSize _contentList)-1, "Land_Barrel_water"];
 _contentListIndex = _contentList lbAdd format["12$ Land_HBarrier_large"];
@@ -88,9 +87,6 @@ _contentListIndex = _contentList lbAdd format["12$ Land_Antenna"];
 _contentList lbSetData [(lbSize _contentList)-1, "Land_Antenna"];
 _contentListIndex = _contentList lbAdd format["12$ Land_runway_edgelight"];
 _contentList lbSetData [(lbSize _contentList)-1, "Land_runway_edgelight"];
-
-
-
 _contentListIndex = _contentList lbAdd format["12$ Land_Teapot_EP1"];
 _contentList lbSetData [(lbSize _contentList)-1, "Land_Teapot_EP1"];
 _contentListIndex = _contentList lbAdd format["12$ Fort_Crate_wood"];
@@ -103,12 +99,6 @@ _contentListIndex = _contentList lbAdd format["12$ Fort_EnvelopeSmall_EP1"];
 _contentList lbSetData [(lbSize _contentList)-1, "Fort_EnvelopeSmall_EP1"];
 _contentListIndex = _contentList lbAdd format["12$ MASH"];
 _contentList lbSetData [(lbSize _contentList)-1, "MASH"];
-
-
-
-
-
-
 _contentListIndex = _contentList lbAdd format["12$ ACamp"];
 _contentList lbSetData [(lbSize _contentList)-1, "ACamp"];
 _contentListIndex = _contentList lbAdd format["12$ Camp"];
@@ -135,8 +125,16 @@ _contentListIndex = _contentList lbAdd format["12$ Barrack2"];
 _contentList lbSetData [(lbSize _contentList)-1, "Barrack2"];
 _contentListIndex = _contentList lbAdd format["12$ Land_Misc_Cargo1D"];
 _contentList lbSetData [(lbSize _contentList)-1, "Land_Misc_Cargo1D"];
-
-
+_contentListIndex = _contentList lbAdd format["12$ Fort_RazorWire"];
+_contentList lbSetData [(lbSize _contentList)-1, "Fort_RazorWire"];
+_contentListIndex = _contentList lbAdd format["12$ Land_leseni2x"];
+_contentList lbSetData [(lbSize _contentList)-1, "Land_leseni2x"];
+_contentListIndex = _contentList lbAdd format["12$ Land_fort_artillery_nest"];
+_contentList lbSetData [(lbSize _contentList)-1, "Land_fort_artillery_nest"];
+_contentListIndex = _contentList lbAdd format["12$ Land_CamoNet_NATO"];
+_contentList lbSetData [(lbSize _contentList)-1, "Land_CamoNet_NATO"];
+_contentListIndex = _contentList lbAdd format["12$ Land_fortified_nest_big"];
+_contentList lbSetData [(lbSize _contentList)-1, "Land_fortified_nest_big"];
 _contentListIndex = _contentList lbAdd format["12$ Land_Misc_Rubble_EP1"];
 _contentList lbSetData [(lbSize _contentList)-1, "Land_Misc_Rubble_EP1"];
 _contentListIndex = _contentList lbAdd format["12$ Land_stand_small_EP1"];
