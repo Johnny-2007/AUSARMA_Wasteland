@@ -26,7 +26,7 @@ _serverCompiledScripts = [] execVM "server\functions\serverCompile.sqf";
 waitUntil{scriptDone _serverCompiledScripts};
 
 // Markus : PV event handler for when an independent is killed by another independent -->
-MD_FindPlayerStr = compile  "{
+MD_FindPlayerStr = compile "{
 	_toFind = _this select 0;
 	_pObj = objNull;
 	{
@@ -41,10 +41,10 @@ MD_FindPlayerStr = compile  "{
 "MD_GuerTK" addPublicVariableEventHandler {
 	private ["_Killer", "_Killed"];
 	// -- Get the player and killer objects
-	_killer = (_this select 0) call MD_FindPlayerStr;
-	_killed = (_this select 1) call MD_FindPlayerStr;
-	
-	if ((side _killer == Independent) && (side _killed == Independent)) then {
+	_killer = ((_this select 1) select 0) call MD_FindPlayerStr;
+	_killed = ((_this select 1) select 1) call MD_FindPlayerStr;
+	diag_log format ["MD-> Server: Killed: %1 | Killer: %2", _killed, _killer];
+	if (((side _killer) == Independent) && ((side _killed) == Independent)) then {
 		_killer addScore 2; // -- Add score to the killer, to cover the TK, and increment their score.
 	};
  };
