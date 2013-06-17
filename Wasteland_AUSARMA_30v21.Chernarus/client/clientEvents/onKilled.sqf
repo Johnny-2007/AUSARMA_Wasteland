@@ -13,8 +13,8 @@ if (isnil {_player getVariable "cmoney"}) then {
 _player = (_this select 0) select 0;
 _killer = (_this select 0) select 1;
 // _killer addscore 2; // -- Markus : addScore can only be ran on the server... -->
-diag_log format ["MD-> Client: Player: %1 | Killer: %2", _player, _killer];
 MD_GuerTK = [name (_this select 0), name (_this select 1)];
+diag_log format ["MD-> Client: Player: %1 | Killer: %2", MD_GuerTK select 0, MD_GuerTK select 1];
 publicVariableServer "MD_GuerTK";
 // <-- Markus
 _playerMoney = _player getVariable["cmoney",0];
