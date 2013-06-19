@@ -129,20 +129,20 @@ for "_i" from 109 to 120 do
 };
 
 //Secondary Mags
-for "_i" from 122 to 129 do 
-{
-	_control = _dialog displayCtrl _i;
-	_item = gearSlotData _control;
-	_val = gearSlotAmmoCount _control;
-	_max = getNumber (configFile >> "CfgMagazines" >> _item >> "count");
-	if (_item != "") then {
-		if (_val != _max) then {
-			_magazineArray set [count _magazineArray,[_item,_val]];
-		} else {
-			_magazineArray set [count _magazineArray,[_item,_val]];
-		};
-	};
-};
+//for "_i" from 122 to 129 do 
+//{
+//	_control = _dialog displayCtrl _i;
+//	_item = gearSlotData _control;
+//	_val = gearSlotAmmoCount _control;
+//	_max = getNumber (configFile >> "CfgMagazines" >> _item >> "count");
+//	if (_item != "") then {
+//		if (_val != _max) then {
+//			_magazineArray set [count _magazineArray,[_item,_val]];
+//		} else {
+//			_magazineArray set [count _magazineArray,[_item,_val]];
+//		};
+//	};
+}//;
 
 // Now that all of the details about the player's weapons and amgs have been recorded, strip them from the dead body.
 // This is to stop people looting the dead body before it disappears and duplicating weapons.

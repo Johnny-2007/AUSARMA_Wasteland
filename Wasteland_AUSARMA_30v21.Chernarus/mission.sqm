@@ -67,7 +67,7 @@ class Mission
 					id=0;
 					side="GUER";
 					vehicle="Soldier_TL_PMC";
-					player="PLAY CDG";
+					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
 					text="guer1";
