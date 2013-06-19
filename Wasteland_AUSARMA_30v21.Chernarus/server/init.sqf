@@ -26,26 +26,46 @@ _serverCompiledScripts = [] execVM "server\functions\serverCompile.sqf";
 waitUntil{scriptDone _serverCompiledScripts};
 
 // Markus : PV event handler for when an independent is killed by another independent -->
-MD_FindPlayerStr = compile "{
-	_toFind = _this select 0;
-	_pObj = objNull;
+// -- Get player slot list
+private ["_iter"];
+MD_PlayerSlots = [];
+_iter = 1;
+while {call compile format ["!isnull guer%1", _iter]} do
+{
+	MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
+	_iter = _iter + 1;
+};
+
+MD_FindPlayerStr = {
+	_toFind = _this;
+	_pObj = "MD: ERROR: NO UNIT";
 	{
 		if (name _x == _toFind) then
 		{
 			_pObj = _x;
-		}
-	} foreach playableUnits;
+		};
+	} foreach MD_Playerslots;
 	_pObj
-};";
+};
 
 "MD_GuerTK" addPublicVariableEventHandler {
 	private ["_Killer", "_Killed"];
 	// -- Get the player and killer objects
-	_killer = ((_this select 1) select 0) call MD_FindPlayerStr;
-	_killed = ((_this select 1) select 1) call MD_FindPlayerStr;
+	_killed = ((_this select 1) select 0);
+	_killer = ((_this select 1) select 1);
 	diag_log format ["MD-> Server: Killed: %1 | Killer: %2", _killed, _killer];
-	if (((side _killer) == Independent) && ((side _killed) == Independent)) then {
-		_killer addScore 2; // -- Add score to the killer, to cover the TK, and increment their score.
+	_killed = (_killed call MD_FindPlayerStr);
+	_killer = (_killer call MD_FindPlayerStr);
+	diag_log format ["MD-> Server: Resolved: Killed: %1 | Killer: %2", _killed, _killer];
+	//if (((side _killer) == "GUER") && ((side _killed) == "GUER")) then {
+	diag_log format ["MD-> Server: Sides: Killed: %1 | Killer: %2", side (group _killed), side (group _killer)];
+	if (side (group _killer) == resistance) then
+	{
+		if (side (group _killed) == resistance) then
+		{
+			if ((name _killer) == (name _killed)) exitWith {}; // -- Don't allow score increase if suicide.
+			_killer addScore 2; // -- Add score to the killer, to cover the TK, and increment their score.
+		}
 	};
  };
 // <-- Markus
