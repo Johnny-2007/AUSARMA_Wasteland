@@ -142,7 +142,7 @@ for "_i" from 109 to 120 do
 //			_magazineArray set [count _magazineArray,[_item,_val]];
 //		};
 //	};
-}//;
+//};
 
 // Now that all of the details about the player's weapons and amgs have been recorded, strip them from the dead body.
 // This is to stop people looting the dead body before it disappears and duplicating weapons.
