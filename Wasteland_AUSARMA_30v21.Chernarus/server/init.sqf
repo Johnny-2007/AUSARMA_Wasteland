@@ -40,9 +40,11 @@ MD_FindPlayerStr = {
 	_toFind = _this;
 	_pObj = "MD: ERROR: NO UNIT";
 	{
+		diag_log format ["MD-> Server: Searching for: %1 Found: %2", _tofind, name _x];
 		if (name _x == _toFind) then
 		{
 			_pObj = _x;
+			diag_log format ["MD-> Server: Found: %1 !!!!!", _tofind];
 		};
 	} foreach MD_Playerslots;
 	_pObj
@@ -54,6 +56,14 @@ MD_FindPlayerStr = {
 	_killed = ((_this select 1) select 0);
 	_killer = ((_this select 1) select 1);
 	diag_log format ["MD-> Server: Killed: %1 | Killer: %2", _killed, _killer];
+	private ["_iter"];
+	MD_PlayerSlots = [];
+	_iter = 1;
+	while {call compile format ["!isnull guer%1", _iter]} do
+	{
+		MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
+		_iter = _iter + 1;
+	};
 	_killed = (_killed call MD_FindPlayerStr);
 	_killer = (_killer call MD_FindPlayerStr);
 	diag_log format ["MD-> Server: Resolved: Killed: %1 | Killer: %2", _killed, _killer];
