@@ -74,6 +74,7 @@ MD_FindPlayerStr = {
 		if (side (group _killed) == resistance) then
 		{
 			if ((name _killer) == (name _killed)) exitWith {}; // -- Don't allow score increase if suicide.
+			if ((group _killed) == (group _killer)) exitWith {}; // -- Don't allow score increase if in same group.
 			_killer addScore 2; // -- Add score to the killer, to cover the TK, and increment their score.
 		}
 	};
