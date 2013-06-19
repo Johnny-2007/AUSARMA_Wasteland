@@ -77,8 +77,6 @@ diag_log format["WASTELAND SERVER - Server Compile Finished"];
 
 // Markus : call compile preprocessFileLineNumbers "script.sqf" is much faster, and, runs in series, vs parallel like execVM. No need for the waitUntil -->
 //Execute Server Spawning.
-
-Compile preprocessFileLineNumbers "client\functions\clientInitEventHandlers.sqf";
 if (serverSpawning == 1) then {
     diag_log format["WASTELAND SERVER - Initilizing Server Spawning"];
 	call Compile preprocessFileLineNumbers "server\functions\vehicleSpawning.sqf";
