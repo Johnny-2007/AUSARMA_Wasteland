@@ -20,7 +20,7 @@ publicVariableServer "MD_GuerTK";
 _playerMoney = _player getVariable["cmoney",0];
 _currencyLimit = 10 * 1000;
 
-_playerPos = getPosATL _player;
+_playerPos = getPos _player;
 _playerPos = [_playerPos select 0, _playerPos select 1, 0];
 _playerDir = getDir _player;
 

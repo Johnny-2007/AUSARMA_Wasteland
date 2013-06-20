@@ -81,7 +81,7 @@ MD_FindPlayerStr = {
  };
 // <-- Markus
 
-diag_log format["WASTELAND SERVER. Radioman version. - Server Compile Finished"];
+diag_log format["AUSARMA WASTELAND SERVER - Server Compile Finished"];
 
 #ifdef __DEBUG__
 #else
