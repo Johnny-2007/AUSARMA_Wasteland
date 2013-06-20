@@ -340,7 +340,6 @@ R3F_LOG_CFG_objets_transportables =  [
 	["WarfareBDepot", 30],
 	["WarfareBMGNest_M240_base", 10],
 	["WarfareBMGNest_PK_Base", 10],
-	["WarfareBVehicleServicePoint", 80],
 	["ZavoraAnim", 2],
 	["ZU23_base", 10]
 ];
@@ -464,7 +463,6 @@ R3F_LOG_CFG_objets_deplacables = [
 	"TargetPopUpTarget",
 	"Wall_L_2m5_EP1",
 	"WarfareBunkerSign",
-	"WarfareBVehicleServicePoint",
 	"ZavoraAnim",
 
 	//Items
