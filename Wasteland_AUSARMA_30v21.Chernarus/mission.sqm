@@ -24,11 +24,11 @@ class Mission
 	};
 	addOnsAuto[]=
 	{
-		"cacharacters_pmc",
 		"cacharacters2",
-		"cacharacters_e",
 		"ca_modules_functions",
 		"cacharacters_baf",
+		"cacharacters_e",
+		"cacharacters_pmc",
 		"camisc3",
 		"caweapons_ammoboxes",
 		"cabuildings",
@@ -54,7 +54,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=96;
+		items=156;
 		class Item0
 		{
 			side="GUER";
@@ -2027,6 +2027,7 @@ class Mission
 					vehicle="USMC_Soldier";
 					leader=1;
 					skill=0.60000002;
+					init="removeAllWeapons this;";
 				};
 			};
 		};
@@ -2044,6 +2045,1269 @@ class Mission
 					vehicle="RU_Soldier";
 					leader=1;
 					skill=0.60000002;
+					init="removeAllWeapons this;";
+				};
+			};
+		};
+		class Item96
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15486.163,253.323,15296.058};
+					id=217;
+					side="GUER";
+					vehicle="UN_CDF_Soldier_Light_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur81";
+					init="removeAllWeapons this;";
+					description="81: RIFLEMAN [1/10] (UN Officer, camo, blue berret)";
+				};
+			};
+		};
+		class Item97
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15491.991,252.09708,15295.484};
+					id=218;
+					side="GUER";
+					vehicle="UN_CDF_Soldier_Light_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur82";
+					init="removeAllWeapons this;";
+					description="82: RIFLEMAN [2/10] (UN Officer, camo, blue berret)";
+				};
+			};
+		};
+		class Item98
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15498.211,250.02121,15296.2};
+					id=219;
+					side="GUER";
+					vehicle="UN_CDF_Soldier_Light_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur83";
+					init="removeAllWeapons this;";
+					description="83: RIFLEMAN [3/10] (UN Officer, camo, blue berret)";
+				};
+			};
+		};
+		class Item99
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15504.794,248.21291,15296.094};
+					id=220;
+					side="GUER";
+					vehicle="UN_CDF_Soldier_Light_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur84";
+					init="removeAllWeapons this;";
+					description="84: RIFLEMAN [4/10] (UN Officer, camo, blue berret)";
+				};
+			};
+		};
+		class Item100
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15511.371,246.17958,15296.291};
+					id=221;
+					side="GUER";
+					vehicle="UN_CDF_Soldier_Light_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur85";
+					init="removeAllWeapons this;";
+					description="85: RIFLEMAN [5/10] (UN Officer, camo, blue berret)";
+				};
+			};
+		};
+		class Item101
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15517.93,244.3192,15296.058};
+					id=222;
+					side="GUER";
+					vehicle="UN_CDF_Soldier_Light_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur86";
+					init="removeAllWeapons this;";
+					description="86: RIFLEMAN [6/10] (UN Officer, camo, blue berret)";
+				};
+			};
+		};
+		class Item102
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15524.028,242.51404,15295.86};
+					id=223;
+					side="GUER";
+					vehicle="UN_CDF_Soldier_Light_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur87";
+					init="removeAllWeapons this;";
+					description="87: RIFLEMAN [7/10] (UN Officer, camo, blue berret)";
+				};
+			};
+		};
+		class Item103
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15530.927,240.54277,15295.377};
+					id=224;
+					side="GUER";
+					vehicle="UN_CDF_Soldier_Light_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur88";
+					init="removeAllWeapons this;";
+					description="88: RIFLEMAN [8/10] (UN Officer, camo, blue berret)";
+				};
+			};
+		};
+		class Item104
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15538.203,238.32417,15294.985};
+					id=225;
+					side="GUER";
+					vehicle="UN_CDF_Soldier_Light_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur89";
+					init="removeAllWeapons this;";
+					description="89: RIFLEMAN [9/10] (UN Officer, camo, blue berret)";
+				};
+			};
+		};
+		class Item105
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15545.637,236.21338,15294.094};
+					id=226;
+					side="GUER";
+					vehicle="UN_CDF_Soldier_Light_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur90";
+					init="removeAllWeapons this;";
+					description="90: RIFLEMAN [10/10] (UN Officer, camo, blue berret)";
+				};
+			};
+		};
+		class Item106
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15486.556,257.50461,15288.001};
+					id=227;
+					side="GUER";
+					vehicle="GUE_Woodlander1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur91";
+					init="removeAllWeapons this;";
+					description="91: RIFLEMAN [1/5] (Woodsmen, navy)";
+					
+				};
+			};
+		};
+		class Item107
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15492.384,256.32538,15287.428};
+					id=228;
+					side="GUER";
+					vehicle="GUE_Woodlander1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur92";
+					init="removeAllWeapons this;";
+					description="92: RIFLEMAN [1/5] (Woodsmen, navy)";
+				};
+			};
+		};
+		class Item108
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15498.604,254.26111,15288.144};
+					id=229;
+					side="GUER";
+					vehicle="GUE_Woodlander1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur93";
+					init="removeAllWeapons this;";
+					description="93: RIFLEMAN [1/5] (Woodsmen, navy)";
+				};
+			};
+		};
+		class Item109
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15505.187,252.46547,15288.037};
+					id=230;
+					side="GUER";
+					vehicle="GUE_Woodlander1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur94";
+					init="removeAllWeapons this;";
+					description="94: RIFLEMAN [1/5] (Woodsmen, navy)";
+				};
+			};
+		};
+		class Item110
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15511.764,250.42517,15288.234};
+					id=231;
+					side="GUER";
+					vehicle="GUE_Woodlander1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur95";
+					init="removeAllWeapons this;";
+					description="95: RIFLEMAN [1/5] (Woodsmen, navy)";
+				};
+			};
+		};
+		class Item111
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15518.322,248.55089,15288.001};
+					id=232;
+					side="GUER";
+					vehicle="GUE_Woodlander2";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur96";
+					init="removeAllWeapons this;";
+					description="96: RIFLEMAN [1/5] (Woodsmen, green)";
+				};
+			};
+		};
+		class Item112
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15524.421,246.72551,15287.804};
+					id=233;
+					side="GUER";
+					vehicle="GUE_Woodlander2";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur97";
+					init="removeAllWeapons this;";
+					description="97: RIFLEMAN [2/5] (Woodsmen, green)";
+				};
+			};
+		};
+		class Item113
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15531.319,244.71747,15287.32};
+					id=234;
+					side="GUER";
+					vehicle="GUE_Woodlander2";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur98";
+					init="removeAllWeapons this;";
+					description="98: RIFLEMAN [3/5] (Woodsmen, green)";
+				};
+			};
+		};
+		class Item114
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15538.596,242.45822,15286.929};
+					id=235;
+					side="GUER";
+					vehicle="GUE_Woodlander2";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur99";
+					init="removeAllWeapons this;";
+					description="99: RIFLEMAN [4/5] (Woodsmen, green)";
+				};
+			};
+		};
+		class Item115
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15546.029,240.34615,15286.037};
+					id=236;
+					side="GUER";
+					vehicle="GUE_Woodlander2";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur100";
+					init="removeAllWeapons this;";
+					description="100: RIFLEMAN [5/5] (Woodsmen, green)";
+				};
+			};
+		};
+		class Item116
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15487.537,261.33206,15280.342};
+					id=237;
+					side="GUER";
+					vehicle="GUE_Woodlander3";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur101";
+					init="removeAllWeapons this;";
+					description="101: RIFLEMAN [1/5] (Woodsmen, camo)";
+					
+				};
+			};
+		};
+		class Item117
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15493.365,260.15756,15279.769};
+					id=238;
+					side="GUER";
+					vehicle="GUE_Woodlander3";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur102";
+					init="removeAllWeapons this;";
+					description="102: RIFLEMAN [2/5] (Woodsmen, camo)";
+				};
+			};
+		};
+		class Item118
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15499.585,258.10568,15280.484};
+					id=239;
+					side="GUER";
+					vehicle="GUE_Woodlander3";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur103";
+					init="removeAllWeapons this;";
+					description="103: RIFLEMAN [3/5] (Woodsmen, camo)";
+				};
+			};
+		};
+		class Item119
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15506.168,256.28992,15280.378};
+					id=240;
+					side="GUER";
+					vehicle="GUE_Woodlander3";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur104";
+					init="removeAllWeapons this;";
+					description="104: RIFLEMAN [4/5] (Woodsmen, camo)";
+				};
+			};
+		};
+		class Item120
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15512.745,254.21971,15280.575};
+					id=241;
+					side="GUER";
+					vehicle="GUE_Woodlander3";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur105";
+					init="removeAllWeapons this;";
+					description="105: RIFLEMAN [5/5] (Woodsmen, camo)";
+				};
+			};
+		};
+		class Item121
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15519.304,252.29393,15280.342};
+					id=242;
+					side="GUER";
+					vehicle="GUE_Commander";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur106";
+					init="removeAllWeapons this;";
+					description="106: RIFLEMAN [1/10] (Warlord, brown pants, cowboy hat)";
+				};
+			};
+		};
+		class Item122
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15525.402,250.4227,15280.145};
+					id=243;
+					side="GUER";
+					vehicle="GUE_Commander";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur107";
+					init="removeAllWeapons this;";
+					description="107: RIFLEMAN [2/10] (Warlord, brown pants, cowboy hat)";
+				};
+			};
+		};
+		class Item123
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15532.301,248.34634,15279.661};
+					id=244;
+					side="GUER";
+					vehicle="GUE_Commander";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur108";
+					init="removeAllWeapons this;";
+					description="108: RIFLEMAN [3/10] (Warlord, brown pants, cowboy hat)";
+				};
+			};
+		};
+		class Item124
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15539.577,246.01393,15279.27};
+					id=245;
+					side="GUER";
+					vehicle="GUE_Commander";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur109";
+					init="removeAllWeapons this;";
+					description="109: RIFLEMAN [4/10] (Warlord, brown pants, cowboy hat)";
+				};
+			};
+		};
+		class Item125
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15547.011,243.87253,15278.378};
+					id=246;
+					side="GUER";
+					vehicle="GUE_Commander";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur110";
+					init="removeAllWeapons this;";
+					description="110: RIFLEMAN [5/10] (Warlord, brown pants, cowboy hat)";
+				};
+			};
+		};
+		class Item126
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15486.755,265.23825,15272.878};
+					id=247;
+					side="GUER";
+					vehicle="GUE_Commander";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur111";
+					init="removeAllWeapons this;";
+					description="111: RIFLEMAN [6/10] (Warlord, brown pants, cowboy hat)";
+				};
+			};
+		};
+		class Item127
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15492.583,264.07617,15272.305};
+					id=248;
+					side="GUER";
+					vehicle="GUE_Commander";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur112";
+					init="removeAllWeapons this;";
+					description="112: RIFLEMAN [7/10] (Warlord, brown pants, cowboy hat)";
+				};
+			};
+		};
+		class Item128
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15498.803,262.07614,15273.021};
+					id=249;
+					side="GUER";
+					vehicle="GUE_Commander";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur113";
+					init="removeAllWeapons this;";
+					description="113: RIFLEMAN [8/10] (Warlord, brown pants, cowboy hat)";
+				};
+			};
+		};
+		class Item129
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15505.386,260.26093,15272.914};
+					id=250;
+					side="GUER";
+					vehicle="GUE_Commander";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur114";
+					init="removeAllWeapons this;";
+					description="114: RIFLEMAN [9/10] (Warlord, brown pants, cowboy hat)";
+				};
+			};
+		};
+		class Item130
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15511.963,258.18649,15273.111};
+					id=251;
+					side="GUER";
+					vehicle="GUE_Commander";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur115";
+					init="removeAllWeapons this;";
+					description="115: RIFLEMAN [10/10] (Warlord, brown pants, cowboy hat)";
+				};
+			};
+		};
+		class Item131
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15518.521,256.22095,15272.878};
+					id=252;
+					side="GUER";
+					vehicle="Soldier_Sniper_KSVK_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur116";
+					init="removeAllWeapons this;";
+					description="116: RIFLEMAN [1/5] (PMC sniper, white and blue checkered shirt)";
+				};
+			};
+		};
+		class Item132
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15524.62,254.29402,15272.681};
+					id=253;
+					side="GUER";
+					vehicle="Soldier_Sniper_KSVK_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur117";
+					init="removeAllWeapons this;";
+					description="117: RIFLEMAN [2/5] (PMC sniper, white and blue checkered shirt)";
+				};
+			};
+		};
+		class Item133
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15531.519,252.13745,15272.197};
+					id=254;
+					side="GUER";
+					vehicle="Soldier_Sniper_KSVK_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur118";
+					init="removeAllWeapons this;";
+					description="118: RIFLEMAN [3/5] (PMC sniper, white and blue checkered shirt)";
+				};
+			};
+		};
+		class Item134
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15538.795,249.73778,15271.806};
+					id=255;
+					side="GUER";
+					vehicle="Soldier_Sniper_KSVK_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur119";
+					init="removeAllWeapons this;";
+					description="119: RIFLEMAN [4/5] (PMC sniper, white and blue checkered shirt)";
+				};
+			};
+		};
+		class Item135
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15546.229,247.5627,15270.914};
+					id=256;
+					side="GUER";
+					vehicle="Soldier_Sniper_KSVK_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur120";
+					init="removeAllWeapons this;";
+					description="120: RIFLEMAN [5/5] (PMC sniper, white and blue checkered shirt)";
+				};
+			};
+		};
+		class Item136
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15485.575,269.36169,15264.036};
+					id=257;
+					side="GUER";
+					vehicle="Tanny_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur121";
+					init="removeAllWeapons this;";
+					description="121: RIFLEMAN [1/5] (PMC Tanny, white and blue checkered shirt)";
+				};
+			};
+		};
+		class Item137
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15491.403,268.20993,15263.463};
+					id=258;
+					side="GUER";
+					vehicle="Tanny_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur122";
+					init="removeAllWeapons this;";
+					description="122: RIFLEMAN [2/5] (PMC Tanny, white and blue checkered shirt)";
+				};
+			};
+		};
+		class Item138
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15497.623,266.30081,15264.179};
+					id=259;
+					side="GUER";
+					vehicle="Tanny_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur123";
+					init="removeAllWeapons this;";
+					description="123: RIFLEMAN [3/5] (PMC Tanny, white and blue checkered shirt)";
+				};
+			};
+		};
+		class Item139
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15504.206,264.49344,15264.072};
+					id=260;
+					side="GUER";
+					vehicle="Tanny_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur124";
+					init="removeAllWeapons this;";
+					description="124: RIFLEMAN [4/5] (PMC Tanny, white and blue checkered shirt)";
+				};
+			};
+		};
+		class Item140
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15510.783,262.42166,15264.27};
+					id=261;
+					side="GUER";
+					vehicle="Tanny_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur125";
+					init="removeAllWeapons this;";
+					description="125: RIFLEMAN [5/5] (PMC Tanny, white and blue checkered shirt)";
+				};
+			};
+		};
+		class Item141
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15517.342,260.40353,15264.036};
+					id=262;
+					side="GUER";
+					vehicle="Soldier_GL_M16A2_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur126";
+					init="removeAllWeapons this;";
+					description="126: RIFLEMAN [1/10] (PMC, dark vest, tan pants)";
+				};
+			};
+		};
+		class Item142
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15523.44,258.39685,15263.839};
+					id=263;
+					side="GUER";
+					vehicle="Soldier_GL_M16A2_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur127";
+					init="removeAllWeapons this;";
+					description="127: RIFLEMAN [2/10] (PMC, dark vest, tan pants)";
+				};
+			};
+		};
+		class Item143
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15530.339,256.16,15263.355};
+					id=264;
+					side="GUER";
+					vehicle="Soldier_GL_M16A2_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur128";
+					init="removeAllWeapons this;";
+					description="128: RIFLEMAN [3/10] (PMC, dark vest, tan pants)";
+				};
+			};
+		};
+		class Item144
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15537.615,253.67897,15262.964};
+					id=265;
+					side="GUER";
+					vehicle="Soldier_GL_M16A2_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur129";
+					init="removeAllWeapons this;";
+					description="129: RIFLEMAN [4/10] (PMC, dark vest, tan pants)";
+				};
+			};
+		};
+		class Item145
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15545.049,251.38489,15262.072};
+					id=266;
+					side="GUER";
+					vehicle="Soldier_GL_M16A2_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur130";
+					init="removeAllWeapons this;";
+					description="130: RIFLEMAN [5/10] (PMC, dark vest, tan pants)";
+				};
+			};
+		};
+		class Item146
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15484.399,272.76895,15254.805};
+					id=267;
+					side="GUER";
+					vehicle="Soldier_AA_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur131";
+					init="removeAllWeapons this;";
+					description="131: RIFLEMAN [6/10] (PMC, dark vest, tan pants)";
+				};
+			};
+		};
+		class Item147
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15490.228,271.59192,15254.231};
+					id=268;
+					side="GUER";
+					vehicle="Soldier_AA_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur132";
+					init="removeAllWeapons this;";
+					description="132: RIFLEMAN [7/10] (PMC, dark vest, tan pants)";
+				};
+			};
+		};
+		class Item148
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15496.447,269.85489,15254.947};
+					id=269;
+					side="GUER";
+					vehicle="Soldier_AA_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur133";
+					init="removeAllWeapons this;";
+					description="133: RIFLEMAN [8/10] (PMC, dark vest, tan pants)";
+				};
+			};
+		};
+		class Item149
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15503.03,268.05197,15254.841};
+					id=270;
+					side="GUER";
+					vehicle="Soldier_AA_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur134";
+					init="removeAllWeapons this;";
+					description="134: RIFLEMAN [9/10] (PMC, dark vest, tan pants)";
+				};
+			};
+		};
+		class Item150
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15509.607,265.99829,15255.038};
+					id=271;
+					side="GUER";
+					vehicle="Soldier_AA_PMC";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur135";
+					init="removeAllWeapons this;";
+					description="135: RIFLEMAN [10/10] (PMC, dark vest, tan pants)";
+				};
+			};
+		};
+		class Item151
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15516.166,263.90463,15254.805};
+					id=272;
+					side="GUER";
+					vehicle="TK_GUE_Soldier_3_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur136";
+					init="removeAllWeapons this;";
+					description="136: RIFLEMAN [1/5] (Taliban, dark grey vest, grey pants, balaclava)";
+				};
+			};
+		};
+		class Item152
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15522.265,261.841,15254.607};
+					id=273;
+					side="GUER";
+					vehicle="TK_GUE_Soldier_3_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur137";
+					init="removeAllWeapons this;";
+					description="137: RIFLEMAN [2/5] (Taliban, dark grey vest, grey pants, balaclava)";
+				};
+			};
+		};
+		class Item153
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15529.163,259.47263,15254.124};
+					id=274;
+					side="GUER";
+					vehicle="TK_GUE_Soldier_3_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur138";
+					init="removeAllWeapons this;";
+					description="138: RIFLEMAN [3/5] (Taliban, dark grey vest, grey pants, balaclava)";
+				};
+			};
+		};
+		class Item154
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15536.439,256.87192,15253.732};
+					id=275;
+					side="GUER";
+					vehicle="TK_GUE_Soldier_3_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur139";
+					init="removeAllWeapons this;";
+					description="139: RIFLEMAN [4/5] (Taliban, dark grey vest, grey pants, balaclava)";
+				};
+			};
+		};
+		class Item155
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={15543.873,254.42879,15252.841};
+					id=276;
+					side="GUER";
+					vehicle="TK_GUE_Soldier_3_EP1";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="geur140";
+					init="removeAllWeapons this;";
+					description="140: RIFLEMAN [5/5] (Taliban, dark grey vest, grey pants, balaclava)";
 				};
 			};
 		};

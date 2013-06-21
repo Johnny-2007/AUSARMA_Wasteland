@@ -7,7 +7,7 @@ player createDiaryRecord["changelog",
 "1.0",
 "
 <br/>
-		AUSARMA Wasteland Rebuild v20.<br/>
+		AUSARMA Wasteland Rebuild v21.<br/>
 "
 ]
 ];

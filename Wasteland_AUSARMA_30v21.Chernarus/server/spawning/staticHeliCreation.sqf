@@ -26,13 +26,13 @@ if (_isWreck == 0) then {
 	clearMagazineCargoGlobal _currHeli;
 	clearWeaponCargoGlobal _currHeli;
     // Spawn some AI to make it interesting...        
-    if ((_spawnType == "MV22") OR (_spawnType == "CH_47F_EP1")) then {
-    	EnemyGrpMV22 = createGroup west;
-		[EnemyGrpMV22,_currHeliLocation] spawn createSmallGroup;
-    } else  {     
-        EnemyGrpSmallChopper = createGroup east;
-		[EnemyGrpSmallChopper,_currHeliLocation] spawn createSmallGroup;
-    };
+//    if ((_spawnType == "MV22") OR (_spawnType == "CH_47F_EP1")) then {
+//    	EnemyGrpMV22 = createGroup west;
+//		[EnemyGrpMV22,_currHeliLocation] spawn createSmallGroup;
+//    } else  {     
+//       EnemyGrpSmallChopper = createGroup east;
+//		[EnemyGrpSmallChopper,_currHeliLocation] spawn createSmallGroup;
+//    };
 	
 	//Set original status to stop ner-do-wells
 	_currHeli setVariable["newVehicle",1,true];
@@ -49,5 +49,5 @@ if (_isWreck == 0) then {
 	//Set original status to stop ner-do-wells
 	_currHeli setVariable["newVehicle",1,true];
     
-    _currHeli setDamage 1; // Destroy this heli on the spot so it looks like a realistic crash.
+	_currHeli setDamage 1; // Destroy this heli on the spot so it looks like a realistic crash.
 };

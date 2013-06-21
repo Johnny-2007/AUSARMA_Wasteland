@@ -14,13 +14,13 @@ _player = (_this select 0) select 0;
 _killer = (_this select 0) select 1;
 // _killer addscore 2; // -- Markus : addScore can only be ran on the server... -->
 MD_GuerTK = [name _player, name _killer];
-diag_log format ["MD-> Client: Player: %1 | Killer: %2", MD_GuerTK select 0, MD_GuerTK select 1];
+diag_log format ["PLAYER DEATH: %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
 publicVariableServer "MD_GuerTK";
 // <-- Markus
 _playerMoney = _player getVariable["cmoney",0];
 _currencyLimit = 10 * 1000;
 
-_playerPos = getPos _player;
+_playerPos = getPosATL _player;
 _playerPos = [_playerPos select 0, _playerPos select 1, 0];
 _playerDir = getDir _player;
 
@@ -110,53 +110,53 @@ if (player getVariable "canDrop") then {
 createGearDialog [_player, "RscDisplayGear"];
 _dialog = findDisplay 106;
 closeDialog 106;
-_magazineArray = [];
+//_magazineArray = [];
 
 //Primary Mags
-for "_i" from 109 to 120 do 
-{
-	_control = _dialog displayCtrl _i;
-	_item = gearSlotData _control;
-	_val = gearSlotAmmoCount _control;
-	_max = getNumber (configFile >> "CfgMagazines" >> _item >> "count");
-	if (_item != "") then {
-		if (_val != _max) then {
-			_magazineArray set [count _magazineArray,[_item,_val]];
-		} else {
-			_magazineArray set [count _magazineArray,[_item,_val]];
-		};
-	};
-};
+//for "_i" from 109 to 120 do 
+//{
+//	_control = _dialog displayCtrl _i;
+//	_item = gearSlotData _control;
+//	_val = gearSlotAmmoCount _control;
+//	_max = getNumber (configFile >> "CfgMagazines" >> _item >> "count");
+//	if (_item != "") then {
+//		if (_val != _max) then {
+//			_magazineArray set [count _magazineArray,[_item,_val]];
+//		} else {
+//			_magazineArray set [count _magazineArray,[_item,_val]];
+//		};
+//	};
+//};
 
-Secondary Mags
-for "_i" from 122 to 129 do 
-{
-	_control = _dialog displayCtrl _i;
-	_item = gearSlotData _control;
-	_val = gearSlotAmmoCount _control;
-	_max = getNumber (configFile >> "CfgMagazines" >> _item >> "count");
-	if (_item != "") then {
-		if (_val != _max) then {
-			_magazineArray set [count _magazineArray,[_item,_val]];
-		} else {
-			_magazineArray set [count _magazineArray,[_item,_val]];
-		};
-	};
-};
+//Secondary Mags
+//for "_i" from 122 to 129 do 
+//{
+//	_control = _dialog displayCtrl _i;
+//	_item = gearSlotData _control;
+//	_val = gearSlotAmmoCount _control;
+//	_max = getNumber (configFile >> "CfgMagazines" >> _item >> "count");
+//	if (_item != "") then {
+//		if (_val != _max) then {
+//			_magazineArray set [count _magazineArray,[_item,_val]];
+//		} else {
+//			_magazineArray set [count _magazineArray,[_item,_val]];
+//		};
+//	};
+//};
 
 // Now that all of the details about the player's weapons and amgs have been recorded, strip them from the dead body.
 // This is to stop people looting the dead body before it disappears and duplicating weapons.
-_playerWeapons = weapons _player;
-removeAllWeapons _player;
+//_playerWeapons = weapons _player;
+//removeAllWeapons _player;
 removeAllItems _player;
 
 // hide the body asap.
-hideBody _player;
+//hideBody _player;
 
 // Create the tombstone objects.
-_graveBase = createVehicle ["Grave", _playerPos, [], 0, "NO_COLLIDE"];
-_graveBase setPosATL _playerPos; // setPos again because arma.
-_graveBase setDir _playerDir;
+//_graveBase = createVehicle ["Grave", _playerPos, [], 0, "NO_COLLIDE"];
+//_graveBase setPosATL _playerPos; // setPos again because arma.
+//_graveBase setDir _playerDir;
 
 
 
@@ -175,40 +175,40 @@ _graveBase setDir _playerDir;
 
 
 // Disable damage for tombstones.
-_graveBase addEventHandler["handledamage", { false }];
+//_graveBase addEventHandler["handledamage", { false }];
 
 
 // Disable physics for the tombstone on all clients.      
 
-_announce = [nil,_graveBase,"per",rENABLESIMULATION,false] call RE;
+//_announce = [nil,_graveBase,"per",rENABLESIMULATION,false] call RE;
 
 // Create a loot container inside the grave.
-_tempContainer = createVehicle ["weaponHolder", getPosATL _graveBase, [], 0, "can_collide"];
-_containerLoc = getPosATL _tempContainer;
-_containerLoc = [((_containerLoc select 0) + 0),((_containerLoc select 1) + 0),0];    
-_tempContainer setPosATL _containerLoc;   
+//_tempContainer = createVehicle ["weaponHolder", getPosATL _graveBase, [], 0, "can_collide"];
+//_containerLoc = getPosATL _tempContainer;
+//_containerLoc = [((_containerLoc select 0) + 0),((_containerLoc select 1) + 0),0];    
+//_tempContainer setPosATL _containerLoc;   
 
 // Make sure people can't move the objects around.
-_tempContainer setVariable ["R3F_LOG_disabled", true, true];
+//_tempContainer setVariable ["R3F_LOG_disabled", true, true];
 
-_graveBase setVariable ["R3F_LOG_disabled", true, true];
+//_graveBase setVariable ["R3F_LOG_disabled", true, true];
 
 // Add the weapons that were on the player to the new weapon container.
-{
-    _tempContainer addWeaponCargoGlobal [_x,1]; 
-} forEach _playerWeapons;
+//{
+//    _tempContainer addWeaponCargoGlobal [_x,1]; 
+//} forEach _playerWeapons;
 
 // Add the magazines that were on the player to the new weapon container.
 {
-	_currMagazine = _x select 0;
-	_currMagAmmoCount = _x select 1;
+//	_currMagazine = _x select 0;
+//	_currMagAmmoCount = _x select 1;
     
     // TODO: Figure out how to use this once the magazine is inside the cargo container...
-    _currMagCapacity = (getNumber(configFile >> "CfgMagazines" >> _currMagazine >> "count"));
-    _newAmmoAmount = _currMagAmmoCount / _currMagCapacity;
+//    _currMagCapacity = (getNumber(configFile >> "CfgMagazines" >> _currMagazine >> "count"));
+//    _newAmmoAmount = _currMagAmmoCount / _currMagCapacity;
 
-    _tempContainer addMagazineCargoGlobal [_currMagazine,1];
-} forEach _magazineArray;
+//    _tempContainer addMagazineCargoGlobal [_currMagazine,1];
+//} forEach _magazineArray;
 
 // Create the thread to blackout the user's screen when the respawn timer is low.
 true spawn {
@@ -217,11 +217,11 @@ true spawn {
 };
 
 // Grave cleanup after 15 minutes. This is to stop the spam of these across the map.
-[_graveBase, _tempContainer] spawn {
-	sleep 900; // 15 minutes.
+//[_graveBase, _tempContainer] spawn {
+//	sleep 900; // 15 minutes.
     
     // Parenthesis are VERY important here, otherwise it attempts to delete the whole _this array.
-    deleteVehicle (_this select 0);
-    deleteVehicle (_this select 1);
+//    deleteVehicle (_this select 0);
+//    deleteVehicle (_this select 1);
 
-};
+//};

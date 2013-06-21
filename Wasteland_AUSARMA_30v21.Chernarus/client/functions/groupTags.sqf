@@ -49,7 +49,7 @@ while {true} do
         
     private ["_storeInteractionBuffer","_storeInteractionZone","_currPos","_store","_relativeDir","_absoluteDir"];
           
-    _storeInteractionBuffer = 15;
+    _storeInteractionBuffer = 20;
     _storeInteractionZone = 5; // The furthest away the player can be from a store to interact with it. Higher = further.
     _currPos = getPosATL player;
         
