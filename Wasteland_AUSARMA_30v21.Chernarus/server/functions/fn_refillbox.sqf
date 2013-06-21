@@ -69,15 +69,9 @@ switch(_selectedBox) do {
 		_currBox addWeaponCargoGlobal ["M4A1_HWS_GL_CAMO",2];
 		_currBox addWeaponCargoGlobal ["DMR",2];
 		_currBox addWeaponCargoGlobal ["M24",2];
-
-		_currBox addWeaponCargoGlobal ["Binocular_Vector",1];
-		_currBox addWeaponCargoGlobal ["NVGoggles",5];
-		_currBox addWeaponCargoGlobal ["Binocular",5];
-
+		_currBox addWeaponCargoGlobal ["Binocular_Vector",3];
 
 		_currBox addMagazineCargoGlobal ["1Rnd_HE_M203",20];
-
-
 		_currBox addMagazineCargoGlobal ["HandGrenade",15];
 		_currBox addMagazineCargoGlobal ["30Rnd_556x45_StanagSD",20];
 		_currBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",50];
@@ -94,7 +88,7 @@ switch(_selectedBox) do {
         // Add new weapons before ammunition
         _currBox addWeaponCargoGlobal ["BAF_NLAW_Launcher",1];
         _currBox addWeaponCargoGlobal ["Stinger",1];
-        _currBox addWeaponCargoGlobal ["AA12_PMC",5];
+        _currBox addWeaponCargoGlobal ["AA12_PMC",4];
         _currBox addWeaponCargoGlobal ["Mk13_EP1",2];
         _currBox addWeaponCargoGlobal ["Mk_48",1];
         _currBox addWeaponCargoGlobal ["SCAR_H_CQC_CCO",2];

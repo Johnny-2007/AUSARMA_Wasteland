@@ -509,7 +509,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="gunstore1";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>Gun store</t>"", ""client\systems\gunStore\loadGunStore.sqf"",'gs1']; this attachTo[fp1,[-1.5,0,0]];";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>Gun store</t>"", ""client\systems\gunStore\loadGunStore.sqf"",'gs1']; this attachTo[fp1,[-1.5,0,0]];";
 				};
 			};
 		};
@@ -529,7 +529,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="gunstore4";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>Gun store</t>"", ""client\systems\gunStore\loadGunStore.sqf"",'gs4']; this attachTo[fp3,[3.5,2.5,0.08]];";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>Gun store</t>"", ""client\systems\gunStore\loadGunStore.sqf"",'gs4']; this attachTo[fp3,[3.5,2.5,0.08]];";
 				};
 			};
 		};
@@ -549,7 +549,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="gunstore3";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>Gun store</t>"", ""client\systems\gunStore\loadGunStore.sqf"", 'gs3']; this attachTo[fp4,[4,-0.6,-0.04]];";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>Gun store</t>"", ""client\systems\gunStore\loadGunStore.sqf"", 'gs3']; this attachTo[fp4,[4,-0.6,-0.04]];";
 				};
 			};
 		};
@@ -569,7 +569,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="gunstore2";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>Gun store</t>"", ""client\systems\gunStore\loadGunStore.sqf"",'gs2']; this attachTo[fp2, [3.5,-1,0]];";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>Gun store</t>"", ""client\systems\gunStore\loadGunStore.sqf"",'gs2']; this attachTo[fp2, [3.5,-1,0]];";
 				};
 			};
 		};
@@ -589,7 +589,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="generalStore1";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>General Store</t>"", ""client\systems\generalStore\loadGenStore.sqf""]; this attachTo[fp5,[0,-3,0]];";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>General Store</t>"", ""client\systems\generalStore\loadGenStore.sqf""]; this attachTo[fp5,[0,-3,0]];";
 				};
 			};
 		};
@@ -609,7 +609,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="generalStore2";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>General Store</t>"", ""client\systems\generalStore\loadGenStore.sqf""]; this attachTo[fp6,[0,-3,0]];";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>General Store</t>"", ""client\systems\generalStore\loadGenStore.sqf""]; this attachTo[fp6,[0,-3,0]];";
 				};
 			};
 		};
@@ -629,7 +629,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="generalStore3";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>General Store</t>"", ""client\systems\generalStore\loadGenStore.sqf""]; this attachTo[fp7,[0,-3,0]];";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>General Store</t>"", ""client\systems\generalStore\loadGenStore.sqf""]; this attachTo[fp7,[0,-3,0]];";
 				};
 			};
 		};
@@ -649,7 +649,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="generalStore4";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>General Store</t>"", ""client\systems\generalStore\loadGenStore.sqf""]; this attachTo[fp8,[0,-3,0]];";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; this addAction[""<t color='#ff1111'>General Store</t>"", ""client\systems\generalStore\loadGenStore.sqf""]; this attachTo[fp8,[0,-3,0]];";
 				};
 			};
 		};
@@ -1949,7 +1949,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="bs1";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; removeAllWeapons this;";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM"";";
 				};
 			};
 		};
@@ -1969,7 +1969,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="bs2";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; removeAllWeapons this;";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM"";";
 				};
 			};
 		};
@@ -1989,7 +1989,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="bs3";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; removeAllWeapons this;";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM"";";
 				};
 			};
 		};
@@ -2009,7 +2009,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="bs4";
-					init="this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM""; removeAllWeapons this;";
+					init="removeAllWeapons this; removeAllItems this; this addEventHandler[""handledamage"", {false}]; this disableAI ""MOVE""; this DisableAI ""ANIM""; this disableAI ""FSM"";";
 				};
 			};
 		};
@@ -2027,7 +2027,7 @@ class Mission
 					vehicle="USMC_Soldier";
 					leader=1;
 					skill=0.60000002;
-					init="removeAllWeapons this;";
+					init="removeAllWeapons this; removeAllItems this;";
 				};
 			};
 		};
@@ -2045,7 +2045,7 @@ class Mission
 					vehicle="RU_Soldier";
 					leader=1;
 					skill=0.60000002;
-					init="removeAllWeapons this;";
+					init="removeAllWeapons this; removeAllItems this;";
 				};
 			};
 		};
