@@ -66,9 +66,9 @@ MD_FindPlayerStr = {
 	};
 	_killed = (_killed call MD_FindPlayerStr);
 	_killer = (_killer call MD_FindPlayerStr);
-	//diag_log format ["MD-> Server: Resolved: Killed: %1 | Killer: %2", _killed, _killer];
+	diag_log format ["MD-> Server: Resolved: Killed: %1 | Killer: %2", _killed, _killer];
 	//if (((side _killer) == "GUER") && ((side _killed) == "GUER")) then {
-	//diag_log format ["MD-> Server: Sides: Killed: %1 | Killer: %2", side (group _killed), side (group _killer)];
+	diag_log format ["MD-> Server: Sides: Killed: %1 | Killer: %2", side (group _killed), side (group _killer)];
 	if (side (group _killer) == resistance) then
 	{
 		if (side (group _killed) == resistance) then

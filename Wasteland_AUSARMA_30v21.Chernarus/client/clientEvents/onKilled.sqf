@@ -10,20 +10,26 @@ if (isnil {_player getVariable "cmoney"}) then {
 
 _player = (_this select 0) select 0;
 _killer = (_this select 0) select 1;
+// _killer addscore 2; // -- Markus : addScore can only be ran on the server... -->
+MD_GuerTK = [name _player, name _killer];
+diag_log format ["MD-> Client: Player: %1 | Killer: %2", MD_GuerTK select 0, MD_GuerTK select 1];
+publicVariableServer "MD_GuerTK";
+// <-- Markus
 _playerMoney = _player getVariable["cmoney",0];
 _currencyLimit = 10 * 1000;
 
 // Close any active dialogs.
 closeDialog 0;
-PlayerCDeath = [_player];
+PlayerCDeath = [_player, _killer];
 publicVariable "PlayerCDeath";
 if (isServer) then {
-	_id = PlayerCDeath spawn serverPlayerDied; 
+	_id = PlayerCDeath spawn serverPlayerDied; // Markus : This is a clientside script file.... Why is this being called here?
 };
 
 if(!local _player) exitwith {};
 
-if((_player != _killer) && (vehicle _player != vehicle _killer) && (playerSide == side (group _killer)) && (str(playerSide) in ["WEST", "EAST"])) then {
+// Don't know what smack whoever was on when they wrote THIS shit...
+if((_player != _killer) && (vehicle _player != vehicle _killer) && (playerSide == side _killer) && (str(playerSide) in ["WEST", "EAST"])) then {
 	pvar_PlayerTeamKiller = objNull;
 	if(_killer isKindOf "CAManBase") then {
 		pvar_PlayerTeamKiller = _killer;
