@@ -105,6 +105,15 @@ if (player getVariable "canDrop") then {
 			_newObject = "Suitcase" createVehicle (position _player);
 		};
 	};
+
+if((_player getVariable "spawnBeacon") > 0) then {
+        _pos = getPosATL _player;
+        _droppedBeacon = "Satelit" createVehicle (position _player);
+        _droppedBeacon setVariable["spawnsRemaining", 100, true];
+        _droppedBeacon setVariable["faction","WORLD",true];
+        _droppedBeacon setPos _pos;
+        _to_delete = _to_delete + [_droppedBeacon];
+};
 };
 
 	waitUntil {playerRespawnTime < 2};

@@ -72,7 +72,7 @@ player setVariable["canDrop",true,false];
 _player setVariable ["ShowNameAllies", false];
 
 [] execVM "client\functions\playerActions.sqf";
-[] execVM "client\functions\blockView.sqf";
+//[] execVM "client\functions\blockView.sqf";
 
 _player groupChat format["Player Initialization Complete"];
 playerSetupComplete = true;
