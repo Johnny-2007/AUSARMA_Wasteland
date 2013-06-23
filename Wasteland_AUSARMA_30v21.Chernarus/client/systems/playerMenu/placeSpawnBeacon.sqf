@@ -45,7 +45,7 @@ _activeBeacon = false;
     if(str(_playerUID) == str(_x select 3)) then {
     	_activeBeacon = true;	
     };
-}forEach pvar_beaconListIndep;
+}forEach pvar_beaconListInd;
 
 // Due to the 'Undefined behaviour' of exitWith inside loops, this is the workaround.
 if (_activeBeacon) exitWith {
@@ -120,8 +120,8 @@ for "_iteration" from 1 to _lockDuration do {
 	    };
         
         if(_playerSide == "GUER") then {
-	    	pvar_beaconListIndep set [count pvar_beaconListIndep,[_beaconOwner, _placedBeaconPos, 100, _playerUID]];
-	    	publicVariable "pvar_beaconListIndep";
+	    	pvar_beaconListInd set [count pvar_beaconListInd,[_beaconOwner, _placedBeaconPos, 100, _playerUID]];
+	    	publicVariable "pvar_beaconListInd";
 	    };
 	                  
 		mutexScriptInProgress = false;
