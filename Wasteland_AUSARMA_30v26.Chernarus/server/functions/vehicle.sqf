@@ -1,4 +1,4 @@
-/*  
+/*
 =========================================================
   Simple Vehicle Respawn Script v1.7
   by Tophe of Östgöta Ops [OOPS]
@@ -26,7 +26,7 @@
   By default the number of respawns is infinite. To set a limit
   First set the other values then the number of respawns you want (0 = infinite).
   Like this:
-  veh = [this, 15, 10, 5] execVM "vehicle.sqf"
+  veh = [this, 15, 10, 0] execVM "vehicle.sqf"
 
 
   Set this value to TRUE to add a special explosion effect to the wreck when respawning.
@@ -56,9 +56,9 @@ Contact & Bugreport: harlechin@hotmail.com
 
 =========================================================
 */
-  
+ 
 if (!isServer) exitWith {};
-#include "setup.sqf"
+#include "setup.sqf" 
 // Define variables
 _unit = _this select 0;
 _delay = if (count _this > 1) then {_this select 1} else {30};
@@ -94,49 +94,114 @@ _startTime = floor(time);
 #endif
 
 // Start monitoring the vehicle
-while {_run} do 
-{	
-	sleep (2 + random 10);
-      if ((getDammage _unit > 0.8) and ({alive _x} count crew _unit == 0)) then {_dead = true};
+while {_run} do {
+    
+	#ifdef __A2NET__
+	_currTime = floor(netTime);
+	#else
+	_currTime = floor(time);
+	#endif
+    if(_currTime - _startTime >= 300) then {_result = 1;};
 
-	// Check if the vehicle is deserted.
-	if (_deserted > 0) then
-	{
-		if ((getPosASL _unit distance _position > 10) and ({alive _x} count crew _unit == 0) and (getDammage _unit < 0.8)) then 
-		{
-			_timeout = time + _deserted;
-			sleep 0.1;
-		 	waitUntil {_timeout < time or !alive _unit or {alive _x} count crew _unit > 0};
-			if ({alive _x} count crew _unit > 0) then {_dead = false}; 
-			if ({alive _x} count crew _unit == 0) then {_dead = true; _nodelay =true}; 
-			if !(alive _unit) then {_dead = true; _nodelay = false}; 
+	if(_result == 1) then {
+        
+        sleep (2 + random 10);
+        
+      	if ((getDammage _unit > 0.8) and ({alive _x} count crew _unit == 0)) then {_dead = true};
+
+        _curPosX = getPos _unit select 0;
+        _curPosY = getPos _unit select 1;
+        
+        if ((_curPosX < 0 or _curPosX > 15360) and ({alive _x} count crew _unit == 0)) then {_dead = true; _deserted = 0;};
+        if ((_curPosY < 0 or _curPosY > 15360) and ({alive _x} count crew _unit == 0)) then {_dead = true; _deserted = 0;};
+
+		// Check if the vehicle is deserted.
+		if (_deserted > 0) then {
+            
+			if ((getPosASL _unit distance _position > 10) and ({alive _x} count crew _unit == 0) and (getDammage _unit < 0.8)) then {
+                
+				#ifdef __A2NET__
+				_timeout = netTime + _deserted;
+				#else
+				_timeout = time + _deserted;
+				#endif
+
+				sleep 0.1;
+				#ifdef __A2NET__
+			 	waitUntil {_timeout < netTime or !alive _unit or {alive _x} count crew _unit > 0};
+				#else
+				waitUntil {_timeout < time or !alive _unit or {alive _x} count crew _unit > 0};
+				#endif
+				if ({alive _x} count crew _unit > 0) then {_dead = false};
+				if ({alive _x} count crew _unit == 0) then {_dead = true; _nodelay =true};
+				if !(alive _unit) then {_dead = true; _nodelay = false};
+                
+			};
+            
 		};
-	};
 
-	// Respawn vehicle
-      if (_dead) then 
-	{	
-		if (_nodelay) then {sleep 0.1; _nodelay = false;} else {sleep _delay;};
-		if (_dynamic) then {_position = getPosASL _unit; _dir = getDir _unit;};
-		if (_explode) then {_effect = "M_TOW_AT" createVehicle getPosASL _unit; _effect setPosASL getPosASL _unit;};
-		sleep 0.1;
+		// Respawn vehicle
+      	if (_dead) then {
+            
+			if (_nodelay) then {sleep 0.1; _nodelay = false;} else {sleep _delay;};
+			if (_dynamic) then {_position = getPosASL _unit; _dir = getDir _unit;};
+			if (_explode) then {_effect = "M_TOW_AT" createVehicle getPosASL _unit; _effect setPosASL getPosASL _unit;};
+            
+			sleep 0.1;
 
-		deleteVehicle _unit;
-		sleep 2;
-		_unit = _type createVehicle _position;
-		_unit setPosASL _position;
-		_unit setDir _dir;
+			deleteVehicle _unit;
+            
+            diag_log format["VEHICLE: deleting %1",_unit];
+            
+			sleep 2;
 
-		if (_haveinit) then 
-					{_unit setVehicleInit format ["%1;", _unitinit];
-					processInitCommands;};
-		if (_hasname) then 
-					{_unit setVehicleInit format ["%1 = this; this setVehicleVarName ""%1""",_unitname];
-					processInitCommands;};
-		_dead = false;
+			_num = floor (random 100);
+			if (_num < 100) then {_type = 0;};
+			if (_num < 35) then {_type = 1;};
+			if (_num < 10) then {_type = 2;};
+            
+            //_position = ["Car"] call triageSpawn;
+			[_position, _type] call vehicleCreation;
 
-		// Check respawn amount
-		if !(_noend) then {_rounds = _rounds + 1};
-		if ((_rounds == _respawns) and !(_noend)) then {_run = false;};
-	};
+            _nearestTown = "UNKNOWN";
+            _nearestTownDist = 9999;
+            
+            {
+                
+                _townPos = getMarkerPos (_x select 0);
+                _townName = _x select 2;
+                _townDist = _position distance _townPos;
+                
+                if(_townDist < _nearestTownDist) then {
+                    
+	            	_nearestTown = _townName;
+	            	_nearestTownDist = _townDist;
+                    
+                };
+                
+            }forEach cityList;
+            
+            diag_log format["VEHICLE: respawned replacement vehicle at %1, %2m from %3", _position, _nearestTownDist, _nearestTown];
+
+            // END LOOP
+			_run = false;
+            
+		};
+        
+        #ifdef __A2NET__
+		_startTime = floor(netTime);
+		#else
+		_startTime = floor(time);
+		#endif
+
+		_result = 0;
+        
+    } else {
+        
+    	sleep (5 + random 5);
+        
+    };
+    
+	sleep 1;
+    
 };

@@ -127,6 +127,7 @@ R3F_LOG_CFG_transporteurs = [
 	["GAZ_Vodnik_HMG", 20],
 	["hilux1_civil_1_open", 15],
 	["hilux1_civil_3_open", 15],
+	["HMMWV", 15],
 	["HMMWV_Ambulance", 15],
 	["HMMWV_Ambulance_CZ_DES_EP1", 15],
 	["HMMWV_Ambulance_DES_EP1", 15],

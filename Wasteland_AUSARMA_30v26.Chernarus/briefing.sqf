@@ -19,7 +19,7 @@ player createDiaryRecord["AUSARMA",
 <br/>
 	Contributors:<br/><br/>
     AUSARMA Rebuild.<br/><br/>
-	Credits to Tonic, 404 team, Redshirt-Ensign and UHAX.<br/><br/>
+	Credits to Tonic, 404 team, Redshirt-Ensign, UHAX and Radioman.<br/><br/>
 "
 ]
 ];
