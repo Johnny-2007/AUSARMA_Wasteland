@@ -98,7 +98,6 @@ militaryVehicles = [
 
 //Armed Military Vehicle List - Random Spawns
 armedMilitaryVehicles = [
-			"ArmoredSUV_PMC",
 			"GAZ_Vodnik",
 			"HMMWV_Armored",
 			"HMMWV_M1151_M2_DES_EP1",
@@ -134,7 +133,6 @@ objectList=[
 	"Base_WarfareBBarrier5x",
 	"Concrete_Wall_EP1",
 	"Fort_Barricade",
-	"Fort_Nest_M240",
 	"Land_BagFenceLong",
 	"Land_BagFenceLong",
 	"Land_Barrel_water",
@@ -161,7 +159,6 @@ objectList=[
 	"Land_prebehlavka",
 	"Land_stand_small_EP1",
 	"Land_stand_small_EP1",
-	"Land_tent_east",
 	"RampConcrete",
 	"WarfareBCamp",
 	"WarfareBDepot",

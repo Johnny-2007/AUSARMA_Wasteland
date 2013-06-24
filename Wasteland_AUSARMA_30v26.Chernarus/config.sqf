@@ -10,7 +10,9 @@ weaponsArray = [
 	// Pistols
 
     // Shotguns & Rifles		
-    [2, "AK-74","AK_74",50,25],
+	[2, "Saiga12K Shotgun","Saiga12K",25,25],
+	[2, "M1014 Shotgun","M1014",25,25],
+	[2, "AK-74","AK_74",50,25],
     [2, "AK-107","AK_107_kobra",70,35],
     [2, "AKM","AK_47_M",70,35],
     [2, "M4A1 CCO","M4A1_Aim",100,50],
@@ -18,6 +20,7 @@ weaponsArray = [
     [2, "Sa-58V ACOG","Sa58V_RCO_EP1",150,75],
     [2, "M8","m8_carbine",150,75],
     [2, "Mk17 CCO","SCAR_H_CQC_CCO",350,175],
+	[2, "Lee Enfield","LeeEnfield", 200,100],
     [2, "FN FAL","FN_FAL",300,150],
     [2, "M14 AIM","M14_EP1",350,175],
     [2, "Mk16 EGLM RCO","SCAR_L_STD_EGLM_RCO",350,175],	
@@ -56,7 +59,7 @@ ammoArray = [
     ["8Rnd. M1014 Slug","8Rnd_B_Beneli_74Slug",5],
     ["8Rnd. Saiga 12K Slug","8Rnd_B_Saiga12_74Slug",5],
     ["30Rnd AK","30Rnd_545x39_AK",10],
-    ["30Rnd AKM","30Rnd_762x39_AK47",20],
+    ["30Rnd AKM","30Rnd_762x39_AK47",15],
     ["30Rnd STANAG","30Rnd_556x45_Stanag",10],
     ["30Rnd STANAG SD","30Rnd_556x45_StanagSD",30],
     ["30Rnd G36","30Rnd_556x45_G36",10],
