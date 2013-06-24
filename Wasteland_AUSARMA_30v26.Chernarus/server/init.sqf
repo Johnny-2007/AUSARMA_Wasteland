@@ -30,7 +30,7 @@ waitUntil{scriptDone _serverCompiledScripts};
 private ["_iter"];
 MD_PlayerSlots = [];
 _iter = 1;
-while {call compile format ["!isnull guer%1", _iter]} do
+while {call compile format ["!isNil 'guer%1'", _iter]} do
 {
 	MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
 	_iter = _iter + 1;
@@ -76,9 +76,9 @@ MD_FindPlayerStr = {
 			if ((name _killer) == (name _killed)) exitWith {}; // -- Don't allow score increase if suicide.
 			if ((group _killed) == (group _killer)) exitWith {}; // -- Don't allow score increase if in same group.
 			_killer addScore 2; // -- Add score to the killer, to cover the TK, and increment their score.
-		}
+		};
 	};
- };
+};
 // <-- Markus
 
 diag_log format["WASTELAND SERVER - Server Compile Finished"];

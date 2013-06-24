@@ -51,7 +51,7 @@ if(str(playerSide) in ["GUER"]) then
 	_player selectWeapon "glock17_EP1";
 };
 
-_player addrating 1000000;
+_player addrating 999999;
 _player switchMove "amovpknlmstpsraswpstdnon_gear";
 
 thirstLevel = 100;
