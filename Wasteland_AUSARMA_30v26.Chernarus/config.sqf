@@ -68,13 +68,15 @@ ammoArray = [
     ["20Rnd FN FAL.","20Rnd_762x51_FNFAL",25],
     ["20Rnd AA-12 Slug","20Rnd_B_AA12_74Slug",30],
     ["20Rnd AA-12 Pellets","20Rnd_B_AA12_Pellets",50], 
+    ["20Rnd AA-12 High Explosive","20Rnd_B_AA12_HE",400],
 	
     ["200Rnd M249","200Rnd_556x45_M249",80],
     ["100Rnd M240","100Rnd_762x51_M240",80],
     ["100Rnd PKM.","100Rnd_762x54_PK",80],
     ["200Rnd L110A1","200Rnd_556x45_L110A1",80],
 
-    ["5Rnd 338 Lapua","5Rnd_86x70_L115A1",50],
+	["5Rnd_762x51_M24","5Rnd_762x51_M24",50],
+    ["5Rnd 338 Lapua","5Rnd_86x70_L115A1",100],
     ["5Rnd CZ550","5x_22_LR_17_HMR",50],
     ["20Rnd SCAR","20Rnd_762x51_B_SCAR",40],
     ["20Rnd M14/DMR","20Rnd_762x51_DMR",50],
