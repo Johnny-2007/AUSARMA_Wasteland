@@ -1,7 +1,7 @@
 #include "addons\R3F_ARTY_AND_LOG\desc_include.h"
 loadScreen = "Loading.jpg";
 respawn="BASE";
-respawnDelay=15;
+respawnDelay=30;
 disabledAI=1;
 disableChannels[]={1,2};
 enableItemsDropping = 0;
