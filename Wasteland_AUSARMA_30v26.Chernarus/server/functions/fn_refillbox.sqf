@@ -46,8 +46,10 @@ switch(_selectedBox) do {
 		// Add new weapons before ammunition
 		_currBox addWeaponCargoGlobal ["RPG7V",2];
 		_currBox addWeaponCargoGlobal ["SMAW",2];
+		_currBox addWeaponCargoGlobal ["M32_EP1",2];
 		// Add ammunition
 		_currBox addMagazineCargoGlobal ["1Rnd_HE_M203",25];
+		_currBox addMagazineCargoGlobal ["6Rnd_HE_M203",12];
 		_currBox addMagazineCargoGlobal ["PG7V",10];
 		_currBox addMagazineCargoGlobal ["SMAW_HEAA",10];
 		_currBox addMagazineCargoGlobal ["HandGrenade",10];

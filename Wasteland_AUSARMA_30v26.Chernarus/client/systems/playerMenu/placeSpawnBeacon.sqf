@@ -95,7 +95,7 @@ for "_iteration" from 1 to _lockDuration do {
 	if(vehicle player != player) exitWith {
 		player globalChat localize "STR_WL_Errors_BeaconInVehicle";
         player action ["eject", vehicle player];
-
+        mutexScriptInProgress = false;
 	};  
     
     if (doCancelAction) exitWith {// Player selected "cancel action".
@@ -138,9 +138,9 @@ for "_iteration" from 1 to _lockDuration do {
 	    _placedBeacon setVariable["ownerName",_beaconOwner,true];
 	    _placedBeacon setVariable["ownerUID",_playerUID,true];
 
-
-            _placedBeacon enableSimulation false;
-
+      	// Disable physics for the spawn beacon globally and JIP      
+        _announce = [nil,_placedBeacon,"per",rENABLESIMULATION,false] call RE;
+        
 	    _placedBeaconPos = getPos _placedBeacon;
 	   
 	    if(_playerSide == "WEST") then {

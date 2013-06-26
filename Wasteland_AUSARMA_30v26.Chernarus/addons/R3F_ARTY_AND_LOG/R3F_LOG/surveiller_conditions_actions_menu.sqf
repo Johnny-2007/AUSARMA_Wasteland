@@ -154,5 +154,5 @@ while {true} do
 			([0,0,0] distance velocity R3F_LOG_objet_addAction < 15) && (getPos R3F_LOG_objet_addAction select 2 < 40) && !(R3F_LOG_objet_addAction getVariable "R3F_LOG_disabled"));
 	};
 	
-	sleep 0.3;
+	sleep 0.2;
 };
