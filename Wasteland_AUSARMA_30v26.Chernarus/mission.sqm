@@ -5806,7 +5806,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=978;
+		items=980;
 		class Item0
 		{
 			position[]={10493.797,6,2295.8762};
@@ -11872,6 +11872,20 @@ class Mission
 			name="bs3";
 			type="Empty";
 			angle=-1384.78;
+		};
+		class Item978
+		{
+			position[]={8327.6826,143.2917,4913.5352};
+			name="Mission_16";
+			type="Empty";
+			colorName="ColorOrange";
+		};
+		class Item979
+		{
+			position[]={5502.1069,308.36014,7334.2759};
+			name="Mission_54";
+			type="Empty";
+			colorName="ColorOrange";
 		};
 	};
 };

@@ -7,11 +7,11 @@
 if(!X_Server) exitWith {};
 
 //Admin menu access levels
-moderators = ["74351430","87646790","6121728"]; //Freeborne, Damnation, Vlad, Johnny
+moderators = ["78933318","74351430","87646790","6121728"]; //Freeborne, Damnation, Vlad, Johnny
 publicVariable "moderators"; 
            
 administrators = [""];
 publicVariable "administrators";
 
-serverAdministrators = ["78933318"]; 
+serverAdministrators = [""]; 
 publicVariable "serverAdministrators";

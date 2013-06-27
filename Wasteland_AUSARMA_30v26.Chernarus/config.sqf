@@ -124,7 +124,7 @@ generalStore = [
 	["Jerry Can (Full)","fuelFull",localize "STR_WL_ShopDescriptions_fuelFull","client\icons\jerrycan.paa",150,75],
     ["Jerry Can (Empty)","fuelEmpty",localize "STR_WL_ShopDescriptions_fuelEmpty","client\icons\jerrycan.paa",50,25],
 	["Spawn Beacon","spawnBeacon",localize "STR_WL_ShopDescriptions_spawnBeacon","client\icons\satellite.paa",2000,1000],
-    ["Camo Net", "camonet", localize "STR_WL_ShopDescriptions_Camo", "client\icons\tent.paa",300,150]  
+    ["Camo Net", "camonet", localize "STR_WL_ShopDescriptions_Camo", "client\icons\tent.paa",200,100]  
 ];
 
 //Name, Price, Vehicle
@@ -138,7 +138,7 @@ BuildStoreArray = [
 	["Fortification, Watchtower", 25, "Land_Fort_Watchtower"],
 	["Fortification, Wooden Guard Shed", 25, "Land_GuardShed"],
 	["Misc, Campfire", 25, "Land_Campfire_burning"],
-	["Misc, MASH Tent", 200, "MASH"],
+	["Misc, MASH Tent", 100, "MASH"],
 	["Misc, Storage Tent", 25, "Land_tent_east"],
 	["Ramp, Artillery Nest", 25, "Land_fort_artillery_nest"],
 	["Ramp, Concrete (high)", 50, "Land_ConcreteRamp"],
@@ -151,10 +151,10 @@ BuildStoreArray = [
 	["Roadblock, Concrete Teeth", 100, "Land_CncBlock_Stripes"],
 	["Roadblock, Rubbish Barricade", 25, "Fort_Barricade"],
 	["Roadblock, Steel Hedgehog", 25, "Hedgehog"],
-	["Storage Container (150x)", 300, "Land_Misc_Cargo1D"],
+	["Storage Container (150x)", 200, "Land_Misc_Cargo1D"],
 	["Storage, Wooden Box (20x)", 25, "Fort_Crate_wood"],
-	["Supplies, Food (30x)", 300, "Land_stand_small_EP1"],
-	["Supplies, Water (30x)", 300, "Land_Barrel_water"],
+	["Supplies, Food (30x)", 200, "Land_stand_small_EP1"],
+	["Supplies, Water (30x)", 200, "Land_Barrel_water"],
 	["Wall, Concrete", 25, "Concrete_Wall_EP1"],
 	["Wall, HESCO, Brown (long, high)", 75, "Base_WarfareBBarrier10xTall"],
 	["Wall, HESCO, Brown (long, low)", 50, "Base_WarfareBBarrier10x"],
