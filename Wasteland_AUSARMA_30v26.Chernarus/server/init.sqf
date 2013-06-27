@@ -55,7 +55,7 @@ MD_FindPlayerStr = {
 	// -- Get the player and killer objects
 	_killed = ((_this select 1) select 0);
 	_killer = ((_this select 1) select 1);
-	diag_log format ["MD-> Server: Killed: %1 | Killer: %2", _killed, _killer];
+	//diag_log format ["MD-> Server: Killer: %2 Killed: %1", _killed, _killer];
 	private ["_iter"];
 	MD_PlayerSlots = [];
 	_iter = 1;
@@ -68,7 +68,7 @@ MD_FindPlayerStr = {
 	_killer = (_killer call MD_FindPlayerStr);
 	diag_log format ["MD-> Server: Resolved: Killed: %1 | Killer: %2", _killed, _killer];
 	//if (((side _killer) == "GUER") && ((side _killed) == "GUER")) then {
-	diag_log format ["MD-> Server: Sides: Killed: %1 | Killer: %2", side (group _killed), side (group _killer)];
+	//diag_log format ["MD-> Server: Sides: Killed: %1 | Killer: %2", side (group _killed), side (group _killer)];
 	if (side (group _killer) == resistance) then
 	{
 		if (side (group _killed) == resistance) then
