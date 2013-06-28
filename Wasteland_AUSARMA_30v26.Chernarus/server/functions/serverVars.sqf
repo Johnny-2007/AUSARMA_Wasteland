@@ -79,6 +79,7 @@ civilianVehicles = [
 			"S1203_ambulance_EP1",
 			"S1203_TK_CIV_EP1",
 			"SkodaGreen",
+			"SUV_TK_EP1",
 			"UAZ_Unarmed_TK_CIV_EP1",
 			"UralCivil",
 			"V3S_Civ",
@@ -87,17 +88,19 @@ civilianVehicles = [
 
 //Military Vehicle List - Random Spawns
 militaryVehicles = [
-			"BAF_Offroad_W",
+			"LandRover_CZ_EP1",
 			"GAZ_Vodnik_MedEvac",
 			"HMMWV",
 			"HMMWV_Ambulance",
 			"MTVR",
-			"SUV_PMC",
-			"UAZ_CDF"
+			"UAZ_CDF",
+			"UralOpen_CDF"
 ];
 
 //Armed Military Vehicle List - Random Spawns
 armedMilitaryVehicles = [
+			"BRDM2_HQ_Gue",
+			"BTR40_MG_TK_GUE_EP1",
 			"GAZ_Vodnik",
 			"HMMWV_Armored",
 			"HMMWV_M1151_M2_DES_EP1",
@@ -105,9 +108,10 @@ armedMilitaryVehicles = [
 			"HMMWV_M998A2_SOV_DES_EP1",
 			"HMMWV_MK19",
 			"HMMWV_TOW",
-			"LandRover_MG_TK_INS_EP1",
+			"LandRover_MG_TK_EP1",
 			"Offroad_DSHKM_Ins",
-			"UAZ_MG_TK_EP1",
+			"UAZ_AGS30_RU"
+			"UAZ_MG_CDF",
 			"UAZ_SPG9_INS",
 			"Ural_ZU23_INS"
 ];
@@ -143,7 +147,6 @@ objectList=[
 	"Land_fort_bagfence_long",
 	"Land_fort_bagfence_round",
 	"Land_fort_rampart",
-
 	"Land_Fort_Watchtower",
 	"Land_HBarrier_large",
 	"Land_HBarrier_large",
@@ -153,8 +156,7 @@ objectList=[
 	"Land_stand_small_EP1",
 	"Land_stand_small_EP1",
 	"RampConcrete",
-	"WarfareBDepot",
-	"ZavoraAnim"
+	"WarfareBDepot"
 ];	
 
 //Object List - Random Spawns.
@@ -163,8 +165,10 @@ staticWeaponsList = [
 	"DSHKM_TK_INS_EP1",
 	"Fort_Nest_M240",    
 	"Igla_AA_pod_TK_EP1",
+	"M2HD_mini_TriPod_US_EP1",
 	"M2StaticMG_US_EP1",
-	"ZU23_TK_INS_EP1"
+	"SPG9_TK_INS_EP1",
+	"ZU23_TK_EP1"
 ];
 
 //Object List - Random Helis.

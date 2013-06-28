@@ -73,7 +73,6 @@ switch (_faction) do
   case "GUE": {east}; 
   case "CIV": {east}; 
   case "CIV_RU": {east}; 
-  
 };
 
 EnemyGrpM = createGroup _side;
