@@ -36,7 +36,7 @@ diag_log format["WASTELAND SERVER - Main Mission Resumed: %1",_missionType];
 
 [_missionMarkerName,_randomPos,_missionType] call createClientMarker;
 
-_vehicleClass = ["BTR60_TK_EP1","BRDM2_TK_GUE_EP1","M113_UN_EP1"] call BIS_fnc_selectRandom;
+_vehicleClass = ["BTR60_TK_EP1","BRDM2_TK_GUE_EP1","M113_UN_EP1","AAPV"] call BIS_fnc_selectRandom;
 
 //Vehicle Class, Posistion, Fuel, Ammo, Damage, State
 _vehicle = [_vehicleClass,_randomPos,0,1,0.75,"NONE"] call createMissionVehicle;

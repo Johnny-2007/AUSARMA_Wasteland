@@ -4,7 +4,7 @@
 //	@file Created: 08/12/2012 15:19
 
 //Side Mission Colour = #4BC9B0 - Turquoise
- //Side Mission Colour = #4B99C9 - Sky Blue
+//Side Mission Colour = #4B99C9 - Sky Blue
 //Fail Mission Colour = #FF1717 - Light red
 //Fail Mission Colour = #17FF41 - Light green
 //Sub Colour = #FFF - White

@@ -18,7 +18,7 @@ _MMarray = [
 		[mission_Heli,"mission_Heli"],
 		[mission_LightArmVeh,"mission_LightArmVeh"],
 		[mission_LightTank,"mission_LightTank"],
-		[mission_MBT,"mission_MBT"],
+//		[mission_MBT,"mission_MBT"],
 //      [mission_RadarTruck,"mission_RadarTruck"],
 //		[mission_VIP,"mission_VIP"]];
 		[mission_Outpost,"mission_Outpost"]];

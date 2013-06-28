@@ -23,18 +23,20 @@ switch(_selectedBox) do {
 		_currBox addWeaponCargoGlobal ["M14_EP1",2];			
 		_currBox addWeaponCargoGlobal ["BAF_L7A2_GPMG",2];
         _currBox addWeaponCargoGlobal ["BAF_L110A1_Aim",2];
-        _currBox addWeaponCargoGlobal ["BAF_L85A2_UGL_Holo",1];		
+        _currBox addWeaponCargoGlobal ["BAF_L85A2_UGL_Holo",2];		
 		_currBox addWeaponCargoGlobal ["FN_FAL",2];
+		_currBox addWeaponCargoGlobal ["RPG7V",2];
         
         // Add ammunition
-        _currBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",72];
-        _currBox addMagazineCargoGlobal ["100Rnd_762x51_M240",16];
-        _currBox addMagazineCargoGlobal ["1Rnd_HE_M203",12];
-        _currBox addMagazineCargoGlobal ["HandGrenade",8];
-		_currBox addMagazineCargoGlobal ["200Rnd_556x45_L110A1",16];
+		_currBox addMagazineCargoGlobal ["10Rnd_762x54_SVD",12];
         _currBox addMagazineCargoGlobal ["20Rnd_762x51_DMR",20];
+        _currBox addMagazineCargoGlobal ["100Rnd_762x51_M240",16];
+		_currBox addMagazineCargoGlobal ["200Rnd_556x45_L110A1",16];
+        _currBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",72];
+        _currBox addMagazineCargoGlobal ["1Rnd_HE_M203",12];
         _currBox addMagazineCargoGlobal ["20Rnd_762x51_FNFAL",24];
-		_currBox addMagazineCargoGlobal ["10Rnd_762x54_SVD",12]; 		
+		_currBox addMagazineCargoGlobal ["PG7V",6];
+        _currBox addMagazineCargoGlobal ["HandGrenade",8];
     };
     case "mission_Side_USLaunchers": { // Used in the airwreck side mission
     	_currBox = _box;
