@@ -110,7 +110,7 @@ armedMilitaryVehicles = [
 			"HMMWV_TOW",
 			"LandRover_MG_TK_EP1",
 			"Offroad_DSHKM_Ins",
-			"UAZ_AGS30_RU"
+			"UAZ_AGS30_RU",
 			"UAZ_MG_CDF",
 			"UAZ_SPG9_INS",
 			"Ural_ZU23_INS"
