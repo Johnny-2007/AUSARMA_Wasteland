@@ -26,13 +26,15 @@ weaponsArray = [
     [2, "Mk16 EGLM RCO","SCAR_L_STD_EGLM_RCO",350,175],	
     [2, "AA-12 Shotgun","AA12_PMC",400,200],
 
-    // Machineguns	
+    // Machineguns
+	[4, "MG36","MG36",250,125],
     [4, "L110A1","BAF_L110A1_Aim",200,100],
     [4, "M249","M249_EP1",250,125],
-    [4, "M249 scope","M249_m145_EP1",250,125],
-    [4, "Mk_48 Mod","Mk_48",400,200],
+    [4, "M249 scope","M249_m145_EP1",350,175],
+    [4, "Mk_48 Mod","Mk_48",350,175],
     [4, "M240","M240",250,125],
-    [4, "Pecheneg","Pecheneg",250,225],
+	[4, "PKM","PK",250,125],
+    [4, "PKP","Pecheneg",350,175],
 	
     // Sniper rifles	
     [3, "AK 107 GL PSO","AK_107_GL_pso",150,75],
