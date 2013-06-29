@@ -47,12 +47,12 @@ weaponsArray = [
     [3, "KSVK","ksvk",800,400],
 
     // Anti-tank	
-    [5, "RPG-7V","RPG7V",500,250],
-    [5, "SMAW","SMAW",500,250],
-    [5, "FIM-92F Stinger","Stinger",800,400],
+    [5, "RPG-7V","RPG7V",300,150],
+    [5, "SMAW","SMAW",300,150],
+    [5, "FIM-92F Stinger","Stinger",300,150],
     [5, "M136 Launcher","M136",200,100],
-    [5, "M47 Dragon","M47Launcher_EP1",500,250],
-    [5, "NLAW","BAF_NLAW_Launcher",1000,400]
+    [5, "M47 Dragon","M47Launcher_EP1",300,150],
+    [5, "NLAW","BAF_NLAW_Launcher",300,150]
 ];
 
 //Gun Store Ammo List
@@ -99,7 +99,7 @@ ammoArray = [
     ["Strela Rocket","Strela",400],
     ["Stinger Rocket","Stinger",300],
     ["M57 Dragon Rocket","Dragon_EP1",250],
-    ["NLAW Rocket","NLAW",300],
+    ["NLAW Rocket","NLAW",500],
     ["M136 Rocket","M136",200],
     
     ["L109A2 Frag","BAF_L109A1_HE",100],
