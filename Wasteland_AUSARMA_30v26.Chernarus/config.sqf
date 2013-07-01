@@ -1,6 +1,6 @@
 //	@file Version: 1.0
 //	@file Name: config.sqf
-//	@file Author: [404] Deadbeat, [404] Costlyy
+//	@file Author: [404] Deadbeat, [404] Costlyy, [TOG FF] Redshirt Ensign
 //	@file Created: 20/11/2012 05:13
 //	@file Description: Main config.
                                                                                                 

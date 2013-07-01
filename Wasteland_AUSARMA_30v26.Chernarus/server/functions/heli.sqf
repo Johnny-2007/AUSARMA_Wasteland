@@ -2,6 +2,7 @@
 =========================================================
   Simple Vehicle Respawn Script v1.7
   by Tophe of Östgöta Ops [OOPS]
+  adapted into heli.sqf by [TOG FF] Redshirt_Ensign
   
   Put this in the vehicles init line:
   veh = [this] execVM "vehicle.sqf"

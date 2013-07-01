@@ -1,8 +1,8 @@
 
 //	@file Version: 1.0
-//	@file Name: Script Name
-//	@file Author: [404] Deadbeat
-//	@file Created: DD/MM/YYYY HH:MM
+//	@file Name: objectCreation.sqf
+//	@file Author: [404] Deadbeat, [TOG FF] Bench
+//	@file Created: 20/04/2013
 //	@file Args:
 
 if(!X_Server) exitWith {};

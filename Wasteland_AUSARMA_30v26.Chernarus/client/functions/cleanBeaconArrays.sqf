@@ -1,7 +1,7 @@
 
 //	@file Version: 1.0
 //	@file Name: cleanBeaconArrays.sqf
-//	@file Author: [404] Costlyy
+//	@file Author: [404] Costlyy, [TOG FF] Redshirt Ensign
 //	@file Created: 08/12/2012 18:30
 //	@file Args: [string(ownerUID)]
 

@@ -1,6 +1,6 @@
 //	@file Version: 1.0
 //	@file Name: staticHeliCreation.sqf
-//	@file Author: [404] Costlyy
+//	@file Author: [404] Costlyy, [TOG FF] Redshirt Ensign
 //	@file Created: 20/12/2012 21:00
 //	@file Description: Random static helis
 //	@file Args: [int (0 = not wreck | 1 = wreck), array (position)]

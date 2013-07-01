@@ -1,6 +1,6 @@
 //	@file Version: 1.0
 //	@file Name: cqMissionController.sqf
-//	@file Author: [404] Deadbeat, [404] Costlyy, Redshirt_Ensign
+//	@file Author: [404] Deadbeat, [404] Costlyy, [TOG FF] Redshirt Ensign
 //	@file Created: 08/12/2012 15:19
 
 if(!isServer) exitWith {};

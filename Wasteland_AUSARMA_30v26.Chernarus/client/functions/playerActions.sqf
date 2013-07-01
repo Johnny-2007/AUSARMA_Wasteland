@@ -1,7 +1,7 @@
 
 //	@file Version: 1.1
 //	@file Name: playerActions.sqf
-//	@file Author: [404] Deadbeat, [404] Costlyy
+//	@file Author: [404] Deadbeat, [404] Costlyy, [TOG FF] Redshirt_Ensign
 //	@file Created: 20/11/2012 05:19
 //  @file Modified: 07/12/2012 23:35
 //	@file Args:

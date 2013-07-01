@@ -1,6 +1,6 @@
 //	@file Version: 1.0
 //	@file Name: onKilled.sqf
-//	@file Author: [404] Deadbeat, [404] costlyy
+//	@file Author: [404] Deadbeat, [TOG FF] Redshirt_Ensign
 //	@file Created: 20/11/2012 05:19
 //	@file Args:
 

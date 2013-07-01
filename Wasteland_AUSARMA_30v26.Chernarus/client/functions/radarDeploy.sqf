@@ -1,6 +1,6 @@
 //	@file Version: 1.0
 //	@file Name: radarDeploy.sqf
-//	@file Author: [404] Costlyy
+//	@file Author: [404] Deadbeat, [404] Costlyy, [TOG FF] Redshirt_Ensign
 //	@file Created: 08/12/2012 15:19
 //	@file Args: [obj(tank), player]
 

@@ -1,6 +1,6 @@
 //	@file Version: 0.9
 //	@file Name: playericons.sqf
-//	@file Author: [404] Pulse
+//    @file Author: [404] Pulse (Name tag by Worltrade1101)
 //	@file Created: 01/01/2012
 //	@file Description: Creating and displaying the icons above team or group.
 

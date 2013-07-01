@@ -1,7 +1,7 @@
 
 //	@file Version: 1.0
 //	@file Name: detectBeacon.sqf
-//	@file Author: [TOG] Redshirt_Ensign
+//	@file Author: [TOG FF] Redshirt_Ensign
 //	@file Created: 13/03/2013 01:00
 //	@file Args:
 

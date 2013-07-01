@@ -1,6 +1,6 @@
 //	@file Version: 1.0
 //	@file Name: radarMarkerUpdate.sqf
-//	@file Author: [404] Costlyy
+//	@file Author: [404] Costlyy, [TOG FF] Redshirt Ensign
 //	@file Created: 08/12/2012 15:19
 //	@file Args: [int(key)]
 

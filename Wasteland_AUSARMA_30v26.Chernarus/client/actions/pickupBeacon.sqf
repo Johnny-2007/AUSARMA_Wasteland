@@ -1,7 +1,7 @@
 
 //	@file Version: 1.0
 //	@file Name: pickupBecon.sqf
-//	@file Author: [404] Costlyy
+//	@file Author: [404] Costlyy, [TOG FF] Redshirt Ensign
 //	@file Created: 7/12/2012 23:30
 //	@file Args:[,,,int (1 = destroy | 0 = steal)]
 

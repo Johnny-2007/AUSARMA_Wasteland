@@ -1,6 +1,6 @@
 //	@file Version: 1.0
 //	@file Name: spawnRandom.sqf
-//	@file Author: [404] Deadbeat, [404] Costlyy
+//	@file Author: [404] Deadbeat, [404] Costlyy, [DI] Dammit, [TOG FF] Redshirt Ensign
 //	@file Created: 28/11/2012 05:19
 //	@file Args:
 

@@ -1,7 +1,7 @@
-//	@file Version: 0.1
+//	@file Version: 0.5
 //	@file Name: vehicleLock.sqf
-//	@file Author: Redshirt_Ensign
-//	@file Created: 27/04/2013 13:19
+//	@file Author: [TOG FF] Redshirt Ensign
+//	@file Created: 14/06/2013 23:55
 //	@file Args: object class
 
 if(!X_Server) exitWith {};
@@ -11,23 +11,20 @@ _vehicle = _this select 0;
 
 _vehicle addEventHandler ["GetIn",
 {
-    private ["_veh", "_pos", "_unit", "_crewMember", "_groupArray","_aliveCrew"];
+    private ["_veh", "_pos", "_unit", "_crew", "_aliveCrew", "_isFriendly", "_crewMember", "_groupArray"];
     _veh = _this select 0;
     _pos = _this select 1;
     _unit = _this select 2;
-    _aliveCrew = ({alive _x} count crew _veh);
-    _groupArray = [];
-    if ( (str(side _unit) == "GUER") AND ({alive _x} count crew _veh > 0) ) then {
+    if (str(side _unit) == "GUER") then {
         _crew = crew _veh;
-        _crewMember = _crew select 0;
         {
-            _groupArray set [count _groupArray,getPlayerUID _x];
-        }forEach units _crewMember;
-
-        if !(getPlayerUID _unit in _groupArray) then {
-            _unit action ["Eject", vehicle _unit];
-            diag_log format["VEHICLELOCK: Player %1 (%2) ejected from %3 (crew alive/total = %4 / %5)", name _unit, getPlayerUID _unit, _veh, _aliveCrew, count crew _veh];
-        };
+            if ((alive _x) AND (_unit != _x) AND (group _unit != group _x)) then {
+                _unit action ["Eject", _veh];
+                [nil,_x,"loc", rTITLETEXT, format["%1 has been EJECTED from your vehicle because not in your group",name _unit], "PLAIN", 0] call RE;
+                [nil,_unit,"loc", rTITLETEXT, format["You have been EJECTED from vehicle because not in group with %1",name _x], "PLAIN", 0] call RE;
+                diag_log format["VEHICLELOCK: Player %1 (%2) ejected from vehicle because not in group with %3 (%4)", name _unit, getPlayerUID _unit, name _x, getPlayerUID _x];
+                exit;
+            };
+        }forEach crew _veh;
     };
 }];
-

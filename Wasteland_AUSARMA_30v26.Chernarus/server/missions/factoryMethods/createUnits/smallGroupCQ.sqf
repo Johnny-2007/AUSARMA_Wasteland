@@ -1,6 +1,6 @@
 //	@file Version: 1.0
 //	@file Name: smallGroup.sqf
-//	@file Author: [404] Deadbeat, [404] Costlyy, Redshirt_Ensign
+//	@file Author: [404] Deadbeat, [404] Costlyy, [TOG FF] Redshirt Ensign
 //	@file Created: 08/12/2012 21:58
 //	@file Args:
 
