@@ -51,7 +51,7 @@ class Mission
 	randomSeed=10079095;
 	class Intel
 	{
-		briefingName="Wasteland - AUSARMA [v3.0.A26.5]";
+		briefingName="Wasteland - AUSARMA [v3.0.A26.7]";
 		briefingDescription="Wasteland is a harsh survival sandbox";
 		resistanceWest=0;
 		startWeather=0.25;
@@ -3733,7 +3733,7 @@ class Mission
 			vehicle="SatPhone";
 			skill=0.60000002;
 			text="osPhone1";
-			init="this addEventHandler[""handledamage"", {false}]; this attachTo [osTable12,[0,0,0.59]]; this setDir 0; this setVariable [""R3F_LOG_disabled"", true]; this enableSimulation false;";
+			init="this addEventHandler[""handledamage"", {false}]; this attachTo [osTable1,[0,0,0.59]]; this setDir 0; this setVariable [""R3F_LOG_disabled"", true]; this enableSimulation false;";
 		};
 		class Item39
 		{
@@ -3766,7 +3766,7 @@ class Mission
 			vehicle="SatPhone";
 			skill=0.60000002;
 			text="osPhone2";
-			init="this addEventHandler[""handledamage"", {false}]; this attachTo [osTable13,[0,0,0.59]]; this setDir 0; this setVariable [""R3F_LOG_disabled"", true]; this enableSimulation false;";
+			init="this addEventHandler[""handledamage"", {false}]; this attachTo [osTable2,[0,0,0.59]]; this setDir 0; this setVariable [""R3F_LOG_disabled"", true]; this enableSimulation false;";
 		};
 		class Item42
 		{
@@ -3799,7 +3799,7 @@ class Mission
 			vehicle="SatPhone";
 			skill=0.60000002;
 			text="osPhone3";
-			init="this addEventHandler[""handledamage"", {false}]; this attachTo [osTable14,[0,0,0.59]]; this setDir 0; this setVariable [""R3F_LOG_disabled"", true]; this enableSimulation false;";
+			init="this addEventHandler[""handledamage"", {false}]; this attachTo [osTable3,[0,0,0.59]]; this setDir 0; this setVariable [""R3F_LOG_disabled"", true]; this enableSimulation false;";
 		};
 		class Item45
 		{
@@ -3832,7 +3832,7 @@ class Mission
 			vehicle="SatPhone";
 			skill=0.60000002;
 			text="osPhone4";
-			init="this addEventHandler[""handledamage"", {false}]; this attachTo [osTable16,[0,0,0.59]]; this setDir 0; this setVariable [""R3F_LOG_disabled"", true]; this enableSimulation false;";
+			init="this addEventHandler[""handledamage"", {false}]; this attachTo [osTable4,[0,0,0.59]]; this setDir 0; this setVariable [""R3F_LOG_disabled"", true]; this enableSimulation false;";
 		};
 		class Item48
 		{
