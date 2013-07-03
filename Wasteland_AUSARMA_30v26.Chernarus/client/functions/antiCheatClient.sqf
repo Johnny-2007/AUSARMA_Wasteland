@@ -11,7 +11,7 @@
 // I couldn't figure out a way to extract all weapons of superClass "cannonBase" and as a result, we have this ugly monstrosity below.
 // TODO: Find a better way of doing this...
 _bannedWeapons = [
-    "2A14","2A38M","2A42","2A46M","2A46MRocket","2A70","2A70Rocket","2A72","2B14","57mmLauncher","57mmLauncher_128","57mmLauncher_64",
+    "2A38M","2A46M","2A46MRocket","2B14","57mmLauncher","57mmLauncher_128","57mmLauncher_64",
     "80mmLauncher","9M311Laucher","AALauncher_twice","AGS17","AGS30_heli","AirBombLauncher","AT10LauncherSingle","AT11LauncherSingle","AT13LauncherSingle","AT2Launcher","AT5Launcher","AT5LauncherSingle",
     "AT6Launcher","AT9Launcher","AZP85","BAF_GMG","BombLauncher","BombLauncherA10","BombLauncherF35","Ch29Launcher","Ch29Launcher_Su34","CRV7_FAT","CRV7_HEPD",
     "CRV7_PG","CTWS","D10","D30","D81","DT_veh","FFARLauncher","FFARLauncher_14","GAU12","GAU8","GRAD","GSh23L",

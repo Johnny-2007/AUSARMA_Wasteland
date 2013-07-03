@@ -39,5 +39,8 @@ NOTE: Original concept is aparently by Sa-Mantra
 <== Radioman
 - Independent Team Scoring workaround (server/init.sqf)
 
+<== UHAX
+- Misc tweaks and fixes.
+
 <== Freeborne
 - Blame for all bugs and copyright violations.
