@@ -16,7 +16,7 @@
 #else
 
 	#define cqMissionTimeout 1800
-	#define cqMissionDelayTime 900
+	#define cqMissionDelayTime 1200
 
 #endif
 
