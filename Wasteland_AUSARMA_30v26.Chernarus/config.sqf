@@ -140,7 +140,7 @@ BuildStoreArray = [
 	["Fortification, Watchtower", 25, "Land_Fort_Watchtower"],
 	["Fortification, Wooden Guard Shed", 25, "Land_GuardShed"],
 	["Misc, Campfire", 25, "Land_Campfire_burning"],
-//	["Misc, MASH Tent", 100, "MASH"],
+	["Misc, MASH Tent", 100, "MASH"],
 	["Misc, Storage Tent", 25, "Land_tent_east"],
 	["Ramp, Artillery Nest", 25, "Land_fort_artillery_nest"],
 	["Ramp, Concrete (high)", 50, "Land_ConcreteRamp"],
