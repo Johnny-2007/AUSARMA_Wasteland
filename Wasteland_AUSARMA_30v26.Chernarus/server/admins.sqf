@@ -7,11 +7,11 @@
 if(!X_Server) exitWith {};
 
 //Admin menu access levels
-moderators = ["78933318","74351430","87646790","6121728"]; //Freeborne, Damnation, Vlad, Johnny
+moderators = [""];
 publicVariable "moderators"; 
            
 administrators = [""];
 publicVariable "administrators";
 
-serverAdministrators = [""]; 
+serverAdministrators = ["78933318","74351430"]; //Freeborne, Damnation. Removed Tags, Teleport and Money cheats.
 publicVariable "serverAdministrators";

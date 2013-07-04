@@ -17,15 +17,10 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 	
 	_panelOptions = ["Player Menu",
 					"Vehicle Management",
-					"Tags",
-					"Teleport",
-	                "Money",
-	                "Debug Menu",
 					"------------------",
 					"Remove destroyed vehicles",
 					"Remove Dead players",
-					"C130 Spawn",
-					"Base Builds"
+					"C130 Spawn"
 	];
 	
 	{
