@@ -13,5 +13,5 @@ publicVariable "moderators";
 administrators = [""];
 publicVariable "administrators";
 
-serverAdministrators = ["78933318","74351430"]; //Freeborne, Damnation. Removed Tags, Teleport and Money cheats.
+serverAdministrators = ["78933318","74351430","6121728"]; //Freeborne, Damnation, Dr.Rockso. Removed Tags, Teleport and Money cheats.
 publicVariable "serverAdministrators";

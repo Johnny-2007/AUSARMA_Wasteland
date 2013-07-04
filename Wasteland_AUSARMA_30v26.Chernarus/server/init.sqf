@@ -113,5 +113,5 @@ if (sideMissions == 1) then {
 
 if (isDedicated) then {
 	_id = [] execFSM "server\WastelandServClean.fsm";
-	//[600,0] execVM "scripts\clean\cly_removedead.sqf"; //Delete men after 10 minutes, ignore vehicles. WastelandServClean will handle that.
+	[600,900] execVM "scripts\clean\cly_removedead.sqf"; //Delete men after 10 minutes, ignore vehicles. WastelandServClean will handle that.
 };

@@ -51,7 +51,7 @@ class Mission
 	randomSeed=10079095;
 	class Intel
 	{
-		briefingName="Wasteland - AUSARMA [v3.0.A26.13]";
+		briefingName="Wasteland - AUSARMA [v3.0.A26.14]";
 		briefingDescription="Wasteland is a harsh survival sandbox";
 		resistanceWest=0;
 		startWeather=0.25;
