@@ -21,7 +21,7 @@ _null = [] execVM "DMZ_delete.sqf";
 DMZ_Included = ["A10","A10_US_EP1","AH1Z","AH64D","AH64D_EP1","BAF_Apache_AH1_D","AH6J_EP1","AAV","M1A1"];
 
 */
-DMZ_Included = ["AllVehicles","Buildings"];	  // used to include certain objects into the delete, such as for example any unit/vehicle, ieds, ammo crates, custom buildings/bases/compounds etc. any object can be used, update it same way as DMZ_Excluded runtime with info from below.
+DMZ_Included = [];	  // used to include certain objects into the delete, such as for example any unit/vehicle, ieds, ammo crates, custom buildings/bases/compounds etc. any object can be used, update it same way as DMZ_Excluded runtime with info from below.
 DMZ_Excluded = [];	  // used to exclude certain men or vehicles or types/classname from being deleted.
 /*
 * more info on DMZ_Excluded:
@@ -59,8 +59,8 @@ _abandoned = false;   // if vehicles should be deleted after being x time un man
 _groupDel = true;   // if empty groups should be deleted, to avoid reaching 144 group limit in long missions.
 _viewDist = 0;    // min distance in meter from a player unit to allow delete, if you dont care if player sees the delete, set it to 0.
 _manTimer = 1200;    // x seconds until delete of dead man units.
-_vehTimer = 300;    // x seconds until delete of dead vehicles, for destroyed and heavy damaged vehicles.
-_abaTimer = 2700;    // x seconds a vehicle must be unmanned to be deleted, for _abandoned option.
+_vehTimer = 1800;    // x seconds until delete of dead vehicles, for destroyed and heavy damaged vehicles.
+_abaTimer = 600;    // x seconds a vehicle must be unmanned to be deleted, for _abandoned option.
 _incTimer = 10;  // x seconds any object put inside the DMZ_Included will be deleted no matter condition.
 // DO NOT EDIT PAST THIS LINE //
 // delete function.

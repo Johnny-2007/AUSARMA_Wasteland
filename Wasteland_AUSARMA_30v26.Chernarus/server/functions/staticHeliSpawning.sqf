@@ -12,12 +12,12 @@ _counter = 0;
 _countActual = 0;
 _i = 0;
 
-while {_counter < 8} do // 8 helis spawn at the beginning (with 4 respawns on them)
+while {_counter < 8} do // 8 helis spawn at the beginning (with 8 respawns on them)
 {
 	_selectedMarker = floor (random 24);
     _position = getMarkerPos format ["heliSpawn_%1", _selectedMarker];
     _newPos = [_position, 25, 50, 1, 0, 60 * (pi / 180), 0] call BIS_fnc_findSafePos;
-	[0, _newPos, 4] call staticHeliCreation;
+	[0, _newPos, 8] call staticHeliCreation;
     
 	currentStaticHelis set [count currentStaticHelis, _selectedMarker];
 

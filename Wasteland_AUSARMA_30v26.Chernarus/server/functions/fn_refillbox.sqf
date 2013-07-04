@@ -18,24 +18,23 @@ switch(_selectedBox) do {
 		clearWeaponCargoGlobal _currBox;
         
         // Add new weapons before ammunition
-
-        _currBox addWeaponCargoGlobal ["SVD_CAMO",1];
-		_currBox addWeaponCargoGlobal ["M14_EP1",2];			
-		_currBox addWeaponCargoGlobal ["BAF_L7A2_GPMG",2];
-        _currBox addWeaponCargoGlobal ["BAF_L110A1_Aim",2];
-        _currBox addWeaponCargoGlobal ["BAF_L85A2_UGL_Holo",2];		
-		_currBox addWeaponCargoGlobal ["FN_FAL",2];
-		_currBox addWeaponCargoGlobal ["RPG7V",2];
+	_currBox addWeaponCargoGlobal ["SVD_CAMO",1];
+	_currBox addWeaponCargoGlobal ["M14_EP1",2];			
+	_currBox addWeaponCargoGlobal ["BAF_L7A2_GPMG",2];
+	_currBox addWeaponCargoGlobal ["BAF_L110A1_Aim",2];
+	_currBox addWeaponCargoGlobal ["BAF_L85A2_UGL_Holo",2];		
+	_currBox addWeaponCargoGlobal ["FN_FAL",2];
+	_currBox addWeaponCargoGlobal ["RPG7V",2];
         
         // Add ammunition
-		_currBox addMagazineCargoGlobal ["10Rnd_762x54_SVD",12];
-        _currBox addMagazineCargoGlobal ["20Rnd_762x51_DMR",20];
-        _currBox addMagazineCargoGlobal ["100Rnd_762x51_M240",16];
-		_currBox addMagazineCargoGlobal ["200Rnd_556x45_L110A1",16];
+	_currBox addMagazineCargoGlobal ["10Rnd_762x54_SVD",12];
+	_currBox addMagazineCargoGlobal ["20Rnd_762x51_DMR",20];
+	_currBox addMagazineCargoGlobal ["100Rnd_762x51_M240",16];
+	_currBox addMagazineCargoGlobal ["200Rnd_556x45_L110A1",16];
         _currBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",72];
         _currBox addMagazineCargoGlobal ["1Rnd_HE_M203",12];
         _currBox addMagazineCargoGlobal ["20Rnd_762x51_FNFAL",24];
-		_currBox addMagazineCargoGlobal ["PG7V",6];
+	_currBox addMagazineCargoGlobal ["PG7V",6];
         _currBox addMagazineCargoGlobal ["HandGrenade",8];
     };
     case "mission_Side_USLaunchers": { // Used in the airwreck side mission
@@ -43,39 +42,39 @@ switch(_selectedBox) do {
 
         // Clear prexisting weapons first
         clearMagazineCargoGlobal _currBox;
-		clearWeaponCargoGlobal _currBox;
+	clearWeaponCargoGlobal _currBox;
 
-		// Add new weapons before ammunition
-		_currBox addWeaponCargoGlobal ["RPG7V",2];
-		_currBox addWeaponCargoGlobal ["SMAW",2];
-		_currBox addWeaponCargoGlobal ["M32_EP1",2];
-		// Add ammunition
-		_currBox addMagazineCargoGlobal ["1Rnd_HE_M203",25];
-		_currBox addMagazineCargoGlobal ["6Rnd_HE_M203",12];
-		_currBox addMagazineCargoGlobal ["PG7V",10];
-		_currBox addMagazineCargoGlobal ["SMAW_HEAA",10];
-		_currBox addMagazineCargoGlobal ["HandGrenade",10];
-		_currBox addMagazineCargoGlobal ["Mine",4];
+	// Add new weapons before ammunition
+	_currBox addWeaponCargoGlobal ["RPG7V",2];
+	_currBox addWeaponCargoGlobal ["SMAW",2];
+	_currBox addWeaponCargoGlobal ["M32_EP1",2];
+	// Add ammunition
+	_currBox addMagazineCargoGlobal ["1Rnd_HE_M203",25];
+	_currBox addMagazineCargoGlobal ["6Rnd_HE_M203",12];
+	_currBox addMagazineCargoGlobal ["PG7V",10];
+	_currBox addMagazineCargoGlobal ["SMAW_HEAA",10];
+	_currBox addMagazineCargoGlobal ["HandGrenade",10];
+	_currBox addMagazineCargoGlobal ["Mine",4];
     };
     case "mission_Side_USSpecial": { // Used in the airwreck side mission
     	_currBox = _box;
         
         // Clear prexisting weapons first
         clearMagazineCargoGlobal _currBox;
-		clearWeaponCargoGlobal _currBox;
+	clearWeaponCargoGlobal _currBox;
         
         // Add new weapons before ammunition
-		_currBox addWeaponCargoGlobal ["M4A1_AIM_SD_CAMO",2];
-		_currBox addWeaponCargoGlobal ["M4A1_HWS_GL_CAMO",2];
-		_currBox addWeaponCargoGlobal ["DMR",2];
-		_currBox addWeaponCargoGlobal ["Binocular_Vector",3];
+	_currBox addWeaponCargoGlobal ["M4A1_AIM_SD_CAMO",2];
+	_currBox addWeaponCargoGlobal ["M4A1_HWS_GL_CAMO",2];
+	_currBox addWeaponCargoGlobal ["DMR",2];
+	_currBox addWeaponCargoGlobal ["Binocular_Vector",3];
 
-		_currBox addMagazineCargoGlobal ["1Rnd_HE_M203",20];
-		_currBox addMagazineCargoGlobal ["HandGrenade",15];
-		_currBox addMagazineCargoGlobal ["30Rnd_556x45_StanagSD",20];
-		_currBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",50];
-		_currBox addMagazineCargoGlobal ["20Rnd_762x51_DMR",15];
-		_currBox addMagazineCargoGlobal ["5Rnd_762x51_M24",15];			
+	_currBox addMagazineCargoGlobal ["1Rnd_HE_M203",20];
+	_currBox addMagazineCargoGlobal ["HandGrenade",15];
+	_currBox addMagazineCargoGlobal ["30Rnd_556x45_StanagSD",20];
+	_currBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",50];
+	_currBox addMagazineCargoGlobal ["20Rnd_762x51_DMR",15];
+	_currBox addMagazineCargoGlobal ["5Rnd_762x51_M24",15];			
     };
      case "mission_CQC_Weapons": { // Used in the weapon stash CQ mission
     	_currBox = _box;
