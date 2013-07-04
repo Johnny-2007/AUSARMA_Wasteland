@@ -14,21 +14,3 @@ _player setVariable["processedDeath",netTime];
 #else
 _player setVariable["processedDeath",time];
 #endif
-
-/* Markus : This code is junk and doesn't help anyone achieve anything.
-//diag_log format["Checking KILLER and PLAYER..."];
-
-if (((str(side _killer)) == "GUER") AND ((str(side _player)) == "GUER")) then { 
-	//diag_log format["Killer and Player are INDEPENDENT."]; 
-    {
-    	if ((vehicle _killer) == _x) then {
-        	//diag_log format["Found the killer, adding score..."];
-        	_x addScore 2; 
-        };
-    } forEach playableUnits;
-} else {
-	//diag_log format["Killer and/or Player are not INDEPENDENT."];
-};
-
-<-- Markus */
-
