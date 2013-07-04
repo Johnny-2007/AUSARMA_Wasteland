@@ -5,7 +5,7 @@
 //	@file Description: The main init.
 //	@file Args:
 
-setViewDistance 1500;
+setViewDistance 1600;
 setTerrainGrid 47;
 
 #include "setup.sqf"
