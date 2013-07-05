@@ -84,12 +84,12 @@ MD_FindPlayerStr = {
 			};
 			
 			// -- Don't allow score increase if suicide.
-			if ((name _killer) == (name _killed)) then {
+			if ((name _killer) == (name _killed)) exitWith {
 				[_x, nil, rGlobalChat, format["%1 has killed themself.", _killed]] call RE;
 			};
 			
 			// -- Don't allow score increase if in same group.
-			if ((group _killed) == (group _killer)) then { 		
+			if ((group _killed) == (group _killer)) exitWith { 		
 				[_x, nil, rGlobalChat, format["%1 was T E A M K I L L E D by %2.", _killed, name _killer]] call RE;
 			};
 					
