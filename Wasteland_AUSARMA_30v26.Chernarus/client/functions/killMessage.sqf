@@ -40,6 +40,16 @@ if (side _killer == Civilian) exitWith {
 	if (_player == _killer) then { // Respawn suicide or killed by a explosion of a vehicle
 	[player, nil, rGlobalChat, format["has killed themself."]] call RE;
 	} else { //AI Kill
+	[player, nil, rGlobalChat, format["was killed by another player."]] call RE;
+	};
+};
+
+if (side _killer == East) exitWith {
+	[player, nil, rGlobalChat, format["was killed by AI."]] call RE;
+	};
+};
+
+if (side _killer == West) exitWith {
 	[player, nil, rGlobalChat, format["was killed by AI."]] call RE;
 	};
 };

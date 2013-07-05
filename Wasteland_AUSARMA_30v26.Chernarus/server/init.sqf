@@ -66,6 +66,10 @@ MD_FindPlayerStr = {
 	};
 	_killed = (_killed call MD_FindPlayerStr);
 	_killer = (_killer call MD_FindPlayerStr);
+	_killerWep = currentWeapon _killer;
+	_killerWep = (configFile >> "cfgWeapons" >> _killerWep);
+	_killerWep = format["%1",getText(_killerWep >> "displayName")];
+	_killerName = name _killer;	
 	//diag_log format ["MD-> Server: Resolved: Killed: %1 by Killer: %2", _killed, _killer];
 	//if (((side _killer) == "GUER") && ((side _killed) == "GUER")) then {
 	//diag_log format ["MD-> Server: Sides: Killed: %1 by Killer: %2", side (group _killed), side (group _killer)];
@@ -73,11 +77,35 @@ MD_FindPlayerStr = {
 	{
 		if (side (group _killed) == resistance) then
 		{
-			if ((name _killer) == (name _killed)) exitWith {}; // -- Don't allow score increase if suicide.
-			if ((group _killed) == (group _killer)) exitWith {}; // -- Don't allow score increase if in same group.
-			_killer addScore 2; // -- Add score to the killer, to cover the TK, and increment their score.
+
+			// Killed by already dead player
+			if (_killerName == "ERROR: NO UNIT") exitWith {
+				[_x, nil, rGlobalChat, format["%1 has died.", _killed]] call RE;
+			};
+			
+			// -- Don't allow score increase if suicide.
+			if ((name _killer) == (name _killed)) then {
+				[_x, nil, rGlobalChat, format["%1 has killed themself.", _killed]] call RE;
+			};
+			
+			// -- Don't allow score increase if in same group.
+			if ((group _killed) == (group _killer)) then { 		
+				[_x, nil, rGlobalChat, format["%1 was T E A M K I L L E D by %2.", _killed, name _killer]] call RE;
+			};
+					
+			// -- Otherwise add score to the killer, to cover the TK, and increment their score.			
+			_killer addScore 2;
+			[_x, nil, rGlobalChat, format["%1 was killed by %2 with %3", _killed, name _killer, _killerWep]] call RE;
 		};
 	};
+	
+	// Kill another player just after you died and in civilian limbo. Example = "Error: No Unit". May not work.
+	if (side (group _killer) == civilian) then
+	{
+		_killer addScore 2;
+		[_x, nil, rGlobalChat, format["%1 was also killed.", _killed]] call RE;
+	};
+	
 };
 // <-- Markus
 
