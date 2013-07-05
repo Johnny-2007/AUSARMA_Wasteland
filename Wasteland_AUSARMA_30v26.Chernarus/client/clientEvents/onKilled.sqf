@@ -15,7 +15,7 @@ _killer = (_this select 0) select 1;
 
 // _killer addscore 2; // -- Markus : addScore can only be ran on the server... -->
 MD_GuerTK = [name _player, name _killer];
-diag_log format ["MD-> Client: %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
+diag_log format ["Client Killed Event - %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
 publicVariableServer "MD_GuerTK";
 // <-- Markus
 _playerMoney = _player getVariable["cmoney",0];
