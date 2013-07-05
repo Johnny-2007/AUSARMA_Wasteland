@@ -64,8 +64,8 @@ MD_FindPlayerStr = {
 		MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
 		_iter = _iter + 1;
 	};
-	_killed = (_killed call MD_FindPlayerStr);
-	_killer = (_killer call MD_FindPlayerStr);
+	//_killed = (_killed call MD_FindPlayerStr);
+	//_killer = (_killer call MD_FindPlayerStr);
 	_killerWep = currentWeapon _killer;
 	_killerWep = (configFile >> "cfgWeapons" >> _killerWep);
 	_killerWep = format["%1",getText(_killerWep >> "displayName")];
