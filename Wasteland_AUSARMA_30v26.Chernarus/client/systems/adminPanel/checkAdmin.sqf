@@ -28,6 +28,6 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 	};	
 } else {
     sleep 1;
-    _handle = player execVM "client\systems\adminPanel\checkAdmin2.sqf"; 
-    waitUntil {scriptDone _handle};
+ //   _handle = player execVM "client\systems\adminPanel\checkAdmin2.sqf"; 
+ //   waitUntil {scriptDone _handle};
 };
