@@ -26,33 +26,44 @@ else
 	
 	R3F_LOG_objet_selectionne = objNull;
 	
-	private ["_playerSideR3F", "_objet", "_est_calculateur", "_arme_principale", "_action_menu_release_relative", "_action_menu_release_horizontal" , "_action_menu_45", "_action_menu_90", "_action_menu_180", "_azimut_canon"];
+	private ["_objet", "_est_calculateur", "_arme_principale", "_action_menu_release_relative", "_action_menu_release_horizontal" , "_action_menu_45", "_action_menu_90", "_action_menu_180", "_azimut_canon", "_owner_close"];
 	
 	_objet = _this select 0;
-	_doExit = false;
 
-    
-	if(isNil {_objet getVariable "R3F_Side"}) then {
-		_objet setVariable ["R3F_Side", (side player), true];
-        
-	} else {
-    
-    	_playerSideR3F = ((_this select 0) getVariable "R3F_Side");
-        
-    	if((side group _x == (_objet getVariable "R3F_Side")) && group _x != group player && alive _x) then {
-			if((_x distance _objet) < 100) exitWith {
-			_doExit = true;
+	_owner_close = false;
+	if(!isNil{_objet getVariable "R3F_Side"}) then {
+		if(playerSide != (_objet getVariable "R3F_Side") || playerSide == resistance) then {
+			{
+				if((side group _x == (_objet getVariable "R3F_Side")) && group _x != group player && alive _x) then {
+					if((_x distance _objet) < 100) exitWith {
+						_owner_close = true;
                 };
             } foreach AllUnits;
 		};
     };
 
-	if(_doExit) exitwith {
-		hint format["This item belongs to %1 and they are too close.", _playerSideR3F]; 
-        R3F_LOG_mutex_local_verrou = false;
+	if(_owner_close) exitWith {
+		hint format [localize "STR_WL_Action_R3F_Enemy_Nearby", 
+			localize format ["STR_WL_Gen_Team%1_2", (_objet getVariable "R3F_Side")]
+			];
+		R3F_LOG_mutex_local_verrou = false;
 	};
     
-	_objet setVariable ["R3F_Side", (side player), true];
+	_owner_close = false;
+	if(playerSide == resistance) then {
+		if(isNil{_objet getVariable "R3F_Side"}) then {
+			{if((group _x != group player) && ((_x distance _objet) < 100)) exitWith {_owner_close = true};} forEach allUnits;
+		} else {
+			if(_objet getVariable "R3F_Side" == civilian) then {
+				{if((group _x != group player) && ((_x distance _objet) < 100)) exitWith {_owner_close = true};} forEach allUnits;
+			};
+		};
+		if(!_enemy_nearby) then {
+			_objet setVariable ["R3F_Side", (side player), true];
+		};
+	} else {
+		_objet setVariable ["R3F_Side", (side player), true];
+	};
 	
 	// Si l'objet est un calculateur d'artillerie, on laisse le script spécialisé gérer
 	_est_calculateur = _objet getVariable "R3F_ARTY_est_calculateur";
