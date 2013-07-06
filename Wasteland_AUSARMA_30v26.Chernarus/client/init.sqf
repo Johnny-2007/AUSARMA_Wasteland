@@ -57,7 +57,7 @@ waituntil {!(IsNull (findDisplay 46))};
 "pvar_teamKillList" addPublicVariableEventHandler {[] call updateTeamKiller};
 "publicVar_teamkillMessage" addPublicVariableEventHandler {if(local(_this select 1)) then {[] spawn teamkillMessage;};};
 // -- Markus - Kill messages -->
-"MD_KillMessage" addPublicVariableEventHandler {player commandChat MD_KillMessage;};
+"MD_KillMessage" addPublicVariableEventHandler {player commandChat (_this select 1);};
 // <-- Markus
 
 //client Executes

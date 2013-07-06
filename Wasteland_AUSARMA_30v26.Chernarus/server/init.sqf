@@ -27,28 +27,37 @@ waitUntil{scriptDone _serverCompiledScripts};
 
 // Markus : PV event handler for when an independent is killed by another independent -->
 // -- Get player slot list
-[] spawn {
-	waitUntil {time != 0};
-	private ["_iter"];
-	MD_NUMBEROFSLOTS = 140; // -- GUER slot count
-	MD_PlayerSlots = [];
-	_iter = 1;
-	while {_iter < MD_NUMBEROFSLOTS} do
-	{
-		MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
-		_iter = _iter + 1;
+MD_GetPlayerList = {
+	[] spawn {
+		waitUntil {time != 0};
+		private ["_iter"];
+		MD_NUMBEROFSLOTS = 140; // -- GUER slot count
+		MD_PlayerSlots = [];
+		_iter = 1;
+		while {_iter < (MD_NUMBEROFSLOTS + 1)} do
+		{
+			private ['_slot'];
+			if (!isnil (str(format ["guer%1", _iter]))) then {
+				MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
+			};
+			_iter = _iter + 1;
+		};
+		diag_log format ["MD-> Server: %1 Player slots: %2", count MD_Playerslots, MD_Playerslots];
 	};
-	diag_log format ["MD-> Server: %1 Player slots: %2", count MD_Playerslots, MD_Playerslots];
 };
+onPlayerConnected "[] call MD_GetPlayerList";
+
 MD_FindPlayerStr = {
 	_toFind = _this;
 	_pObj = objNull;
 	{
+		if (!isnil (str _x)) then {
 		diag_log format ["MD-> Server: Searching for: %1 Found: %2", _tofind, name _x];
-		if (name _x == _toFind) then
-		{
-			_pObj = _x;
-			diag_log format ["MD-> Server: Found: %1 !!!!!", _tofind];
+			if (name _x == _toFind) then
+			{
+				_pObj = _x;
+				diag_log format ["MD-> Server: Found: %1 !!!!!", _tofind];
+			};
 		};
 	} foreach MD_Playerslots;
 	_pObj
@@ -85,6 +94,7 @@ MD_FindPlayerStr = {
 			// Killed by already dead player
 			if (_killerName == "ERROR: NO UNIT") exitWith {
 				MD_KillMessage = format["%1 has died.", _killed];
+				publicVariable "MD_KillMessage";
 			};
 			
 			// -- Don't allow score increase if suicide.
@@ -93,6 +103,7 @@ MD_FindPlayerStr = {
 			// -- Don't allow score increase if in same group.
 			if ((group _killed) == (group _killer)) exitWith {
 				MD_KillMessage = format["%1 was T E A M K I L L E D by %2.", _killed, name _killer];
+				publicVariable "MD_KillMessage";
 			};
 			// -- Otherwise add score to the killer, to cover the TK, and increment their score.			
 			_killer addScore 2;
@@ -108,7 +119,6 @@ MD_FindPlayerStr = {
 		MD_KillMessage = format["%1 was also killed.", _killed];
 		publicVariable "MD_KillMessage";
 	};
-	
 };
 // <-- Markus
 
