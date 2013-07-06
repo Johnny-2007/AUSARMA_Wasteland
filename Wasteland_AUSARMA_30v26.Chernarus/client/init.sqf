@@ -56,6 +56,9 @@ waituntil {!(IsNull (findDisplay 46))};
 "clientRadarMarkers" addPublicVariableEventHandler {[] call updateRadarMarkers};
 "pvar_teamKillList" addPublicVariableEventHandler {[] call updateTeamKiller};
 "publicVar_teamkillMessage" addPublicVariableEventHandler {if(local(_this select 1)) then {[] spawn teamkillMessage;};};
+// -- Markus - Kill messages -->
+"MD_KillMessage" addPublicVariableEventHandler {player commandChat MD_KillMessage;};
+// <-- Markus
 
 //client Executes
 [] execVM "client\functions\initSurvival.sqf";

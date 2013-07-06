@@ -27,18 +27,21 @@ waitUntil{scriptDone _serverCompiledScripts};
 
 // Markus : PV event handler for when an independent is killed by another independent -->
 // -- Get player slot list
-private ["_iter"];
-MD_PlayerSlots = [];
-_iter = 1;
-while {call compile format ["!isNil 'guer%1'", _iter]} do
-{
-	MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
-	_iter = _iter + 1;
+[] spawn {
+	waitUntil {time != 0};
+	private ["_iter"];
+	MD_PlayerSlots = [];
+	_iter = 1;
+	while {call compile format ["!isNil 'guer%1'", _iter]} do
+	{
+		MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
+		_iter = _iter + 1;
+	};
+	diag_log format ["MD-> Server: %1 Player slots: %2", count MD_Playerslots, MD_Playerslots];
 };
-
 MD_FindPlayerStr = {
 	_toFind = _this;
-	_pObj = "MD: ERROR: NO UNIT";
+	_pObj = objNull;
 	{
 		diag_log format ["MD-> Server: Searching for: %1 Found: %2", _tofind, name _x];
 		if (name _x == _toFind) then
@@ -56,6 +59,7 @@ MD_FindPlayerStr = {
 	_killed = ((_this select 1) select 0);
 	_killer = ((_this select 1) select 1);
 	//diag_log format ["MD-> Server: Killed: %1 by Killer: %2", _killed, _killer];
+	/* -- Refresh the player slot objects.
 	private ["_iter"];
 	MD_PlayerSlots = [];
 	_iter = 1;
@@ -64,38 +68,35 @@ MD_FindPlayerStr = {
 		MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
 		_iter = _iter + 1;
 	};
-	//_killed = (_killed call MD_FindPlayerStr);
-	//_killer = (_killer call MD_FindPlayerStr);
+	diag_log format ["MD-> Server: Player slots: %1", MD_Playerslots];
+	*/
+	//
+	_killed = (_killed call MD_FindPlayerStr);
+	_killer = (_killer call MD_FindPlayerStr);
 	_killerWep = currentWeapon _killer;
 	_killerWep = (configFile >> "cfgWeapons" >> _killerWep);
 	_killerWep = format["%1",getText(_killerWep >> "displayName")];
 	_killerName = name _killer;	
-	//diag_log format ["MD-> Server: Resolved: Killed: %1 by Killer: %2", _killed, _killer];
-	//if (((side _killer) == "GUER") && ((side _killed) == "GUER")) then {
-	//diag_log format ["MD-> Server: Sides: Killed: %1 by Killer: %2", side (group _killed), side (group _killer)];
 	if (side (group _killer) == resistance) then
 	{
 		if (side (group _killed) == resistance) then
 		{
-
 			// Killed by already dead player
 			if (_killerName == "ERROR: NO UNIT") exitWith {
-				[_x, nil, rGlobalChat, format["%1 has died.", _killed]] call RE;
+				MD_KillMessage = format["%1 has died.", _killed];
 			};
 			
 			// -- Don't allow score increase if suicide.
-			if ((name _killer) == (name _killed)) exitWith {
-				[_x, nil, rGlobalChat, format["%1 has killed themself.", _killed]] call RE;
-			};
+			if ((name _killer) == (name _killed)) exitWith {};
 			
 			// -- Don't allow score increase if in same group.
-			if ((group _killed) == (group _killer)) exitWith { 		
-				[_x, nil, rGlobalChat, format["%1 was T E A M K I L L E D by %2.", _killed, name _killer]] call RE;
+			if ((group _killed) == (group _killer)) exitWith {
+				MD_KillMessage = format["%1 was T E A M K I L L E D by %2.", _killed, name _killer];
 			};
-					
 			// -- Otherwise add score to the killer, to cover the TK, and increment their score.			
 			_killer addScore 2;
-			[_x, nil, rGlobalChat, format["%1 was killed by %2 with %3", _killed, name _killer, _killerWep]] call RE;
+			MD_KillMessage = format["%1 was killed by %2 with %3", _killed, name _killer, _killerWep];
+			publicVariable "MD_KillMessage";
 		};
 	};
 	
@@ -103,7 +104,8 @@ MD_FindPlayerStr = {
 	if (side (group _killer) == civilian) then
 	{
 		_killer addScore 2;
-		[_x, nil, rGlobalChat, format["%1 was also killed.", _killed]] call RE;
+		MD_KillMessage = format["%1 was also killed.", _killed];
+		publicVariable "MD_KillMessage";
 	};
 	
 };
