@@ -16,6 +16,7 @@ _killer = (_this select 0) select 1;
 // _killer addscore 2; // -- Markus : addScore can only be ran on the server... -->
 if (name _player != name _killer) then {
 	MD_GuerTK = [name _player, name _killer];
+	diag_log format ["MD-> Client: Player slot: %1 | Killer Slot: %2", str _player, str _killer];
 	diag_log format ["Client Killed Event - %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
 	publicVariableServer "MD_GuerTK";
 } else {

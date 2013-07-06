@@ -36,7 +36,7 @@ MD_GetPlayerList = {
 	while {_iter < (MD_NUMBEROFSLOTS + 1)} do
 	{
 		private ['_slot'];
-		if (!isnil (str(format ["guer%1", _iter]))) then {
+		if (!isnull (call compile format ["guer%1", _iter])) then {
 			MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
 		};
 		_iter = _iter + 1;
