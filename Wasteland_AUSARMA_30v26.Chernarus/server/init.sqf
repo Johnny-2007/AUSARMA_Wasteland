@@ -28,24 +28,27 @@ waitUntil{scriptDone _serverCompiledScripts};
 // Markus : PV event handler for when an independent is killed by another independent -->
 // -- Get player slot list
 MD_GetPlayerList = {
-	[] spawn {
-		waitUntil {time != 0};
-		private ["_iter"];
-		MD_NUMBEROFSLOTS = 140; // -- GUER slot count
-		MD_PlayerSlots = [];
-		_iter = 1;
-		while {_iter < (MD_NUMBEROFSLOTS + 1)} do
-		{
-			private ['_slot'];
-			if (!isnil (str(format ["guer%1", _iter]))) then {
-				MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
-			};
-			_iter = _iter + 1;
+	waitUntil {time > 10};
+	private ["_iter"];
+	MD_NUMBEROFSLOTS = 140; // -- GUER slot count
+	MD_PlayerSlots = [];
+	_iter = 1;
+	while {_iter < (MD_NUMBEROFSLOTS + 1)} do
+	{
+		private ['_slot'];
+		if (!isnil (str(format ["guer%1", _iter]))) then {
+			MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
 		};
-		diag_log format ["MD-> Server: %1 Player slots: %2", count MD_Playerslots, MD_Playerslots];
+		_iter = _iter + 1;
+	};
+	diag_log format ["MD-> Server: %1 Player slots: %2", count MD_Playerslots, MD_Playerslots];
+	if (count MD_Playerslots == 0) then {
+		diag_log "MD-> Server: No players detected. Retrying in 3 seconds";
+		sleep 3;
+		[] spawn MD_GetPlayerList;
 	};
 };
-onPlayerConnected "[] call MD_GetPlayerList";
+onPlayerConnected "[] spawn MD_GetPlayerList";
 
 MD_FindPlayerStr = {
 	_toFind = _this;
