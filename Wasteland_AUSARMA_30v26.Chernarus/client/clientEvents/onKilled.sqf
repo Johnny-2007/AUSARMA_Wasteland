@@ -20,6 +20,7 @@ if (name _player != name _killer) then {
 	publicVariableServer "MD_GuerTK";
 } else {
 	MD_KillMessage = format["%1 has killed themself.", _player];
+	commandChat MD_KillMessage;
 	publicVariable "MD_KillMessage";
 };
 // <-- Markus

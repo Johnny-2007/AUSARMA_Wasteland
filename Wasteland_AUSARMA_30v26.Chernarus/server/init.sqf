@@ -30,9 +30,10 @@ waitUntil{scriptDone _serverCompiledScripts};
 [] spawn {
 	waitUntil {time != 0};
 	private ["_iter"];
+	MD_NUMBEROFSLOTS = 140; // -- GUER slot count
 	MD_PlayerSlots = [];
 	_iter = 1;
-	while {call compile format ["!isNil 'guer%1'", _iter]} do
+	while {_iter < MD_NUMBEROFSLOTS} do
 	{
 		MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
 		_iter = _iter + 1;
