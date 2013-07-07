@@ -21,10 +21,10 @@ switch _key do
     };
     
     // Y key
-    case 21:
-    {
-    	[1] execVM "client\systems\adminPanel\checkAdmin.sqf";
-    };
+    //case 21:
+    //{
+    //	[1] execVM "client\systems\adminPanel\checkAdmin.sqf";
+    //};
     
     //tilde ~
     case 41:
