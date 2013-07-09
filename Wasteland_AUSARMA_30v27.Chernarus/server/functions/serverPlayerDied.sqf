@@ -1,0 +1,16 @@
+//	@file Version: 1.0
+//	@file Name: serverPlayerDied.sqf
+//	@file Author: [404] Pulse, [404] Costlyy
+//	@file Created: 20/11/2012 05:19
+#include "setup.sqf"
+if(!X_Server) exitWith {};
+
+private["_newObject"];
+_player = _this select 0;
+_killer = _this select 1;
+
+#ifdef __A2NET__
+_player setVariable["processedDeath",netTime];
+#else
+_player setVariable["processedDeath",time];
+#endif
