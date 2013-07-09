@@ -5806,7 +5806,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=980;
+		items=974;
 		class Item0
 		{
 			position[]={10493.797,6,2295.8762};
@@ -11799,88 +11799,40 @@ class Mission
 		};
 		class Item968
 		{
-			position[]={4715.1631,339,10127.798};
-			name="HeliBase_1";
-			type="n_air";
-			colorName="ColorYellow";
-			angle=-210.89522;
-		};
-		class Item969
-		{
-			position[]={4476.1919,339,10545.321};
-			name="HeliBase_2";
-			type="n_air";
-			colorName="ColorYellow";
-			angle=-29.952099;
-		};
-		class Item970
-		{
-			position[]={12027.043,158.83333,12677.499};
-			name="HeliBase_3";
-			type="n_air";
-			colorName="ColorYellow";
-			angle=20.130602;
-		};
-		class Item971
-		{
-			position[]={12071.638,158.8,12662.415};
-			name="HeliBase_4";
-			type="n_air";
-			colorName="ColorYellow";
-			angle=19.654606;
-		};
-		class Item972
-		{
-			position[]={4732.4233,8.9989805,2545.8188};
-			name="HeliBase_5";
-			type="n_air";
-			colorName="ColorYellow";
-			angle=28.981319;
-		};
-		class Item973
-		{
-			position[]={4766.4512,9,2525.4622};
-			name="HeliBase_6";
-			type="n_air";
-			colorName="ColorYellow";
-			angle=29.561253;
-		};
-		class Item974
-		{
 			position[]={2797.6304,279.74881,8545.208};
 			name="bs1";
 			type="Empty";
 			angle=125.045;
 		};
-		class Item975
+		class Item969
 		{
 			position[]={10234.654,57.202961,4025.3972};
 			name="bs2";
 			type="Empty";
 			angle=-258.26801;
 		};
-		class Item976
+		class Item970
 		{
 			position[]={4958.1699,221.38725,3988.8474};
 			name="bs4";
 			type="Empty";
 			angle=-71.881302;
 		};
-		class Item977
+		class Item971
 		{
 			position[]={9772.7051,172.53818,10483.395};
 			name="bs3";
 			type="Empty";
 			angle=-1384.78;
 		};
-		class Item978
+		class Item972
 		{
 			position[]={8327.6826,143.2917,4913.5352};
 			name="Mission_16";
 			type="Empty";
 			colorName="ColorOrange";
 		};
-		class Item979
+		class Item973
 		{
 			position[]={5502.1069,308.36014,7334.2759};
 			name="Mission_54";
