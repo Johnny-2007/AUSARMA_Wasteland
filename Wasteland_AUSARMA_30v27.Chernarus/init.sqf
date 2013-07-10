@@ -61,5 +61,5 @@ if(X_Server) then {
 //init 3rd Party Scripts
 [] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
 [] execVM "addons\proving_Ground\init.sqf";
-[0, 0, 0] execVM "addons\scripts\DynamicWeatherEffects.sqf";
+//[0, 0, 0] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 _null = [] execVM "addons\scripts\DMZ_delete.sqf";
