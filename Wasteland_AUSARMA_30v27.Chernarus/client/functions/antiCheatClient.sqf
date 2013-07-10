@@ -30,13 +30,13 @@ _bannedVehicles = [
     "C130J_US_EP1","L159_ACR","L39_ACR","L39_TK_EP1", "L39_TK_EP1", "MQ9PredatorB_US_EP1", "A10_US_EP1", "Chukar", "L39_2_ACR","T810A_Des_MG_ACR",
     "BRDM2_ATGM_CDF","BRDM2_ATGM_INS","BTR90_HQ","GRAD_CDF","T810A_MG_ACR",
 	"GRAD_INS","GRAD_RU","GRAD_CDF","Ikarus","KamazOpen","KamazReammo","KamazRefuel","RM70_ACR",
-	"KamazRepair","LAV25_HQ","2S6M_Tunguska","BMP2_Ambul_CDF","BMP2_CDF","2S6M_Tunguska","BMP2_Gue",
-	"BMP2_HQ_CDF","BMP2_HQ_INS","BMP2_INS","M1A1","M1A2_TUSK_MG","MLRS","AH64D_Sidewinders",
+	"KamazRepair","LAV25_HQ","2S6M_Tunguska","BMP2_Ambul_CDF","2S6M_Tunguska",
+	"BMP2_HQ_CDF","BMP2_HQ_INS","M1A1","M1A2_TUSK_MG","MLRS","AH64D_Sidewinders",
     "Ka52","Ka52Black","Pandur2_ACR","BVP1_TK_ACR","BVP1_TK_GUE_ACR","BRDM2_Desert_ACR","BRDM2_ACR","BMP2_ACR",
 	"Mi17_rockets_RU","Mi24_P","Mi24_V","AH64D_EP1","Mi171Sh_CZ_EP1","BMP2_Des_ACR",
     "T810_Open_ACR","T810_Open_Des_ACR","T810Repair_ACR","T810Repair_Des_ACR","Dingo_GL_DST_ACR","Dingo_GL_Wdl_ACR","Dingo_WDL_ACR","Dingo_DST_ACR",
     "LandRover_ACR","LandRover_Ambulance_ACR","LandRover_Ambulance_Des_ACR","Octavia_ACR","UAZ_Unarmed_ACR",
-    "Mi171Sh_rockets_CZ_EP1","Su34","BAF_Apache_AH1_D","AH6J_EP1","Mi24_D_CZ_ACR","AW159_Lynx_BAF","M1114_AGS_ACR","M1114_DSK_ACR"];
+    "Mi171Sh_rockets_CZ_EP1","Su34","BAF_Apache_AH1_D","Mi24_D_CZ_ACR","AW159_Lynx_BAF","M1114_AGS_ACR","M1114_DSK_ACR"];
     
     
 _currencyLimit = 10 * 1000; // 10k money limit for initial config.
