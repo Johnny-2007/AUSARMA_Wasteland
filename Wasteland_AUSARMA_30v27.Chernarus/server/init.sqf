@@ -1,6 +1,6 @@
 //	@file Version: 1.0
 //	@file Name: init.sqf
-//	@file Author: [404] Deadbeat, [404] Costlyy
+//	@file Author: [404] Deadbeat, [404] Costlyy, Radioman
 //	@file Created: 20/11/2012 05:19
 //	@file Description: The server init.
 //	@file Args:
@@ -38,24 +38,24 @@ while {call compile format ["!isNil 'guer%1'", _iter]} do
 
 MD_FindPlayerStr = {
 	_toFind = _this;
-	_pObj = "MD: ERROR: NO UNIT";
+	_pObj = "ERROR: NO UNIT";
 	{
-		diag_log format ["MD-> Server: Searching for: %1 Found: %2", _tofind, name _x];
+		diag_log format ["Server: Searching for: %1 Found: %2", _tofind, name _x];
 		if (name _x == _toFind) then
 		{
 			_pObj = _x;
-			diag_log format ["MD-> Server: Found: %1 !!!!!", _tofind];
+			diag_log format ["Server: Found: %1 !!!!!", _tofind];
 		};
 	} foreach MD_Playerslots;
 	_pObj
 };
 
 "MD_GuerTK" addPublicVariableEventHandler {
-	private ["_Killer", "_Killed"];
+	private ["_player", "_killer"];
 	// -- Get the player and killer objects
-	_killed = ((_this select 1) select 0);
+	_player = ((_this select 1) select 0);
 	_killer = ((_this select 1) select 1);
-	//diag_log format ["MD-> Server: Killed: %1 by Killer: %2", _killed, _killer];
+	diag_log format ["Server: %1 was killed by %2", _player, _killer];
 	private ["_iter"];
 	MD_PlayerSlots = [];
 	_iter = 1;
@@ -64,17 +64,19 @@ MD_FindPlayerStr = {
 		MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
 		_iter = _iter + 1;
 	};
-	_killed = (_killed call MD_FindPlayerStr);
+	_player = (_player call MD_FindPlayerStr);
 	_killer = (_killer call MD_FindPlayerStr);
-	//diag_log format ["MD-> Server: Resolved: Killed: %1 by Killer: %2", _killed, _killer];
-	//if (((side _killer) == "GUER") && ((side _killed) == "GUER")) then {
-	//diag_log format ["MD-> Server: Sides: Killed: %1 by Killer: %2", side (group _killed), side (group _killer)];
+	diag_log format ["Server: (MD_FindPlayerStr) %1 was killed by %2", _player, _killer];
+	//if (((side _player) == "GUER") && ((side _killer) == "GUER")) then {
+	//diag_log format ["Server: %1 was killed by %2", side (group _player), side (group _killer)];
 	if (side (group _killer) == resistance) then
 	{
-		if (side (group _killed) == resistance) then
+		if (side (group _player) == resistance) then
 		{
-			if ((name _killer) == (name _killed)) exitWith {}; // -- Don't allow score increase if suicide.
-			if ((group _killed) == (group _killer)) exitWith {}; // -- Don't allow score increase if in same group.
+			if ((name _player) == (name _killer)) exitWith {}; // -- Don't allow score increase if suicide.
+			if ((group _player) == (group _killer)) exitWith {
+				diag_log format ["Server: %1 was TEAMKILLED by %2", _player, _killer];
+			}; // -- Don't allow score increase if in same group. Write TK to server log.
 			_killer addScore 2; // -- Add score to the killer, to cover the TK, and increment their score.
 		};
 	};
@@ -113,5 +115,5 @@ if (sideMissions == 1) then {
 
 if (isDedicated) then {
 	_id = [] execFSM "server\WastelandServClean.fsm";
-	[900,300] execVM "scripts\clean\cly_removedead.sqf"; //Delete men after 15 minutes, vehicles after 5 minutes. WastelandServClean will handle that.
+	[900,300] execVM "scripts\clean\cly_removedead.sqf"; //Delete men after 15 minutes, vehicles after 5 minutes. WastelandServClean will handle the rest.
 };
