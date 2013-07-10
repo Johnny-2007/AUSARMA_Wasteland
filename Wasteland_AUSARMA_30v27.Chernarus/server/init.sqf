@@ -52,32 +52,49 @@ MD_FindPlayerStr = {
 
 "MD_GuerTK" addPublicVariableEventHandler {
 	private ["_player", "_killer"];
-	// -- Get the player and killer objects
 	_player = ((_this select 1) select 0);
 	_killer = ((_this select 1) select 1);
 	diag_log format ["Server: %1 was killed by %2", _player, _killer];
-	private ["_iter"];
-	MD_PlayerSlots = [];
-	_iter = 1;
-	while {call compile format ["!isnull guer%1", _iter]} do
-	{
-		MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
-		_iter = _iter + 1;
-	};
-	_player = (_player call MD_FindPlayerStr);
-	_killer = (_killer call MD_FindPlayerStr);
-	diag_log format ["Server: (MD_FindPlayerStr) %1 was killed by %2", _player, _killer];
-	//if (((side _player) == "GUER") && ((side _killer) == "GUER")) then {
-	//diag_log format ["Server: %1 was killed by %2", side (group _player), side (group _killer)];
-	if (side (group _killer) == resistance) then
-	{
-		if (side (group _player) == resistance) then
-		{
-			if ((name _player) == (name _killer)) exitWith {}; // -- Don't allow score increase if suicide.
+//	private ["_iter"];
+//	MD_PlayerSlots = [];
+//	_iter = 1;
+//	while {call compile format ["!isnull guer%1", _iter]} do
+//	{
+//		MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
+//		_iter = _iter + 1;
+//	};
+//	_player = (_player call MD_FindPlayerStr);
+//	_killer = (_killer call MD_FindPlayerStr);
+//	diag_log format ["Server: (MD_FindPlayerStr) %1 was killed by %2", _player, _killer];
+//	diag_log format ["Server: %1 was killed by %2", side (group _player), side (group _killer)];
+	if (_player != "ERROR: NO UNIT") then {
+		
+		if (_killer != "ERROR: NO UNIT") then {
+			
+			// Don't allow score increase if suicide.
+			if ((name _player) == (name _killer)) exitWith { 
+				diag_log format ["Server: %1 has comitted SUICIDE", _player];
+//				MD_KillMessage = format["%1 died by S U I C I D E.", _player];					
+//				publicVariable "MD_KillMessage";
+			};
+			
 			if ((group _player) == (group _killer)) exitWith {
 				diag_log format ["Server: %1 was TEAMKILLED by %2", _player, _killer];
-			}; // -- Don't allow score increase if in same group. Write TK to server log.
-			_killer addScore 2; // -- Add score to the killer, to cover the TK, and increment their score.
+//				MD_KillMessage = format["%1 was T E A M K I L L E D by %2.", _player, name _killer];				
+//				publicVariable "MD_KillMessage";
+			};
+			
+			//  Add score to the killer, to cover the TK, and increment their score.
+			diag_log format ["Server: %1 was KILLED by %2", _player, _killer];
+//			MD_KillMessage = format["%1 was K I L L E D by %2", _player, name _killer];
+//			publicVariable "MD_KillMessage";			
+			_killer addScore 2;
+		};
+	else {
+		// Rare event where player name is unknown.
+		diag_log format ["Server: %1 has died!", _player];
+//		MD_KillMessage = format["%1 has died.", _player];
+//		publicVariable "MD_KillMessage";
 		};
 	};
 };
