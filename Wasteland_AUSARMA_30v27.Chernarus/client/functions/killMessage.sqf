@@ -57,5 +57,5 @@ if (side _killer == West) exitWith {
 if(_player == _killer) then { //Suicide - Might be obsolete since respawning suicide get's catched in the "Civilian" section
 [player, nil, rGlobalChat, format["has killed themself."]] call RE;
 } else { //Normal kill
-[player, nil, rGlobalChat, format["was killed by «%1» with %3",name _killer,_distance,_killerWep]] call RE;
+[player, nil, rGlobalChat, format["was killed by «%1» with %2",name _killer,_killerWep]] call RE;
 };
