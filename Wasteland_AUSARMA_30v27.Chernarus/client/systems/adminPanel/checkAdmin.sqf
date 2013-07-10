@@ -14,7 +14,7 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 	};
     if ((_uid in administrators)) then {
 		[] execVM "client\systems\adminPanel\loadAdministratorMenu.sqf";
-        hint "Welcome Admin";		
+        hint "Welcome Administrator";		
 	};
     if ((_uid in serverAdministrators)) then {
     
@@ -24,7 +24,7 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
         } else {
         	execVM "client\systems\adminPanel\loadServerAdministratorMenu.sqf";
         };
-      	hint "Welcome Owner";		
+      	hint "Welcome Server Administrator";		
 	};	
 } else {
     sleep 1;

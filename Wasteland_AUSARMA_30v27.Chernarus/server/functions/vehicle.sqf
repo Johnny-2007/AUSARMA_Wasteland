@@ -161,7 +161,6 @@ while {_run} do {
 			if (_num < 35) then {_type = 1;};
 			if (_num < 10) then {_type = 2;};
             
-            //_position = ["Car"] call triageSpawn;
 			[_position, _type] call vehicleCreation;
 
             _nearestTown = "UNKNOWN";

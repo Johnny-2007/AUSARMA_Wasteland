@@ -1,6 +1,6 @@
 //	@file Author: [404] Costlyy
 //	@file Version: 1.0
-//  	@file Date:	21/11/2012	
+//  @file Date:	21/11/2012	
 //	@file Description: Locks an object until the player disconnects.
 //	@file Args: [object,player,int,lockState(lock = 0 / unlock = 1)]
 
@@ -112,14 +112,14 @@ switch (_lockState) do {
                 player switchMove "AinvPknlMstpSlayWrflDnon_medic";
             };
             
-		_unlockDuration = _unlockDuration - 1;
-		_iterationPercentage = floor (_iteration / _totalDuration * 100);
+			_unlockDuration = _unlockDuration - 1;
+		    _iterationPercentage = floor (_iteration / _totalDuration * 100);
 		    
-		2 cutText [format["Object unlock %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
-		sleep 1;
+			2 cutText [format["Object unlock %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
+		    sleep 1;
 		    
-		if (_iteration >= _totalDuration) exitWith { // Sleep a little extra to show that lock has completed
-		sleep 1;
+			if (_iteration >= _totalDuration) exitWith { // Sleep a little extra to show that lock has completed
+		        sleep 1;
                 _currObject setVariable ["objectLocked", false, true];
                 2 cutText ["", "PLAIN DOWN", 1];
                 mutexScriptInProgress = false;

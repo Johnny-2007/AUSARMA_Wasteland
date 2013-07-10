@@ -70,7 +70,6 @@ staticHeliWrecks = [
 //Civilian Vehicle List - Random Spawns
 civilianVehicles = [
 			"ATV_US_EP1",
-			"BAF_Offroad_W",
 			"car_hatchback",
 			"car_sedan",
 			"hilux1_civil_1_open",
