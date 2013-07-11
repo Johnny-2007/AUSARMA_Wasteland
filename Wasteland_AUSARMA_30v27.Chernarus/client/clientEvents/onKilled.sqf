@@ -23,7 +23,7 @@ if (name _player != name _killer) then {
 	diag_log format ["Client: %1 was killed by %2", name _player, name _killer];
 	diag_log format ["Client (GuerTK): %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
 	publicVariableServer "MD_GuerTK";
-} else {
+//} else {
 //	MD_KillMessage = format["%1 has killed themself.", name _player];
 //	commandChat MD_KillMessage;
 //	publicVariable "MD_KillMessage";

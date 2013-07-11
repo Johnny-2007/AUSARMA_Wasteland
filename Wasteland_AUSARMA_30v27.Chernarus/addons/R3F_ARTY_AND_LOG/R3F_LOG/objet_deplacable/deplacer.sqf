@@ -60,7 +60,7 @@ else
 			if(_objet getVariable "R3F_Side" == civilian) then {
 				{
 					if((group _x != group player) && ((_x distance _objet) < _ownerMinDistance)) exitWith {
-						_owner_close = true
+						_owner_close = false
 					};
 				} forEach allUnits;
 			};

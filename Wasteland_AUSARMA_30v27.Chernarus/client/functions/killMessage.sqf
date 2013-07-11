@@ -28,21 +28,21 @@ _killerName = name _killer;
 };
 
 //_distance = format["%1",round(_distance)];
-switch (true) do {
-	case (_distance < 300) : {	// Close range kills
-	_distance = format[""];};
-
-	case (_distance > 300 && _distance < 800) : { //Show no distance
-	_distance = format[""];};
-
-	case (_distance > 800 && _distance < 1500) : {	//Long distance kills
-	_distance = format[""];};
-
-	case (_distance > 1500 && _distance < 3000) : { //Show the distance in meters only for really remarkable long shots
-	_distance = format[" from over 1500m"];};
-
-	default {};
-};
+//switch (true) do {
+//	case (_distance < 300) : {	// Close range kills
+//	_distance = format[""];};
+//
+//	case (_distance > 300 && _distance < 800) : { //Show no distance
+//	_distance = format[""];};
+//
+//	case (_distance > 800 && _distance < 1500) : {	//Long distance kills
+//	_distance = format[""];};
+//
+//	case (_distance > 1500 && _distance < 3000) : { //Show the distance in meters only for really remarkable long shots
+//	_distance = format[" from over 1500m"];};
+//
+//	default {};
+//};
 
 // Define the name for killer and his weapon
 _killerName = name _killer;
