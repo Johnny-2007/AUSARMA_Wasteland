@@ -80,10 +80,7 @@ if !(isServer && isDedicated) then
 	R3F_LOG_action_detacher_valide = false;
 	R3F_LOG_action_charger_deplace_valide = false;
 	R3F_LOG_action_selectionner_objet_charge_valide = false;
-
-        R3F_LOG_action_hpcheck_object_valid = false;
-        R3F_LOG_action_repair_object_valid = false;
-
+	
 	/** Ce fil d'exécution permet de diminuer la fréquence des vérifications des conditions normalement faites dans les addAction (~60Hz) */
 	execVM "addons\R3F_ARTY_AND_LOG\R3F_LOG\surveiller_conditions_actions_menu.sqf";
 };

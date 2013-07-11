@@ -17,7 +17,7 @@ else
 
 	_objet = _this select 0;
 	_owner_close = false;
-    	_ownerMinDistance = 100;
+    _ownerMinDistance = 100;
 	if(!isNil{_objet getVariable "R3F_Side"}) then {
 		if(playerSide != (_objet getVariable "R3F_Side") || playerSide == resistance) then {
 			{
@@ -31,7 +31,7 @@ else
 	};
     
 	if (_owner_close) exitwith {
-    	hint format["This item belongs to %1 and they are nearby.", (_objet getVariable "R3F_Side")]; 
+    	hint format["This item belongs to another group and they are nearby."]; 
         R3F_LOG_mutex_local_verrou = false;
     };
 	

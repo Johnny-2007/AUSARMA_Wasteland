@@ -90,12 +90,11 @@ MD_FindPlayerStr = {
 //			publicVariable "MD_KillMessage";			
 			_killer addScore 2;
 		};
-//	else {
+//	} else {
 //		// Rare event where player name is unknown.
 //		diag_log format ["Server %1 has died", _player];
 //		MD_KillMessage = format["%1 has died.", _player];
 //		publicVariable "MD_KillMessage";
-//		};
 	};
 };
 // <-- Markus
