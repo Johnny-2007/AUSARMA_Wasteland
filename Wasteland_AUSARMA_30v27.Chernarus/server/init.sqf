@@ -54,7 +54,7 @@ MD_FindPlayerStr = {
 	private ["_player", "_killer"];
 	_player = ((_this select 1) select 0);
 	_killer = ((_this select 1) select 1);
-	diag_log format ["Server: %1 was killed by %2", _player, _killer];
+	diag_log format ["Server %1 was killed by %2", _player, _killer];
 //	private ["_iter"];
 //	MD_PlayerSlots = [];
 //	_iter = 1;
@@ -73,29 +73,29 @@ MD_FindPlayerStr = {
 			
 			// Don't allow score increase if suicide.
 			if ((name _player) == (name _killer)) exitWith { 
-				diag_log format ["Server: %1 has comitted SUICIDE", _player];
+				diag_log format ["Server %1 has comitted SUICIDE", _player];
 //				MD_KillMessage = format["%1 died by S U I C I D E.", _player];					
 //				publicVariable "MD_KillMessage";
 			};
 			
 			if ((group _player) == (group _killer)) exitWith {
-				diag_log format ["Server: %1 was TEAMKILLED by %2", _player, _killer];
+				diag_log format ["Server %1 was TEAMKILLED by %2", _player, _killer];
 //				MD_KillMessage = format["%1 was T E A M K I L L E D by %2.", _player, name _killer];				
 //				publicVariable "MD_KillMessage";
 			};
 			
 			//  Add score to the killer, to cover the TK, and increment their score.
-			diag_log format ["Server: %1 was KILLED by %2", _player, _killer];
+			diag_log format ["Server %1 was KILLED by %2", _player, _killer];
 //			MD_KillMessage = format["%1 was K I L L E D by %2", _player, name _killer];
 //			publicVariable "MD_KillMessage";			
 			_killer addScore 2;
 		};
-	else {
-		// Rare event where player name is unknown.
-		diag_log format ["Server: %1 has died!", _player];
+//	else {
+//		// Rare event where player name is unknown.
+//		diag_log format ["Server %1 has died", _player];
 //		MD_KillMessage = format["%1 has died.", _player];
 //		publicVariable "MD_KillMessage";
-		};
+//		};
 	};
 };
 // <-- Markus
