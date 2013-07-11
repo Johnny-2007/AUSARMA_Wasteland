@@ -51,7 +51,7 @@ MD_GetPlayerList = {
 };
 onPlayerConnected "[] spawn MD_GetPlayerList";
 */
-
+// -- Markus --> If this doesn't work, try http://community.bistudio.com/wiki/vehicleVarName - Send player's vehicle name from client, instead of names.
 MD_Playerslots = [GUER1, GUER2, GUER3, GUER4, GUER5, GUER6, GUER7, GUER8, GUER9, GUER10, GUER11, GUER12, GUER13, GUER14, GUER15, GUER16, GUER17, GUER18, GUER19, GUER20, GUER21, GUER22, GUER23, GUER24, GUER25, GUER26, GUER27, GUER28, GUER29, GUER30, GUER31, GUER32, GUER33, GUER34, GUER35, GUER36, GUER37, GUER38, GUER39, GUER40, GUER41, GUER42, GUER43, GUER44, GUER45, GUER46, GUER47, GUER48, GUER49, GUER50, GUER51, GUER52, GUER53, GUER54, GUER55, GUER56, GUER57, GUER58, GUER59, GUER60, GUER61, GUER62, GUER63, GUER64, GUER65, GUER66, GUER67, GUER68, GUER69, GUER70, GUER71, GUER72, GUER73, GUER74, GUER75, GUER76, GUER77, GUER78, GUER79, GUER80, GUER81, GUER82, GUER83, GUER84, GUER85, GUER86, GUER87, GUER88, GUER89, GUER90, GUER91, GUER92, GUER93, GUER94, GUER95, GUER96, GUER97, GUER98, GUER99, GUER100, GUER101, GUER102, GUER103, GUER104, GUER105, GUER106, GUER107, GUER108, GUER109, GUER110, GUER111, GUER112, GUER113, GUER114, GUER115, GUER116, GUER117, GUER118, GUER119, GUER120, GUER121, GUER122, GUER123, GUER124, GUER125, GUER126, GUER127, GUER128, GUER129, GUER130, GUER131, GUER132, GUER133, GUER134, GUER135, GUER136, GUER137, GUER138, GUER139, GUER140];
 
 MD_FindPlayerStr = {
@@ -75,18 +75,6 @@ MD_FindPlayerStr = {
 	// -- Get the player and killer objects
 	_killed = ((_this select 1) select 0);
 	_killer = ((_this select 1) select 1);
-	//diag_log format ["MD-> Server: Killed: %1 by Killer: %2", _killed, _killer];
-	/* -- Refresh the player slot objects.
-	private ["_iter"];
-	MD_PlayerSlots = [];
-	_iter = 1;
-	while {call compile format ["!isnull guer%1", _iter]} do
-	{
-		MD_Playerslots set [count MD_Playerslots, call compile format ["guer%1", _iter]];
-		_iter = _iter + 1;
-	};
-	diag_log format ["MD-> Server: Player slots: %1", MD_Playerslots];
-	*/
 	//
 	_killed = (_killed call MD_FindPlayerStr);
 	_killer = (_killer call MD_FindPlayerStr);
