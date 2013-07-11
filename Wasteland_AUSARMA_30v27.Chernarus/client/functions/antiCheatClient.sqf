@@ -63,7 +63,6 @@ while {true} do {
 	[nil, player, "loc", rHideObject, false] call RE;
     
     // Remove existing event handlers before adding them back.
-    player removeAllEventHandlers "Killed";
     player removeAllEventHandlers "Respawn";
     player removeAllEventHandlers "handleDamage";
     
