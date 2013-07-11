@@ -31,7 +31,7 @@ else
 	};
     
 	if (_owner_close) exitwith {
-    	hint format["This item belongs to another group and they are nearby."]; 
+    	hint format["Your cannot move this item while enemy are within 100m."]; 
         R3F_LOG_mutex_local_verrou = false;
     };
 	

@@ -15,17 +15,17 @@
 _player = _this select 0;
 _killer = _this select 1;
 	
-_distance = _killer distance _player;
-_distance = floor(_distance);
+//_distance = _killer distance _player;
+//_distance = floor(_distance);
 
-if (_distance > 3000) exitWith {	//Killed while respawning (or when driving over a mine and the killer is over 3km away)
-_killerName = name _killer;
-	if (isNull _killerName) then {
-	[player, nil, rGlobalChat, format["soldier K.I.A."]] call RE;
-	} else {
-	[player, nil, rGlobalChat, format["got killed by «%1»",name _killer]] call RE;
-	};
-};
+//if (_distance > 3000) exitWith {	//Killed while respawning (or when driving over a mine and the killer is over 3km away)
+//_killerName = name _killer;
+//	if (isNull _killerName) then {
+//	[player, nil, rGlobalChat, format["soldier K.I.A."]] call RE;
+//	} else {
+//	[player, nil, rGlobalChat, format["got killed by «%1»",name _killer]] call RE;
+//	};
+//};
 
 //_distance = format["%1",round(_distance)];
 //switch (true) do {
@@ -49,7 +49,7 @@ _killerName = name _killer;
 _killerWep = currentWeapon _killer;
 _weaponName = (configFile >> "cfgWeapons" >> _killerWep);
 _weaponName = format["%1",getText(_weaponName >> "displayName")];
-_killerWep = format[" with «%1»",_weaponName];
+_killerWep = format["«%1»",_weaponName];
 
 
 if (_killerName == "ERROR: NO UNIT") exitWith { // Drive a car into a wall/rock etc. or drive over a mine
