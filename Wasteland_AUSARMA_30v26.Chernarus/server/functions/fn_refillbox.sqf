@@ -67,6 +67,7 @@ switch(_selectedBox) do {
 	_currBox addWeaponCargoGlobal ["M4A1_AIM_SD_CAMO",2];
 	_currBox addWeaponCargoGlobal ["M4A1_HWS_GL_CAMO",2];
 	_currBox addWeaponCargoGlobal ["DMR",2];
+	_currBox addWeaponCargoGlobal ["M107",1];
 	_currBox addWeaponCargoGlobal ["Binocular_Vector",3];
 
 	_currBox addMagazineCargoGlobal ["1Rnd_HE_M203",20];
@@ -74,7 +75,7 @@ switch(_selectedBox) do {
 	_currBox addMagazineCargoGlobal ["30Rnd_556x45_StanagSD",20];
 	_currBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",50];
 	_currBox addMagazineCargoGlobal ["20Rnd_762x51_DMR",15];
-	_currBox addMagazineCargoGlobal ["5Rnd_762x51_M24",15];			
+	_currBox addMagazineCargoGlobal ["10Rnd_127x99_m107",5];		
     };
      case "mission_CQC_Weapons": { // Used in the weapon stash CQ mission
     	_currBox = _box;

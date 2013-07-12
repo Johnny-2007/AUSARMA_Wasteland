@@ -19,8 +19,6 @@ STR_R3F_LOG_courir_trop_vite = "You're walking too fast ! (Hold the shift key to
 STR_LOCK_OBJECT = "Lock this object";
 STR_UNLOCK_OBJECT = "Unlock this object";
 STR_RELEASE_HORIZONTAL = "Release the object horizontally";
-STR_CHECK_HEALTH = "Check object health";
-STR_REPAIR_OBJECT = "Repair object with a repair kit";
 
 STR_R3F_LOG_action_selectionner_objet_charge = "Load in...";
 STR_R3F_LOG_action_selectionner_objet_charge_fait = "Now select the vehicle in which to load the object ""%1""...";

@@ -121,7 +121,7 @@ switch (_lockState) do {
 			if (_iteration >= _totalDuration) exitWith { // Sleep a little extra to show that lock has completed
 		        sleep 1;
                 _currObject setVariable ["objectLocked", false, true];
-				// Need to reset object's group or side owner here somewhere!
+		// Need to reset object's group or side owner here somewhere!
                 2 cutText ["", "PLAIN DOWN", 1];
                 mutexScriptInProgress = false;
                 R3F_LOG_mutex_local_verrou = false;

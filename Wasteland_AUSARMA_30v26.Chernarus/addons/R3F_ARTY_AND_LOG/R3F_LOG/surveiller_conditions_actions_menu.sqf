@@ -35,15 +35,7 @@ while {true} do
 					(isNull (_objet_pointe getVariable "R3F_LOG_est_deplace_par") || (!alive (_objet_pointe getVariable "R3F_LOG_est_deplace_par"))) &&
 					isNull (_objet_pointe getVariable "R3F_LOG_est_transporte_par") && !(_objet_pointe getVariable "R3F_LOG_disabled"));
 			};
-
-                        // HP Check and Repair
-			if ( !isNil {_objet_pointe getVariable "health"} ) then
-			{
-                                if (_objet_pointe getVariable "health" < _objet_pointe getVariable "healthTotal") then { R3F_LOG_action_hpcheck_object_valid = true } else { R3F_LOG_action_hpcheck_object_valid = false };
-                                if (R3F_LOG_action_hpcheck_object_valid && player getVariable "repairkits" > 0) then { R3F_LOG_action_repair_object_valid = true } else { R3F_LOG_action_repair_object_valid = false };
-                                //if ((_objet_pointe getVariable "health" < (_objet_pointe getVariable "healthTotal" * 0.75)) && player getVariable "repairkits" > 0) then { R3F_LOG_action_repair_object_valid = true } else { R3F_LOG_action_repair_object_valid = false };
-			};
-
+			
 			// Si l'objet est un objet remorquable
 			if ({_objet_pointe isKindOf _x} count R3F_LOG_CFG_objets_remorquables > 0) then
 			{
@@ -154,5 +146,5 @@ while {true} do
 			([0,0,0] distance velocity R3F_LOG_objet_addAction < 15) && (getPos R3F_LOG_objet_addAction select 2 < 40) && !(R3F_LOG_objet_addAction getVariable "R3F_LOG_disabled"));
 	};
 	
-	sleep 0.2;
+	sleep 0.3;
 };

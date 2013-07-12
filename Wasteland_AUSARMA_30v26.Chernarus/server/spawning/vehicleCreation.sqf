@@ -17,8 +17,7 @@ if (_type == 0) then {
     _cartype = civilianVehicles select (random (count civilianVehicles - 1));
     _car = createVehicle [_cartype,_pos,[], 20,"None"];
     _car setpos [getpos _car select 0,getpos _car select 1,0];
-    //_car setVehicleInit "nul=[this, 300, 3600, 0, false] execVM 'server\functions\vehicle.sqf'";
-    _car setVehicleInit "nul=[this, 30, 3600, 0, false] execVM 'server\functions\vehicle.sqf'; [this] execVM 'server\functions\vehicleLock.sqf';";
+    _car setVehicleInit "nul=[this, 30, 1800, 0, false] execVM 'server\functions\vehicle.sqf'; [this] execVM 'server\functions\vehicleLock.sqf';";
     processInitCommands;
     _car setVariable["spawnpos",_pos,true];
     
@@ -43,7 +42,8 @@ if (_type == 1) then {
     _cartype = militaryVehicles select (random (count militaryVehicles - 1));
     _car = createVehicle [_cartype,_pos, [], 30, "None"];
     _car setpos [getpos _car select 0,getpos _car select 1,0];
-    _car setVehicleInit "nul=[this, 30, 0, 0, false] execVM 'server\functions\vehicle.sqf'; [this] execVM 'server\functions\vehicleLock.sqf';";
+	// Vehicle will respawn after 90 minutes if deserted
+    _car setVehicleInit "nul=[this, 30, 5400, 0, false] execVM 'server\functions\vehicle.sqf'; [this] execVM 'server\functions\vehicleLock.sqf';";
     processInitCommands;
     _car setVariable["spawnpos",_pos,true];
 
@@ -69,7 +69,8 @@ if (_type == 2) then {
     _cartype = armedMilitaryVehicles select (random (count armedMilitaryVehicles - 1));
     _car = createVehicle [_cartype,_pos, [], 30, "None"];
     _car setpos [getpos _car select 0,getpos _car select 1,0];
-    _car setVehicleInit "nul=[this, 30, 0, 0, false] execVM 'server\functions\vehicle.sqf'; [this] execVM 'server\functions\vehicleLock.sqf';";
+	// Vehicle will respawn after 2 hours if deserted
+    _car setVehicleInit "nul=[this, 30, 7200, 0, false] execVM 'server\functions\vehicle.sqf'; [this] execVM 'server\functions\vehicleLock.sqf';";
     processInitCommands;
     _car setVariable["spawnpos",_pos,true];
 

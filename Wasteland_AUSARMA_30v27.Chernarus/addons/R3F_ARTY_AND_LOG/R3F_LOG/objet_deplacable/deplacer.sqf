@@ -29,8 +29,8 @@ else
 	private ["_objet", "_est_calculateur", "_arme_principale", "_action_menu_release_relative", "_action_menu_release_horizontal" , "_action_menu_45", "_action_menu_90", "_action_menu_180", "_azimut_canon", "_owner_close"];
 	
 	_objet = _this select 0;
-    _ownerMinDistance = 100;
-    _owner_close = false;
+	_ownerMinDistance = 100;
+	_owner_close = false;
     
 	if(!isNil{_objet getVariable "R3F_Side"}) then {
 			{

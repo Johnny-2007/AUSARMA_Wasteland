@@ -29,34 +29,40 @@ else
 	private ["_objet", "_est_calculateur", "_arme_principale", "_action_menu_release_relative", "_action_menu_release_horizontal" , "_action_menu_45", "_action_menu_90", "_action_menu_180", "_azimut_canon", "_owner_close"];
 	
 	_objet = _this select 0;
-    	_ownerMinDistance = 150;
-    	_owner_close = false;
+	_ownerMinDistance = 100;
+	_owner_close = false;
     
 	if(!isNil{_objet getVariable "R3F_Side"}) then {
-		if(playerSide != (_objet getVariable "R3F_Side") || playerSide == resistance) then {
-        
 			{
 				if((side group _x == (_objet getVariable "R3F_Side")) && group _x != group player && alive _x) then {
 					if((_x distance _objet) < _ownerMinDistance) exitWith {
-						_enemy_nearby = true;
+						_owner_close = true;
 					};
 				};
 			} forEach allUnits;
-		};
+	} else {
+		_owner_close = false;
 	};
 
 	if(_owner_close) exitWith {
-		hint format["This item belongs to %1 and they are nearby.", _objet getVariable "R3F_Side"]; 
+		hint format["You cannot move this item while enemy are within 100m."]; 
         R3F_LOG_mutex_local_verrou = false;
 	};
     
-	_owner_close = false;
 	if(playerSide == resistance) then {
 		if(isNil{_objet getVariable "R3F_Side"}) then {
-			{if((group _x != group player) && ((_x distance _objet) < _ownerMinDistance)) exitWith {_owner_close = true};} forEach allUnits;
+			{
+				if((group _x != group player) && ((_x distance _objet) < _ownerMinDistance)) exitWith {
+					_owner_close = true;
+				};
+			} forEach allUnits;
 		} else {
 			if(_objet getVariable "R3F_Side" == civilian) then {
-				{if((group _x != group player) && ((_x distance _objet) < _ownerMinDistance)) exitWith {_owner_close = true};} forEach allUnits;
+				{
+					if((group _x != group player) && ((_x distance _objet) < _ownerMinDistance)) exitWith {
+						_owner_close = false
+					};
+				} forEach allUnits;
 			};
 		};
 		if(!_owner_close) then {

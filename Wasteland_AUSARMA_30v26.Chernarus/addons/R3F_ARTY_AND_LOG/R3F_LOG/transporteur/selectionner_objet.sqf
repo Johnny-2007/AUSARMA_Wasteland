@@ -17,13 +17,13 @@ else
 
 	_objet = _this select 0;
 	_owner_close = false;
-    	_ownerMinDistance = 100;
+	_ownerMinDistance = 100;
 	if(!isNil{_objet getVariable "R3F_Side"}) then {
 		if(playerSide != (_objet getVariable "R3F_Side") || playerSide == resistance) then {
 			{
 				if((side group _x == (_objet getVariable "R3F_Side")) && group _x != group player && alive _x) then {
 					if((_x distance _objet) < _ownerMinDistance) exitWith {
-						_enemy_nearby = true;
+						_owner_close = true;
 					};
 				};
 			} forEach allUnits;
@@ -31,7 +31,7 @@ else
 	};
     
 	if (_owner_close) exitwith {
-    	hint format["This item belongs to %1 and they are nearby.", _playerSideR3F]; 
+    	hint format["Your cannot move this item while enemy are within 100m."]; 
         R3F_LOG_mutex_local_verrou = false;
     };
 	
