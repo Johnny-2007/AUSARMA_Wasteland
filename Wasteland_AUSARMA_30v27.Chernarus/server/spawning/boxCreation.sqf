@@ -138,12 +138,13 @@ switch(_selectedBox) do {
         
         // Add new weapons before ammunition
         _currBox addWeaponCargoGlobal ["m8_compact_pmc",2];
-	_currBox addWeaponCargoGlobal ["M4A1_AIM_SD_camo",2];
+		_currBox addWeaponCargoGlobal ["M4A1_AIM_SD_camo",2];
         _currBox addWeaponCargoGlobal ["m8_sharpshooter",4];
         
         // Add ammunition
         _currBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",25];
         _currBox addMagazineCargoGlobal ["30Rnd_556x45_StanagSD",25];
+		_currBox addMagazineCargoGlobal ["HandGrenade",5];
     };
     case "basicSpecial2": { // BAF weapons
     	_currBox = createVehicle ["SpecialWeaponsBox", _selectedBoxPos,[], 30, "NONE"];
