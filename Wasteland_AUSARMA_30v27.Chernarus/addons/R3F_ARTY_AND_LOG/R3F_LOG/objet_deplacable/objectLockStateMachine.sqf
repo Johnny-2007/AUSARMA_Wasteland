@@ -90,8 +90,9 @@ switch (_lockState) do {
 						_owner_close = true;
 						2 cutText [format["Unlocking failed as enemy are near!"], "PLAIN DOWN", 1];
 						player SwitchMove _currState; // Redundant reset of animation state to avoid getting locked in animation.   	
+						mutexScriptInProgress = false;
 						R3F_LOG_mutex_local_verrou = false;
-						mutexScriptInProgress = false;						
+						doCancelAction = false;						
 					};
 				};
 			} forEach allUnits;
