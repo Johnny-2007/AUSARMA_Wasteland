@@ -132,8 +132,8 @@ generalStore = [
 //Name, Price, Vehicle
 BuildStoreArray = [
 	["Concrete Block", 50, "Land_ConcreteBlock"],
-	["Defenses - 50Rnd KORD High-gun", 500, "KORD_high"],
-	["Defenses - 50Rnd KORD Mini-gun", 500, "KORD"],
+	["Defenses (KORD High)", 500, "KORD_high"],
+	["Defenses (KORD Mini)n", 500, "KORD"],
 	["Fortification, Deerstand", 25, "Land_Misc_deerstand"],
 	["Fortification, Sandbag Bunker (big)", 25, "Land_fortified_nest_big"],
 	["Fortification, Sandbag Camp (large)", 25, "WarfareBCamp"],

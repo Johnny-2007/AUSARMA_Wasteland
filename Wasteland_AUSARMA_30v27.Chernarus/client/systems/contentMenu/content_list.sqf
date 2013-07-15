@@ -53,6 +53,8 @@ _contentListIndex = _contentList lbAdd format["12$ Land_fort_bagfence_round"];
 _contentList lbSetData [(lbSize _contentList)-1, "Land_fort_bagfence_round"];
 _contentListIndex = _contentList lbAdd format["12$ Land_fortified_nest_small"];
 _contentList lbSetData [(lbSize _contentList)-1, "Land_fortified_nest_small"];
+_contentListIndex = _contentList lbAdd format["12$ Hedgehog"];
+_contentList lbSetData [(lbSize _contentList)-1, "Hedgehog"];
 _contentListIndex = _contentList lbAdd format["12$ Hhedgehog_concreteBig"];
 _contentList lbSetData [(lbSize _contentList)-1, "Hhedgehog_concreteBig"];
 _contentListIndex = _contentList lbAdd format["12$ Desk"];

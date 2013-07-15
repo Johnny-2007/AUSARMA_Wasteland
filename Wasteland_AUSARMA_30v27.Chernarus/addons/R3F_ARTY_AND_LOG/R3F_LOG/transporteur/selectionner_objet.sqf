@@ -15,23 +15,22 @@ else
 	// Set mutex lock to active.
 	R3F_LOG_mutex_local_verrou = true;
 
-	_doExit = false;
-    	_ownerMinDistance = 100;
-	_playerSideR3F = ((_this select 0) getVariable "R3F_Side");
-    
-    if(isNil {_objet getVariable "R3F_Side"}) then {
-		_objet setVariable ["R3F_Side", (side player), true];
-    };
-    
-	if (side player != _playerSideR3F) then {
-		{
-            if ((side _x ==  _playerSideR3F) AND (alive _x) AND (_x distance (_this select 0) < _ownerMinDistance)) exitwith {
-                _doExit = true;
-            };
-        } foreach AllUnits;
+	_objet = _this select 0;
+	_owner_close = false;
+    _ownerMinDistance = 100;
+	if(!isNil{_objet getVariable "R3F_Side"}) then {
+		if(playerSide != (_objet getVariable "R3F_Side") || playerSide == resistance) then {
+			{
+				if((side group _x == (_objet getVariable "R3F_Side")) && group _x != group player && alive _x) then {
+					if((_x distance _objet) < _ownerMinDistance) exitWith {
+						_owner_close = true;
+					};
+				};
+			} forEach allUnits;
+		};
 	};
     
-	if (_doExit) exitwith {
+	if (_owner_close) exitwith {
     	hint format["Your cannot move this item while enemy are within 100m."]; 
         R3F_LOG_mutex_local_verrou = false;
     };

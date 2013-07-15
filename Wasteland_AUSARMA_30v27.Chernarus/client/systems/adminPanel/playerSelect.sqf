@@ -40,7 +40,6 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 			if (_spectating == "Spectate") then {
 				_spectateButton ctrlSetText "Spectating";
 				player commandChat format ["Viewing %1.", name _target];
-				diag_log format ["ADMIN TOOLS: %1 is SPECTATING %2", name _player, name _target];
 				
 				camDestroy _camadm;
 				_camadm = "camera" camCreate ([(position vehicle _target select 0) - 5,(position vehicle _target select 1), (position vehicle _target select 2) + 10]);
@@ -67,7 +66,6 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 			} else {
 				_spectateButton ctrlSetText "Spectate";
 				player commandchat format ["No Longer Viewing.", name _target];
-				diag_log format ["ADMIN TOOLS: %1 has STOPPED spectating %2", name _player, name _target];
 				player cameraEffect ["terminate","back"];
 				camDestroy _camadm;
 			};
@@ -80,11 +78,11 @@ if ((_uid in moderators) OR (_uid in administrators) OR (_uid in serverAdministr
 	        processInitCommands;
 	        clearVehicleInit _target;
 		};
-	    case 2: //Slay - DISABLED
+	    case 2: //Slay
 	    {
-//			_target setVehicleInit format["if (name player == ""%1"") then {player setdamage 1;deletevehicle player;};",name _target];
-//			processInitCommands;
-//			clearVehicleInit _target;
+			_target setVehicleInit format["if (name player == ""%1"") then {player setdamage 1;deletevehicle player;};",name _target];
+			processInitCommands;
+			clearVehicleInit _target;
 	    };
 	    case 3: //Unlock Team Switcher
 	    {      

@@ -301,7 +301,7 @@ R3F_LOG_CFG_objets_transportables =  [
 	["LocalBasicWeaponsBox", 5],
 	["Hhedgehog_concreteBig", 5],
 	["KORD_high", 3],
-	["KORD_high", 3],
+	["KORD", 3],
 	["M1030", 5],
 	["M252", 4],
 	["M2HD_mini_TriPod", 4],

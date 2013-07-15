@@ -14,22 +14,21 @@ _player = (_this select 0) select 0;
 _killer = (_this select 0) select 1;
 [_player,_killer] execVM "client\functions\killMessage.sqf";
 
-//MD_GuerTK = [name _player, name _killer];
-//diag_log format ["Client: %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
-//publicVariableServer "MD_GuerTK";
+MD_GuerTK = [name _player, name _killer];
+diag_log format ["Client: %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
+publicVariableServer "MD_GuerTK";
 // <-- Markus
-//if (name _player != name _killer) then {
-//	MD_GuerTK = [name _player, name _killer];
-//	diag_log format ["Client: %1 was killed by %2", name _player, name _killer];
-//	diag_log format ["Client (GuerTK): %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
-//	publicVariableServer "MD_GuerTK";
+if (name _player != name _killer) then {
+	MD_GuerTK = [name _player, name _killer];
+	diag_log format ["Client: %1 was killed by %2", name _player, name _killer];
+	diag_log format ["Client (GuerTK): %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
+	publicVariableServer "MD_GuerTK";
 //} else {
 //	MD_KillMessage = format["%1 has killed themself.", name _player];
 //	commandChat MD_KillMessage;
 //	publicVariable "MD_KillMessage";
-//};
+};
 // <-- Markus
-
 _playerMoney = _player getVariable["cmoney",0];
 _currencyLimit = 10 * 1000;
 
