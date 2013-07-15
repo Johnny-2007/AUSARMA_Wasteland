@@ -134,6 +134,7 @@ objectList=[
 	"Base_WarfareBBarrier5x",
 	"Base_WarfareBBarrier5x",
 	"Fort_Barricade",
+	"Hhedgehog_concreteBig",
 	"Land_Barrel_water",
 	"Land_Barrel_water",
 	"Land_CncBlock_Stripes",

@@ -88,7 +88,10 @@ switch (_lockState) do {
 				if((side group _x == (_currObject getVariable "R3F_Side")) && group _x != group player && alive _x) then {
 					if((_x distance _currObject) < _ownerMinDistance) exitWith {
 						_owner_close = true;
-						hint format["You cannot unlock while enemy are within 100m."]; 
+						2 cutText [format["Unlocking failed as enemy are near!"], "PLAIN DOWN", 1];
+						player SwitchMove _currState; // Redundant reset of animation state to avoid getting locked in animation.   	
+						R3F_LOG_mutex_local_verrou = false;
+						mutexScriptInProgress = false;						
 					};
 				};
 			} forEach allUnits;

@@ -31,7 +31,7 @@ for [{_x=0},{_x<=_size},{_x=_x+1}] do
 	{if(_itemText == _x select 0) then{
 		sleep 1;
 		_ObjectsInArea = [(getPos ShopSpawn) select 0, (getPos ShopSpawn) select 1] nearObjects 2;
-		if(count _ObjectsInArea <= 1) then {
+		if(count _ObjectsInArea <= 5) then {
 			_price = _x select 1;
 			if(_price > (player getVariable "cmoney")) exitWith {hintsilent "You do not have enough money"};
 			_spawn = createVehicle [(_x select 2),getPos ShopSpawn,[], 0,"CAN_COLLIDE"];
@@ -44,7 +44,7 @@ for [{_x=0},{_x<=_size},{_x=_x+1}] do
 			_playerMoneyText CtrlsetText format["Cash: $%1", player getVariable "cmoney"];
 			hintsilent "Building materials purchased!";
 		} else {
-			hintsilent "There is another Building or player blocking the spawn point!";
+			hintsilent "There are too many objects blocking the spawn point! (Limit = 5)";
 		};
 	}}forEach BuildStoreArray;
 };
