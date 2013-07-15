@@ -50,11 +50,11 @@ waitUntil{scriptDone _serverCompiledScripts};
 //	_pObj
 //};
 
-"MD_GuerTK" addPublicVariableEventHandler {
-	private ["_player", "_killer"];
-	_player = ((_this select 1) select 0);
-	_killer = ((_this select 1) select 1);
-	diag_log format ["Server %1 was killed by %2", _player, _killer];
+//"MD_GuerTK" addPublicVariableEventHandler {
+//	private ["_player", "_killer"];
+//	_player = ((_this select 1) select 0);
+//	_killer = ((_this select 1) select 1);
+//	diag_log format ["Server %1 was killed by %2", _player, _killer];
 //	private ["_iter"];
 //	MD_PlayerSlots = [];
 //	_iter = 1;
@@ -96,7 +96,7 @@ waitUntil{scriptDone _serverCompiledScripts};
 //		MD_KillMessage = format["%1 has died.", _player];
 //		publicVariable "MD_KillMessage";
 //	};
-};
+//};
 // <-- Markus
 
 diag_log format["WASTELAND SERVER - Server Compile Finished"];
