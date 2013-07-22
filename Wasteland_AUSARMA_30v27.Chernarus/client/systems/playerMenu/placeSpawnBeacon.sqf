@@ -144,17 +144,17 @@ for "_iteration" from 1 to _lockDuration do {
 	    _placedBeaconPos = getPos _placedBeacon;
 	   
 	    if(_playerSide == "WEST") then {
-	    	pvar_beaconListBlu set [count pvar_beaconListBlu,[_beaconOwner, _placedBeaconPos, 500, _playerUID]];
+	    	pvar_beaconListBlu set [count pvar_beaconListBlu,[_beaconOwner, _placedBeaconPos, 200, _playerUID]];
 	    	publicVariable "pvar_beaconListBlu";
 	    };
 
 	    if(_playerSide == "EAST") then {
-	    	pvar_beaconListRed set [count pvar_beaconListRed,[_beaconOwner, _placedBeaconPos, 500, _playerUID]];
+	    	pvar_beaconListRed set [count pvar_beaconListRed,[_beaconOwner, _placedBeaconPos, 200, _playerUID]];
 	    	publicVariable "pvar_beaconListRed";
 	    };
 
 	    if(_playerSide == "GUER") then {
-	    	pvar_beaconListInd set [count pvar_beaconListInd,[_beaconOwner, _placedBeaconPos, 500, _playerUID]];
+	    	pvar_beaconListInd set [count pvar_beaconListInd,[_beaconOwner, _placedBeaconPos, 200, _playerUID]];
 	    	publicVariable "pvar_beaconListInd";
 	    };
 
