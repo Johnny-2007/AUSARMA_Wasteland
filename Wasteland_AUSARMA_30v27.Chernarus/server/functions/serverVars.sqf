@@ -91,6 +91,7 @@ militaryVehicles = [
 			"GAZ_Vodnik_MedEvac",
 			"HMMWV",
 			"HMMWV_Ambulance",
+			"Kamaz",
 			"MTVR",
 			"UAZ_CDF",
 			"UralOpen_CDF"
