@@ -133,7 +133,7 @@ generalStore = [
 BuildStoreArray = [
 	["Concrete Block", 50, "Land_ConcreteBlock"],
 	["Defenses (KORD High)", 500, "KORD_high"],
-	["Defenses (KORD Mini)n", 500, "KORD"],
+	["Defenses (KORD Mini)", 500, "KORD"],
 	["Fortification, Deerstand", 25, "Land_Misc_deerstand"],
 	["Fortification, Sandbag Bunker (big)", 25, "Land_fortified_nest_big"],
 	["Fortification, Sandbag Camp (large)", 25, "WarfareBCamp"],

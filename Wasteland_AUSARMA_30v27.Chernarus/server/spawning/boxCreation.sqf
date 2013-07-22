@@ -144,6 +144,7 @@ switch(_selectedBox) do {
         // Add ammunition
         _currBox addMagazineCargoGlobal ["30Rnd_556x45_Stanag",25];
         _currBox addMagazineCargoGlobal ["30Rnd_556x45_StanagSD",25];
+	_currBox addMagazineCargoGlobal ["HandGrenade",5];
     };
     case "basicSpecial2": { // BAF weapons
     	_currBox = createVehicle ["SpecialWeaponsBox", _selectedBoxPos,[], 30, "NONE"];

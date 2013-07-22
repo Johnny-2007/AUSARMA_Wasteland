@@ -16,6 +16,7 @@ FZF_IC_Icons =
 {
     private ["_pIcons", "_relativePos"];
     _pIcons = player getVariable "FZF_IC_Hud_pIcons";
+    _showName1 = player getVariable "ShowNameAllies";
 
     _make_icons = false;
 	_remove_icon = false;
@@ -52,6 +53,12 @@ FZF_IC_Icons =
         if (count(_pIcons) > _uc) then {
 			_make_icons = true;
 			_remove_icon = true;
+        };
+        //on refait les markers
+            if (_showName1) then {
+            _make_icons = true;
+            _remove_icon = true;
+            
         };
     };
     if (_make_icons)then {
@@ -102,7 +109,11 @@ FZF_IC_Icons =
 							
 				with uinamespace do{  //update posistion
 					HUD_ICON = FZF_IC_Hud_Disp displayCtrl (icons_idc + _index);
-					HUD_ICON ctrlSetStructuredText parseText _picon;
+                    if (_showName1) then {
+                    HUD_ICON ctrlSetStructuredText parseText format ["%1<t align='left' > %2<br/></t>", _Picon, name _x];
+                    } else {
+                    HUD_ICON ctrlSetStructuredText parseText _picon;
+                    };
 					HUD_ICON ctrlSetPosition [_sx, _sy, 0.4, 0.65];
 					HUD_ICON ctrlSetScale _scale;
 					HUD_ICON ctrlSetFade ((1- _scale ) / 2);

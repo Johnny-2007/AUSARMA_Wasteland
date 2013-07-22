@@ -31,10 +31,20 @@ switch _key do
     {
         [] call loadPlayerMenu;
     };
-    
+
+    // window key (DIK_LWIN)
+    case 219:
+    {
+        player setVariable ["ShowNameAllies", true];
+        [] spawn {
+          sleep 5;
+          player setVariable ["ShowNameAllies", false];
+        };
+    };
+
     //E key
 	case 18:
-    {	
+    {
         if(vehicle player != player) exitwith{};  // Check the player is not a car.
         if(!alive player) exitwith{};  // Check the player is not dead.
         
