@@ -131,5 +131,6 @@ if (sideMissions == 1) then {
 
 if (isDedicated) then {
 	_id = [] execFSM "server\WastelandServClean.fsm";
-	[900,300] execVM "scripts\clean\cly_removedead.sqf"; //Delete men after 15 minutes, vehicles after 5 minutes. WastelandServClean will handle the rest.
+	//[900,300] execVM "scripts\clean\cly_removedead.sqf"; //Delete men after 15 minutes, vehicles after 5 minutes. DISABLED as doesn't clear abandoned vehicles.
+	_null = [] execVM "addons\scripts\DMZ_delete.sqf";
 };

@@ -6,7 +6,7 @@ by Demonized.
 This script does not use any eventhandlers, so it may delay the deleting if there are heavy scripts running.
 Main purpose is to cleanup within a reasonable frame, for most missions it will be 100% accurate on timers, exept maybe for those heavy scripted ones, wich may cause some extra time until delete.
 
-Script will delete any dead man, destroyed/abandoned vehicle and empty group after x seconds within a 10 seconds accuracy (its checking for new dead or vehicles every 10 seconds)
+Script will delete any dead man, destroyed/abandoned vehicle and empty group after x seconds within a 10 seconds accuracy (its checking for new dead or vehicles every 10 (edit - now 30) seconds)
 * abandoned vehicles if option is used, will abort their delete if anyone gets into the vehicle before timer runs out.
 * abandoned vehicles wich are destroyed, will abort their current abandon timer, and will be deleted after same timer as deleting destroyed vehicles.
 * _canmove may be a bad option, any vehicle witouth fuel, will be detected as it cannot move, make sure you want the option in your mission if you use it.
@@ -47,21 +47,21 @@ you can add just the object/unit/vehicle, or you can add a specific timer AND di
 any object that can be placed in the world via editor or script can be included.
 you cannot use classname or cfgVehicles atm.
 included objects will not care for _canMove OR _abandoned options, they will delete no matter what after _incTimer OR custom seconds if used like below.
-icluded objects will use _viewDist to check if player is to close, if not custom is used like below.
+included objects will use _viewDist to check if player is to close, if not custom is used like below.
 
   DMZ_Included = [obj1,unit1];   // obj1 and unit1 will be deleted after x seconds(_incTimer).
   DMZ_Included = [[obj1,129],unit1];  // obj1 deletes after 129 seconds, and unit1 will be deleted after x seconds(_incTimer below).
   DMZ_Included = [[obj1,129,200]];  // obj1 deletes after 129 seconds, and only when any player unit is 200 meter or more away from it.
 */
 // true/false = on/off.
-_canMove = false;   // if vehicles should be deleted when they are to damaged to move and empty, NOTE empty fuel also means it cannot move.
-_abandoned = false;   // if vehicles should be deleted after being x time un manned, if 1 unit enters in the time period, time is reset, and vehicle is processed again when empty or destroyed.
-_groupDel = true;   // if empty groups should be deleted, to avoid reaching 144 group limit in long missions.
-_viewDist = 0;    // min distance in meter from a player unit to allow delete, if you dont care if player sees the delete, set it to 0.
-_manTimer = 1200;    // x seconds until delete of dead man units.
-_vehTimer = 1800;    // x seconds until delete of dead vehicles, for destroyed and heavy damaged vehicles.
-_abaTimer = 600;    // x seconds a vehicle must be unmanned to be deleted, for _abandoned option.
-_incTimer = 10;  // x seconds any object put inside the DMZ_Included will be deleted no matter condition.
+_canMove = false;	// if vehicles should be deleted when they are to damaged to move and empty, NOTE empty fuel also means it cannot move.
+_abandoned = true;	// if vehicles should be deleted after being x time un manned, if 1 unit enters in the time period, time is reset, and vehicle is processed again when empty or destroyed.
+_groupDel = true;	// if empty groups should be deleted, to avoid reaching 144 group limit in long missions.
+_viewDist = 50;		// min distance in meter from a player unit to allow delete, if you dont care if player sees the delete, set it to 0.
+_manTimer = 900;	// 15 minutes until delete of dead man units.
+_vehTimer = 180;	// 3 minutes until delete of dead vehicles, for destroyed and heavy damaged vehicles.
+_abaTimer = 7800;	// 130 minutes that a vehicle must be unmanned to be deleted, for _abandoned option.
+_incTimer = 10;		// 10 seconds any object put inside the DMZ_Included will be deleted no matter condition.
 // DO NOT EDIT PAST THIS LINE //
 // delete function.
 _delete = {
@@ -201,6 +201,6 @@ _allV = vehicles;
 // delete empty groups.
 if (_groupDel) then {{if ((count (units _x)) == 0) then {deleteGroup _x; _x = grpNull; _x = nil}} foreach allGroups};
 
-// sleep 10 seconds, then check if there are any changes to dead or vehicles that are not processed.
-sleep 10;
+// sleep 30 seconds, then check if there are any changes to dead or vehicles that are not processed.
+sleep 30;
 };
