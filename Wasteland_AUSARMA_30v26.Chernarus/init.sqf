@@ -5,7 +5,7 @@
 //	@file Description: The main init.
 //	@file Args:
 
-setViewDistance 1600;
+setViewDistance 2000;
 setTerrainGrid 47;
 
 #include "setup.sqf"
@@ -18,7 +18,7 @@ X_Server = false;
 X_Client = false;
 X_JIP = false;
 hitStateVar = false;
-versionName = "v3.0.A26.25";
+versionName = "v3.0.A26";
 
 if(isServer) then { X_Server = true;};
 if(!isDedicated) then { X_Client = true;};
@@ -61,5 +61,5 @@ if(X_Server) then {
 //init 3rd Party Scripts
 [] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
 [] execVM "addons\proving_Ground\init.sqf";
-[0.1, 0.5, 0.5] execVM "addons\scripts\DynamicWeatherEffects.sqf";
+//[0, 0, 0] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 _null = [] execVM "addons\scripts\DMZ_delete.sqf";

@@ -69,12 +69,10 @@ if (side _killer == Civilian) exitWith {
 
 if (side _killer == East) exitWith {
 	[player, nil, rGlobalChat, format["was killed by AI."]] call RE;
-	};
 };
 
 if (side _killer == West) exitWith {
 	[player, nil, rGlobalChat, format["was killed by AI."]] call RE;
-	};
 };
 
 if(_player == _killer) then { //Suicide - Might be obsolete since respawning suicide get's catched in the "Civilian" section

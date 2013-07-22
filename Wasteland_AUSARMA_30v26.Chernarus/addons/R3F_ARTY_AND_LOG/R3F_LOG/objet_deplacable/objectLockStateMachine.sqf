@@ -79,20 +79,7 @@ switch (_lockState) do {
 		player SwitchMove _currState; // Redundant reset of animation state to avoid getting locked in animation.       
     };
     case 1:{ // UNLOCK
-
-	_ownerMinDistance = 100;
-	_owner_close = false;
-    
-	if(!isNil{_currObject getVariable "R3F_Side"}) then {
-			{
-				if((side group _x == (_currObject getVariable "R3F_Side")) && group _x != group player && alive _x) then {
-					if((_x distance _currObject) < _ownerMinDistance) exitWith {
-						_owner_close = true;
-						hint format["You cannot unlock while enemy are within 100m."]; 
-					};
-				};
-			} forEach allUnits;
-	} else {
+        
 		_totalDuration = 45;
 		_unlockDuration = _totalDuration;
 		_iteration = 0;
@@ -134,17 +121,13 @@ switch (_lockState) do {
 			if (_iteration >= _totalDuration) exitWith { // Sleep a little extra to show that lock has completed
 		        sleep 1;
                 _currObject setVariable ["objectLocked", false, true];
-		// Need to reset object's group or side owner here somewhere!
+				// Need to reset object's group or side owner here somewhere!
                 2 cutText ["", "PLAIN DOWN", 1];
                 mutexScriptInProgress = false;
                 R3F_LOG_mutex_local_verrou = false;
                 doCancelAction = false;
 		    }; 
 		};
-		
-	};
-	
-
 		
 		player SwitchMove _currState; // Redundant reset of animation state to avoid getting locked in animation.     
     };

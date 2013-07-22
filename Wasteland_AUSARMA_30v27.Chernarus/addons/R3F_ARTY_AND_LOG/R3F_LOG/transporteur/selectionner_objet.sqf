@@ -17,7 +17,7 @@ else
 
 	_objet = _this select 0;
 	_owner_close = false;
-    _ownerMinDistance = 100;
+	_ownerMinDistance = 100;
 	if(!isNil{_objet getVariable "R3F_Side"}) then {
 		if(playerSide != (_objet getVariable "R3F_Side") || playerSide == resistance) then {
 			{
