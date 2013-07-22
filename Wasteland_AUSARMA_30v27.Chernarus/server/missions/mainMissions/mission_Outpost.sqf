@@ -52,7 +52,7 @@ if (_num < 50) then {
 };
 
 EnemyGrpM = createGroup _side;
-[EnemyGrpM,_randomPos,_side] spawn createLargeGroup;
+[EnemyGrpM,_randomPos,_side] spawn createHugeGroup;
 
 diag_log format["WASTELAND SERVER - Main Mission Waiting to be Finished: %1",_missionType];
 #ifdef __A2NET__

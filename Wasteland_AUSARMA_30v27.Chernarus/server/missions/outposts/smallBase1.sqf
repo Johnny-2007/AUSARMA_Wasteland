@@ -13,7 +13,7 @@ _objs =
 ["Land_stand_small_EP1", [5.0715, 7.376, 3.8146973e-006], 90.160278, 0,0,"this setVariable[""food"",30,true]"],
 ["Land_Barrel_water", [4.9016, 6.2346, 4.9591064e-005], 0, 1,0,"this setVariable[""water"",30,true]"],
 ["DSHKM_TK_INS_EP1", [4.7051, 15.7063, 0.00011825562], 0, 1,0,{}],
-["BAF_BasicWeapons", [6.3168, 1.7998, 1.1444092e-005], 0, 1,0,"[this,'mission_Mid_BAF'] call fn_refillbox"],
+["RUVehicleBox", [6.3168, 1.7998, 1.1444092e-005], 0, 1,0,"[this,'mission_Mid_BAF'] call fn_refillbox"],
 ["Land_GuardShed", [4.4502, 15.2827, 3.8146973e-006], 190.9557, 1,0,{}],
 ["Land_HBarrier5", [9.1663, -0.7385,0.001], 181.12386, 1,0,{}],
 ["Land_HBarrier5", [13.0701, 2.3604, 1.9073486e-006], 138.28712, 1,0,{}],
