@@ -163,8 +163,8 @@ switch(_switch) do
 if(!_beaconExists) exitWith { 2 cutText ["HALO jump aborted. Beacon coordinates not found!", "PLAIN DOWN", 1]; };
 
 2 cutText ["HALO jump activated. Open your chute before you hit the ground!", "PLAIN DOWN", 5];
-player setPos [_respawnPosition select 0, _respawnPosition select 1, 800]; // Stop the player appearing on the ground for a split second before the HALO
-[player, 800] exec "ca\air2\halo\data\Scripts\HALO_init.sqs";
+player setPos [_respawnPosition select 0, _respawnPosition select 1, 600]; // Stop the player appearing on the ground for a split second before the HALO
+[player, 600] exec "ca\air2\halo\data\Scripts\HALO_init.sqs";
 respawnDialogActive = false;
 closeDialog 0;
 

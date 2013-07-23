@@ -283,6 +283,7 @@ R3F_LOG_CFG_objets_transportables =  [
 	["Land_ladder_half", 3],
 	["Land_leseni2x", 8],
 	["Land_leseni4x", 15],
+	["Land_Misc_Cargo1D", 60],
 	["Land_Misc_ConcPipeline_EP1", 5],
 	["Land_Misc_deerstand", 3],
 	["Land_Misc_Rubble_EP1", 2],
