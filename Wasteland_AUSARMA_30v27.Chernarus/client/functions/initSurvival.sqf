@@ -5,13 +5,11 @@
 //	@file Created: 20/11/2012 05:19
 //	@file Args:
 
-foodDelay = 600; // 10 Minutes. 100 mins before death!
-waterDelay = 450; // 7.5 Minutes. 75 mins before death!
 
 [] spawn  {
 	while { true } do {
     
-		sleep foodDelay;
+		sleep 600;
 		waitUntil {!respawnDialogActive};
         
 		if(hungerLevel < 2) then {
@@ -37,7 +35,7 @@ waterDelay = 450; // 7.5 Minutes. 75 mins before death!
 [] spawn  {
 	while { true } do {
     
-		sleep waterDelay;
+		sleep 450;
 		waitUntil {!respawnDialogActive};
         
 		if(thirstLevel < 2) then {
