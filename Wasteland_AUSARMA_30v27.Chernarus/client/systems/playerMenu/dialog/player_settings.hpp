@@ -132,27 +132,27 @@ class playerSettings {
 		};
 
 		class btnDistanceNear : w_RscButton {
-			text = "Near";
+			text = "1100m";
 			onButtonClick = "setViewDistance 1100;";
 			x = 0.02; y = 0.45;
 			w = 0.125; h = 0.033 * safezoneH;
 		};
 
 		class btnDistanceMedium : w_RscButton {
-			text = "Medium";
+			text = "2200m";
 			onButtonClick = "setViewDistance 2200;";
 			x = 0.02; y = 0.50;
 			w = 0.125; h = 0.033 * safezoneH;
 		};
 
 		class btnDistanceFar : w_RscButton {
-			text = "Far";
+			text = "3300m";
 			onButtonClick = "setViewDistance 3300;";
 			x = 0.02; y = 0.55;
 			w = 0.125; h = 0.033 * safezoneH;
 		};
 		class btnDistanceInsane : w_RscButton {
-			text = "Insane";
+			text = "5000m";
 			onButtonClick = "setViewDistance 5000;";
 			x = 0.02; y = 0.60;
 			w = 0.125; h = 0.033 * safezoneH;

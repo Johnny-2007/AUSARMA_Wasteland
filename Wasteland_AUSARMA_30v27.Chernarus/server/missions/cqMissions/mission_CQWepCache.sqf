@@ -35,6 +35,7 @@ diag_log format["WASTELAND SERVER - CQ Mission Resumed: %1",_missionType];
 
 _box = createVehicle ["RUOrdnanceBox",[(_randomPos select 0), (_randomPos select 1),0],[], 0, "NONE"];
 [_box,"mission_CQC_Weapons"] call fn_refillbox;
+_box setVariable ["objectLocked", true, true];
 
 _hint = parseText format ["<t align='center' color='%2' shadow='2' size='1.75'>Close Quarters Objective</t><br/><t align='center' color='%2'>------------------------------</t><br/><t align='center' color='%3' size='1.25'>%1</t><br/><t align='center' color='%3'>A CQC weapons stash has been reported near the marker</t>", _missionType,  cqMissionColor, subTextColor];
 [nil,nil,rHINT,_hint] call RE;
