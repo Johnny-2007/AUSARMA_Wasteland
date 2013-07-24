@@ -17,7 +17,7 @@ if (_isWreck == 0) then {
 	//diag_log "Spawning heli complete...";
 	_spawnType = staticHeliList select (random (count staticHeliList - 1));
 	_currHeli = createVehicle [_spawnType,_spawnPos,[], 50,"None"]; 
-        _initCmd = format["nul=[this, 300, 0, %1, false] execVM 'server\functions\heli.sqf'; [this] execVM 'server\functions\vehicleLock.sqf';",_respawns];
+        _initCmd = format["nul=[this, 300, 0, 8, false] execVM 'server\functions\heli.sqf'; [this] execVM 'server\functions\vehicleLock.sqf';",_respawns];
         _currHeli setVehicleInit _initCmd;
         processInitCommands;
 

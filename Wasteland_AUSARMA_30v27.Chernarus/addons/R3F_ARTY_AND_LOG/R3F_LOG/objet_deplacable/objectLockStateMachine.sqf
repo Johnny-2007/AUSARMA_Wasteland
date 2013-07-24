@@ -14,6 +14,28 @@ if(mutexScriptInProgress) exitWith {
 	player globalChat STR_R3F_LOG_mutex_action_en_cours;
 };
 
+
+_ownerMinDistance = 100;
+_owner_close = false;
+    
+if(!isNil{_objet getVariable "R3F_Side"}) then {
+	{
+		if((side group _x == (_objet getVariable "R3F_Side")) && group _x != group player && alive _x) then {
+			if((_x distance _objet) < _ownerMinDistance) exitWith {
+			_owner_close = true;
+		};
+	};
+	} forEach allUnits;
+	} else {
+		_owner_close = false;
+};
+
+if(_owner_close) then {
+	hint format["You cannot lock or unlock while enemy are within 100m."]; 
+        R3F_LOG_mutex_local_verrou = false;
+	
+} else {
+
 R3F_LOG_mutex_local_verrou = true;
 mutexScriptInProgress = true;
 
@@ -141,4 +163,6 @@ switch (_lockState) do {
     }; 
     
     mutexScriptInProgress = false;
+};
+
 };

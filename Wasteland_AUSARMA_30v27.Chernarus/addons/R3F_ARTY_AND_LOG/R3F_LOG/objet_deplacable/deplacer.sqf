@@ -29,7 +29,7 @@ else
 	private ["_objet", "_est_calculateur", "_arme_principale", "_action_menu_release_relative", "_action_menu_release_horizontal" , "_action_menu_45", "_action_menu_90", "_action_menu_180", "_azimut_canon", "_owner_close"];
 	
 	_objet = _this select 0;
-    _ownerMinDistance = 100;
+    _ownerMinDistance = 50;
     _owner_close = false;
     
 	if(!isNil{_objet getVariable "R3F_Side"}) then {
@@ -45,7 +45,7 @@ else
 	};
 
 	if(_owner_close) exitWith {
-		hint format["You cannot move this item while enemy are within 100m."]; 
+		hint format["You cannot move this item while enemy are within 50m."]; 
         R3F_LOG_mutex_local_verrou = false;
 	};
     
