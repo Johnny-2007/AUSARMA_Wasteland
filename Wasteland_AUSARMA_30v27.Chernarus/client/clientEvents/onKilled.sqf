@@ -14,20 +14,27 @@ _player = (_this select 0) select 0;
 _killer = (_this select 0) select 1;
 [_player,_killer] execVM "client\functions\killMessage.sqf";
 
-MD_GuerTK = [name _player, name _killer];
-diag_log format ["Client: %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
-publicVariableServer "MD_GuerTK";
+
+// if _killer != "Error: No vehicle" then {
+// kill message stuff goes here
+// } else {
+// Player Has Killed Himself
+// };
+
+//MD_GuerTK = [name _player, name _killer];
+//diag_log format ["Client: %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
+//publicVariableServer "MD_GuerTK";
 // <-- Markus
-if (name _player != name _killer) then {
-	MD_GuerTK = [name _player, name _killer];
-	diag_log format ["Client: %1 was killed by %2", name _player, name _killer];
-	diag_log format ["Client (GuerTK): %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
-	publicVariableServer "MD_GuerTK";
+//if (name _player != name _killer) then {
+//	MD_GuerTK = [name _player, name _killer];
+//	diag_log format ["Client: %1 was killed by %2", name _player, name _killer];
+//	diag_log format ["Client (GuerTK): %1 was killed by %2", MD_GuerTK select 0, MD_GuerTK select 1];
+//	publicVariableServer "MD_GuerTK";
 //} else {
 //	MD_KillMessage = format["%1 has killed themself.", name _player];
 //	commandChat MD_KillMessage;
 //	publicVariable "MD_KillMessage";
-};
+//};
 // <-- Markus
 _playerMoney = _player getVariable["cmoney",0];
 _currencyLimit = 10 * 1000;
@@ -42,7 +49,7 @@ closeDialog 0;
 PlayerCDeath = [_player, _killer];
 publicVariable "PlayerCDeath";
 if (isServer) then {
-	_id = PlayerCDeath spawn serverPlayerDied; // Markus : This is a clientside script file.... Why is this being called here?
+	_id = PlayerCDeath spawn serverPlayerDied; 
 };
 
 if(!local _player) exitwith {};

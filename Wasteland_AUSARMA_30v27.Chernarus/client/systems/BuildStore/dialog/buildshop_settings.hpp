@@ -5,7 +5,7 @@ class buildshopd {
 	idd = buildshop_DIALOG;
 	movingEnable = true;
 	enableSimulation = true;
-	onLoad = "[] spawn PopulateBuildStore";	//"[] execVM 'client\systems\vehicleStore\PopulateVehStore.sqf'";
+	onLoad = "[] spawn PopulateBuildStore";
 
 	class controlsBackground {
 		
@@ -16,7 +16,7 @@ class buildshopd {
 
 			x = 0.35 * safezoneW + safezoneX;
 			y = 0.15 * safezoneH + safezoneY;
-			w = 0.25 * safezoneW; //0.28
+			w = 0.25 * safezoneW;
 			h = 0.661111 * safezoneH;
 		};
 

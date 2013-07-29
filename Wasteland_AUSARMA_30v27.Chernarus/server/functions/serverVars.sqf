@@ -52,7 +52,7 @@ currentDate = [];
 publicVariable "currentDate";
 currentInvites = [];
 publicVariable "currentInvites";
-"processVIP" addPublicVariableEventHandler {[_this] spawn server_VIPEscape};
+//"processVIP" addPublicVariableEventHandler {[_this] spawn server_VIPEscape};
 
 "PlayerCDeath" addPublicVariableEventHandler {_id = (_this select 1) spawn server_playerDied};
 

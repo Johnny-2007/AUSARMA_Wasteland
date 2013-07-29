@@ -59,7 +59,6 @@ waituntil {!(IsNull (findDisplay 46))};
 
 //client Executes
 [] execVM "client\functions\initSurvival.sqf";
-//[] execVM "scripts\notherm\twsremove.sqf";
 [] execVM "client\systems\hud\playerHud.sqf";
 [] execVM "client\functions\createTownMarkers.sqf";
 [] execVM "client\functions\createGunStoreMarkers.sqf";
@@ -74,5 +73,5 @@ if (isNil "FZF_IC_INIT") then   {
 };
 sleep 1;
 true spawn playerSpawn;
-[] execVM "client\functions\antiCheatClient.sqf";
 [] spawn FZF_IC_INIT;
+[] execVM "client\functions\antiCheatClient.sqf";

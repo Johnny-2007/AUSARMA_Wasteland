@@ -131,7 +131,6 @@ generalStore = [
 
 //Name, Price, Vehicle
 BuildStoreArray = [
-	["Concrete Block", 50, "Land_ConcreteBlock"],
 	["Defenses (KORD High)", 500, "KORD_high"],
 	["Defenses (KORD Mini)", 500, "KORD"],
 	["Fortification, Deerstand", 25, "Land_Misc_deerstand"],
@@ -141,7 +140,6 @@ BuildStoreArray = [
 	["Fortification, Sandbag Nest (small)", 10, "Land_fortified_nest_small"],
 	["Fortification, Watchtower", 10, "Land_Fort_Watchtower"],
 	["Fortification, Wooden Guard Shed", 10, "Land_GuardShed"],
-	["Misc, Campfire", 10, "Land_Campfire_burning"],
 	["Misc, MASH Tent", 50, "MASH"],
 	["Misc, Storage Tent", 25, "Land_tent_east"],
 	["Ramp, Artillery Nest", 25, "Land_fort_artillery_nest"],
@@ -157,9 +155,8 @@ BuildStoreArray = [
 	["Roadblock, Steel Hedgehog", 10, "Hedgehog"],
 	["Storage Container (150x)", 150, "Land_Misc_Cargo1D"],
 	["Storage, Wooden Box (20x)", 25, "Fort_Crate_wood"],
-//	["Supplies, Food (30x)", 200, "Land_stand_small_EP1"],
-//	["Supplies, Water (30x)", 200, "Land_Barrel_water"],
 	["Wall, Concrete", 25, "Concrete_Wall_EP1"],
+	["Wall, Concrete Block", 50, "Land_ConcreteBlock"],
 	["Wall, HESCO, Brown (long, high)", 50, "Base_WarfareBBarrier10xTall"],
 	["Wall, HESCO, Brown (long, low)", 25, "Base_WarfareBBarrier10x"],
 	["Wall, HESCO, Brown (short, low)", 25, "Base_WarfareBBarrier5x"],
