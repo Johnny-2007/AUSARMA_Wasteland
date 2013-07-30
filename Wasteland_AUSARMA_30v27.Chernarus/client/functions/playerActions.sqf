@@ -28,8 +28,8 @@ aActionsIDs = aActionsIDs + [player addAction["Pickup Money", "client\actions\pi
 aActionsIDs = aActionsIDs + [player addAction[("<t color=""#E01B1B"">Destroy spawn beacon</t>"), "client\actions\pickupBeacon.sqf", 1, 1, false, false, "", 'player distance (nearestobjects [player, ["Satelit"],  5] select 0) < 5']];
 aActionsIDs = aActionsIDs + [player addAction[("<t color=""#21DE31"">Repack spawn beacon</t>"), "client\actions\pickupBeacon.sqf", 0, 1, false, false, "", 'player distance (nearestobjects [player, ["Satelit"],  5] select 0) < 5']];
 
-//Detect Nearest SpawnBeacon (Satelit)
-aActionsIDs = aActionsIDs + [player addAction[("<t color=""#21DE31"">Beacon Detector</t>"), "client\actions\detectBeacon.sqf", 1, 1, false, false, "", 'player distance (nearestobjects [player, ["Satelit"],  150] select 0) < 150 AND ((nearestobjects [player, ["Satelit"],  150] select 0) getVariable "faction") != "WORLD"']];
+//Detect Nearest SpawnBeacon (Satelit). RESERVED FOR RECON DONATORS.
+//aActionsIDs = aActionsIDs + [player addAction[("<t color=""#21DE31"">Beacon Detector</t>"), "client\actions\detectBeacon.sqf", 1, 1, false, false, "", 'player distance (nearestobjects [player, ["Satelit"],  150] select 0) < 150 AND ((nearestobjects [player, ["Satelit"],  150] select 0) getVariable "faction") != "WORLD"']];
 
 //Interact with radar trucks
 aActionsIDs = aActionsIDs + [player addAction[("<t color=""#21DE31"">Deploy radar</t>"), "client\functions\radarDeploy.sqf",nil, 6, false, false, "", '_currRadar = (nearestobjects [player, ["M1133_MEV_EP1"],  5]); player distance (_currRadar select 0) < 5; ((nearestObjects[player, ["M1133_MEV_EP1"], 10] select 0) getVariable "deployed") == 0']];
@@ -43,3 +43,6 @@ aActionsIDs = aActionsIDs + [player addAction["Pickup Camo Net", "client\actions
 
 //Cancel action
 aActionsIDs = aActionsIDs + [player addAction[("<t color=""#FFFFFF"">Cancel Action</t>"), "noscript.sqf", 'doCancelAction = true;', 1, false, false, "", 'mutexScriptInProgress']];
+
+// Repair Tyres on Cars/Trucks
+aActionsIDs = aActionsIDs + [_player addAction [localize "STR_WL_Acts_ChangeWheels", "AUSARMA\Action_Wheel.sqf", "", 1, false, true, "", "(cursorTarget isKindOf 'Car')&&(player distance cursorTarget<5)"]];

@@ -12,6 +12,7 @@ weaponsArray = [
     // Shotguns & Rifles		
 	[2, "Saiga12K Shotgun","Saiga12K",25,25],
 	[2, "M1014 Shotgun","M1014",25,25],
+	[2, "M16A4","M16A4",60,30],
 	[2, "AK-74","AK_74",50,25],
 	[2, "AK-107","AK_107_kobra",70,35],
 	[2, "AKM","AK_47_M",70,35],
@@ -23,7 +24,8 @@ weaponsArray = [
 	[2, "Lee Enfield","LeeEnfield", 200,100],
 	[2, "FN FAL","FN_FAL",300,150],
 	[2, "M14 AIM","M14_EP1",350,175],
-	[2, "Mk16 EGLM RCO","SCAR_L_STD_EGLM_RCO",350,175],	
+	[2, "Mk16 EGLM RCO","SCAR_L_STD_EGLM_RCO",350,175],
+	[2, "M4A3 ACOG GL","M4A3_RCO_GL_EP1",350,175],
 	[2, "AA-12 Shotgun","AA12_PMC",400,200],
 
     // Machineguns
@@ -43,6 +45,7 @@ weaponsArray = [
 	[3, "DMR","DMR",600,300],
 	[3, "Mk17 Sniper","SCAR_H_LNG_Sniper",800,400],
 	[3, "Mk17 Sniper SD","SCAR_H_LNG_Sniper_SD",600,300],
+	[3, "Mk17 EGLM RCO","SCAR_H_STD_EGLM_Spect",800,400],
 	[3, "M110 NV","M110_NVG_EP1",1500,750],	
 	[3, "KSVK","ksvk",800,400],
 

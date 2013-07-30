@@ -16,13 +16,6 @@ _player removeWeapon "ItemRadio";
 _player removeWeapon "ItemGPS";
 removeAllWeapons _player;
 removeBackpack _player;
-_player addWeapon "ItemGPS";
-
-//Default case means something fucked up.
-_player addMagazine "6Rnd_45ACP";
-_player addMagazine "6Rnd_45ACP";
-_player addWeapon "revolver_gold_EP1";
-_player selectWeapon "revolver_gold_EP1";
 
 if(str(playerSide) in ["WEST"]) then
 {
@@ -68,11 +61,12 @@ _player setVariable["fuelEmpty", 1, false];
 _player setVariable["bombs",false,false];
 _player setVariable["spawnBeacon",0,false];
 _player setVariable["camonet",0,false];
-player setVariable["canDrop",true,false];
+_player setVariable["canDrop",true,false];
 _player setVariable ["ShowNameAllies", false];
 
 [] execVM "client\functions\playerActions.sqf";
 //[] execVM "client\functions\blockView.sqf";
+[] execVM "addons\donators\checkDonator.sqf";
 
 _player groupChat format["Player Initialization Complete"];
 playerSetupComplete = true;

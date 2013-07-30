@@ -27,7 +27,7 @@ while {_runLoop} do {
         
         _currSide = side _x; 
         
-    	if ((isPlayer _x) AND (str(_currSide) == _playerSide) AND _x distance _radarStationPos < 350) then {
+    	if ((isPlayer _x) AND (str(_currSide) == _playerSide) AND _x distance _radarStationPos < 400) then {
 			if (_playerSide == "GUER") then {
                 if (_groupID == (group _x)) then {
                     _friendlyCount = _friendlyCount + 1;
@@ -39,7 +39,7 @@ while {_runLoop} do {
             };
         };
         
-        if ((isPlayer _x) AND (str(_currSide) != _playerSide) AND _x distance _radarStationPos < 350) then {
+        if ((isPlayer _x) AND (str(_currSide) != _playerSide) AND _x distance _radarStationPos < 400) then {
         	_enemyCount = _enemyCount + 1;
         };
         

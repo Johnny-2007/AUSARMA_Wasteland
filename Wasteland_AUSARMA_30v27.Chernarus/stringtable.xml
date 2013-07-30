@@ -118,6 +118,15 @@
 		<Key ID="STR_WL_Acts_PlayerMenu">
 			<English>Player Menu</English>
 		</Key>
+		<Key ID="STR_WL_Acts_ChangeWheels">
+			<English>Change tyre(s)</English>
+		</Key>
+		<Key ID="STR_WL_Acts_ChangeWheels-CanMove">
+			<English>Tyre(s) are not damaged</English>
+		</Key>
+		<Key ID="STR_WL_Acts_ChangeWheels-NoWheel">
+			<English>No spare tyre</English>
+		</Key>		
 	</Package>
 	<Package name="Errors">
 		<Key ID="STR_WL_Errors_InProgress">

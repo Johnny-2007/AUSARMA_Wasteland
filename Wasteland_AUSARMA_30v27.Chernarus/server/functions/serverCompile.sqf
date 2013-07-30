@@ -16,7 +16,7 @@ mission_LightArmVeh = compile preprocessFileLineNumbers "server\missions\mainMis
 mission_LightTank = compile preprocessFileLineNumbers "server\missions\mainMissions\mission_LightTank.sqf";
 //mission_MBT = compile preprocessFileLineNumbers "server\missions\mainMissions\mission_MBT.sqf";
 mission_Outpost = compile preprocessFileLineNumbers "server\missions\mainMissions\mission_Outpost.sqf";
-//mission_RadarTruck = compile preprocessFileLineNumbers "server\missions\mainMissions\mission_RadarTruck.sqf";
+mission_RadarTruck = compile preprocessFileLineNumbers "server\missions\mainMissions\mission_RadarTruck.sqf";
 mission_SupplyDrop = compile preprocessFileLineNumbers "server\missions\mainMissions\mission_SupplyDrop.sqf";
 //mission_VIP = compile preprocessFileLineNumbers "server\missions\mainMissions\mission_VIP.sqf";
 
@@ -25,7 +25,7 @@ mission_AirWreck = compile preprocessFileLineNumbers "server\missions\sideMissio
 mission_Truck = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_Truck.sqf";
 mission_ReconVeh = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_ReconVeh.sqf";
 mission_WepCache = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_WepCache.sqf";
-mission_SmallHeli = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_SmallHeli.sqf";
+//mission_SmallHeli = compile preprocessFileLineNumbers "server\missions\sideMissions\mission_SmallHeli.sqf";
 
 //CQ Mission Compiles
 mission_CQWepCache = compile preprocessFileLineNumbers "server\missions\cqMissions\mission_CQWepCache.sqf";
