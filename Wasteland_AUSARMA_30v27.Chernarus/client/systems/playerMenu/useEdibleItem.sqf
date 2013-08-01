@@ -1,5 +1,5 @@
 //	@file Version: 1.0
-//	@file Name: useMedicalKit.sqf
+//	@file Name: useEdibleItem.sqf
 //  @file Author: [404] Costlyy
 //	@file Created: 29th May 13
 //  @file Args: 0 = food / 1 = water

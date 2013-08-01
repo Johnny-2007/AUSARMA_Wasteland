@@ -63,6 +63,7 @@ _player setVariable["spawnBeacon",0,false];
 _player setVariable["camonet",0,false];
 _player setVariable["canDrop",true,false];
 _player setVariable ["ShowNameAllies", false];
+_player setVariable["medbags",0,false];
 
 [] execVM "client\functions\playerActions.sqf";
 //[] execVM "client\functions\blockView.sqf";

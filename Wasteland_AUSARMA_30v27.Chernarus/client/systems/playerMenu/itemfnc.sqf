@@ -99,6 +99,7 @@ switch(_switch) do
 			case "repairkits": {player setVariable["repairkits", (player getVariable "repairkits")-1,true]; _temp = "Suitcase" createVehicle (position player); _temp setPos _pos;};
 			case "water": {player setVariable["water", (player getvariable "water")-1,true]; _temp = "Land_Teapot_EP1" createVehicle (position player); _temp setPos _pos;};
 			case "medkit": {player setVariable["medkits", (player getVariable "medkits")-1,true]; _temp = "CZ_VestPouch_EP1" createVehicle (position player); _temp setPos _pos;};
+			case "medbag": {player globalChat "YOU CANNOT DROP THIS ITEM!";};
             case "spawnBeacon": {
 	            player setVariable["spawnBeacon", (player getVariable "spawnBeacon")-1,true]; 
 	            _droppedBeacon = "Satelit" createVehicle (position player);

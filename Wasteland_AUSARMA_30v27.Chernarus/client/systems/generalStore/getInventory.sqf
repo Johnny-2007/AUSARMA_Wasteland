@@ -53,6 +53,13 @@ for [{_x=1},{_x<=_amount},{_x=_x+1}] do
 	_index = _index + 1;
 };
 
+_amount = (player getVariable "medbags");
+for [{_x=1},{_x<=_amount},{_x=_x+1}] do
+{
+	playerInventory set [_index, "Medical Bag"];
+	_index = _index + 1;
+};
+
 _amount = (player getVariable "repairkits");
 for [{_x=1},{_x<=_amount},{_x=_x+1}] do
 {

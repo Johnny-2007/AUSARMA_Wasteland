@@ -66,6 +66,17 @@ if(player getVariable "medkits" > 0) then {
 	_itemList lbSetData [(lbSize _itemList)-1, "medkit"];
 };
 
+if(player getVariable "medbags" > 0) then {
+	_str = "Medbag";
+	if(player getVariable "medbags" > 1) then {
+	    _str = format ["%1x - Medbag", player getVariable "medbags"];
+	} else {
+	    _str = "Medbag";
+	};
+	_itemListIndex = _itemList lbAdd _str;
+	_itemList lbSetData [(lbSize _itemList)-1, "medkit"];
+};
+
 if(player getVariable "spawnBeacon" > 0) then {
 	_itemListIndex = _itemList lbAdd "Spawn Beacon";
 	_itemList lbSetData [(lbSize _itemList)-1, "spawnBeacon"];
