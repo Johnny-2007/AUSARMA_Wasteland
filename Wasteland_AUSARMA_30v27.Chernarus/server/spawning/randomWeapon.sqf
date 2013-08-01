@@ -6,10 +6,11 @@
 
 if(!X_Server) exitWith {};
 
-private ["_car","_mags","_rnd","_weapon","_mag"];
+private ["_type","_car","_mags","_rnd","_weapon","_mag"];
 
 //Grabs carname from array in execVM
 _car = _this select 0;
+_type = _this select 1;
 
 
 //Get Random Gun From randomWeapons Array.
@@ -20,3 +21,13 @@ _mag = (getArray (configFile >> "Cfgweapons" >> _weapon >> "magazines")) select 
 _car addMagazineCargoGlobal [_mag,1];
 _car addMagazineCargoGlobal [_mag,(random 4)];
 _car addWeaponCargoGlobal [_weapon,1];
+
+if (_car iskindof "Truck") then {
+	_weapon = vehicleWeapons select (random (count vehicleWeapons - 1));
+	_mag = (getArray (configFile >> "Cfgweapons" >> _weapon >> "magazines")) select 0;
+
+	//Add guns and magazines, note the Global at the end..
+	_car addMagazineCargoGlobal [_mag,1];
+	_car addMagazineCargoGlobal [_mag,(random 4)];
+	_car addWeaponCargoGlobal [_weapon,1];
+};

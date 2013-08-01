@@ -16,7 +16,7 @@ publicVariable "Tier1";
  
 //Tier 2 
 Tier2 = [
-"78933318"
+
 ];
 publicVariable "Tier2";
 

@@ -24,5 +24,5 @@ _player setVariable["water",1,true];
 _player setVariable["medkits",1,true];
 _player setVariable["fuelEmpty",1,true];
 
-aActionsIDs = aActionsIDs + [_player addAction[("<t color=""#21DE31"">Beacon Detector</t>"), "client\actions\detectBeacon.sqf", 1, 1, false, false, "", 'player distance (nearestobjects [player, ["Satelit"],  500] select 0) < 500 AND ((nearestobjects [player, ["Satelit"],  500] select 0) getVariable "faction") != "WORLD"']];
+aActionsIDs = aActionsIDs + [_player addAction[("<t color=""#21DE31"">Beacon Detector</t>"), "client\actions\detectBeacon.sqf", 1, 1, false, false, "", 'player distance (nearestobjects [player, ["Satelit"],  300] select 0) < 300 AND ((nearestobjects [player, ["Satelit"],  300] select 0) getVariable "faction") != "WORLD"']];
 };
