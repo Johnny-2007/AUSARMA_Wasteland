@@ -49,6 +49,10 @@ switch(_switch) do
 			{
                 [] call useMedicalKit;
 			};
+			case "medbag": 
+			{
+                [] call useMedicalBag;
+			};
 			case "camonet": 
 			{
 				[] call placeCammoNet;

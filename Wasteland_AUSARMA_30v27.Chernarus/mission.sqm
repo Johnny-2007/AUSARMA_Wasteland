@@ -3322,7 +3322,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=248;
+		items=244;
 		class Item0
 		{
 			position[]={8343.0654,26.779518,3340.9795};
@@ -4861,80 +4861,84 @@ class Mission
 		};
 		class Item152
 		{
-			position[]={2806.1248,278.25089,8558.5371};
-			azimut=68.882912;
+			position[]={10230.055,64.289116,4061.8972};
+			azimut=310.36011;
 			id=308;
 			side="EMPTY";
-			vehicle="ClutterCutter_small_EP1";
+			vehicle="Land_CamoNet_EAST";
 			skill=0.60000002;
 		};
 		class Item153
 		{
-			position[]={2806.3708,278.25815,8558.1289};
-			azimut=68.882912;
+			position[]={10222.54,62.701752,4055.1394};
+			azimut=310.16666;
 			id=309;
 			side="EMPTY";
-			vehicle="ClutterCutter_small_EP1";
+			vehicle="Land_CamoNet_EAST";
 			skill=0.60000002;
 		};
 		class Item154
 		{
-			position[]={2805.8438,278.27109,8558.2656};
-			azimut=68.882912;
+			position[]={10215.256,60.596424,4048.2241};
+			azimut=311.90604;
 			id=310;
 			side="EMPTY";
-			vehicle="ClutterCutter_small_EP1";
+			vehicle="Land_CamoNet_EAST";
 			skill=0.60000002;
 		};
 		class Item155
 		{
-			position[]={2806.0935,278.27115,8558.041};
-			azimut=68.882912;
-			id=311;
-			side="EMPTY";
-			vehicle="ClutterCutter_small_EP1";
-			skill=0.60000002;
-		};
-		class Item156
-		{
-			position[]={10230.055,64.289116,4061.8972};
-			azimut=310.36011;
-			id=312;
-			side="EMPTY";
-			vehicle="Land_CamoNet_EAST";
-			skill=0.60000002;
-		};
-		class Item157
-		{
-			position[]={10222.54,62.701752,4055.1394};
-			azimut=310.16666;
-			id=313;
-			side="EMPTY";
-			vehicle="Land_CamoNet_EAST";
-			skill=0.60000002;
-		};
-		class Item158
-		{
-			position[]={10215.256,60.596424,4048.2241};
-			azimut=311.90604;
-			id=314;
-			side="EMPTY";
-			vehicle="Land_CamoNet_EAST";
-			skill=0.60000002;
-		};
-		class Item159
-		{
 			position[]={9743.1406,173.78697,10487.401};
 			azimut=-1349.4032;
-			id=315;
+			id=311;
 			side="EMPTY";
 			vehicle="Land_fort_rampart";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item160
+		class Item156
 		{
 			position[]={2815.813,277.72537,8564.7412};
+			azimut=-1014.8233;
+			id=312;
+			side="EMPTY";
+			vehicle="ClutterCutter_EP1";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item157
+		{
+			position[]={2815.6975,278.02271,8556.5273};
+			azimut=-1014.8233;
+			id=313;
+			side="EMPTY";
+			vehicle="ClutterCutter_EP1";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item158
+		{
+			position[]={2806.0059,277.89044,8568.1436};
+			azimut=-1014.8233;
+			id=314;
+			side="EMPTY";
+			vehicle="ClutterCutter_EP1";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item159
+		{
+			position[]={2813.1675,278.24838,8552.667};
+			azimut=-1014.8233;
+			id=315;
+			side="EMPTY";
+			vehicle="ClutterCutter_EP1";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item160
+		{
+			position[]={2799.5398,278.65097,8566.6094};
 			azimut=-1014.8233;
 			id=316;
 			side="EMPTY";
@@ -4944,7 +4948,7 @@ class Mission
 		};
 		class Item161
 		{
-			position[]={2815.6975,278.02271,8556.5273};
+			position[]={2809.4226,278.48752,8550.167};
 			azimut=-1014.8233;
 			id=317;
 			side="EMPTY";
@@ -4954,7 +4958,7 @@ class Mission
 		};
 		class Item162
 		{
-			position[]={2806.0059,277.89044,8568.1436};
+			position[]={2795.6694,279.2493,8563.5645};
 			azimut=-1014.8233;
 			id=318;
 			side="EMPTY";
@@ -4964,7 +4968,7 @@ class Mission
 		};
 		class Item163
 		{
-			position[]={2813.1675,278.24838,8552.667};
+			position[]={2806.2905,278.68387,8548.583};
 			azimut=-1014.8233;
 			id=319;
 			side="EMPTY";
@@ -4974,7 +4978,7 @@ class Mission
 		};
 		class Item164
 		{
-			position[]={2799.5398,278.65097,8566.6094};
+			position[]={2792.3381,279.26053,8561.8027};
 			azimut=-1014.8233;
 			id=320;
 			side="EMPTY";
@@ -4984,7 +4988,7 @@ class Mission
 		};
 		class Item165
 		{
-			position[]={2809.4226,278.48752,8550.167};
+			position[]={2801.718,279.67191,8546.3613};
 			azimut=-1014.8233;
 			id=321;
 			side="EMPTY";
@@ -4994,48 +4998,48 @@ class Mission
 		};
 		class Item166
 		{
-			position[]={2795.6694,279.2493,8563.5645};
-			azimut=-1014.8233;
+			position[]={2804.4583,279.80261,8543.4014};
+			azimut=-1103.395;
 			id=322;
 			side="EMPTY";
-			vehicle="ClutterCutter_EP1";
-			leader=1;
+			vehicle="Land_fort_rampart";
 			skill=0.60000002;
+			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
 		class Item167
 		{
-			position[]={2806.2905,278.68387,8548.583};
-			azimut=-1014.8233;
+			position[]={2811.9626,278.53345,8546.6641};
+			azimut=-1103.395;
 			id=323;
 			side="EMPTY";
-			vehicle="ClutterCutter_EP1";
-			leader=1;
+			vehicle="Land_fort_rampart";
 			skill=0.60000002;
+			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
 		class Item168
 		{
-			position[]={2792.3381,279.26053,8561.8027};
-			azimut=-1014.8233;
+			position[]={2819.407,278.16519,8549.8447};
+			azimut=-1103.395;
 			id=324;
 			side="EMPTY";
-			vehicle="ClutterCutter_EP1";
-			leader=1;
+			vehicle="Land_fort_rampart";
 			skill=0.60000002;
+			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
 		class Item169
 		{
-			position[]={2801.718,279.67191,8546.3613};
-			azimut=-1014.8233;
+			position[]={2809.0383,277.56775,8574.25};
+			azimut=-923.39044;
 			id=325;
 			side="EMPTY";
-			vehicle="ClutterCutter_EP1";
-			leader=1;
+			vehicle="Land_fort_rampart";
 			skill=0.60000002;
+			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
 		class Item170
 		{
-			position[]={2804.4583,279.80261,8543.4014};
-			azimut=-1103.395;
+			position[]={2801.5005,277.94836,8570.9541};
+			azimut=-923.39044;
 			id=326;
 			side="EMPTY";
 			vehicle="Land_fort_rampart";
@@ -5044,8 +5048,8 @@ class Mission
 		};
 		class Item171
 		{
-			position[]={2811.9626,278.53345,8546.6641};
-			azimut=-1103.395;
+			position[]={2821.9333,277.86743,8556.5928};
+			azimut=-1192.717;
 			id=327;
 			side="EMPTY";
 			vehicle="Land_fort_rampart";
@@ -5054,8 +5058,8 @@ class Mission
 		};
 		class Item172
 		{
-			position[]={2819.407,278.16519,8549.8447};
-			azimut=-1103.395;
+			position[]={2818.7778,277.67212,8564.1338};
+			azimut=-1192.717;
 			id=328;
 			side="EMPTY";
 			vehicle="Land_fort_rampart";
@@ -5064,8 +5068,8 @@ class Mission
 		};
 		class Item173
 		{
-			position[]={2809.0383,277.56775,8574.25};
-			azimut=-923.39044;
+			position[]={2815.6946,277.47736,8571.6396};
+			azimut=-1192.717;
 			id=329;
 			side="EMPTY";
 			vehicle="Land_fort_rampart";
@@ -5074,519 +5078,515 @@ class Mission
 		};
 		class Item174
 		{
-			position[]={2801.5005,277.94836,8570.9541};
-			azimut=-923.39044;
-			id=330;
-			side="EMPTY";
-			vehicle="Land_fort_rampart";
-			skill=0.60000002;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
-		};
-		class Item175
-		{
-			position[]={2821.9333,277.86743,8556.5928};
-			azimut=-1192.717;
-			id=331;
-			side="EMPTY";
-			vehicle="Land_fort_rampart";
-			skill=0.60000002;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
-		};
-		class Item176
-		{
-			position[]={2818.7778,277.67212,8564.1338};
-			azimut=-1192.717;
-			id=332;
-			side="EMPTY";
-			vehicle="Land_fort_rampart";
-			skill=0.60000002;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
-		};
-		class Item177
-		{
-			position[]={2815.6946,277.47736,8571.6396};
-			azimut=-1192.717;
-			id=333;
-			side="EMPTY";
-			vehicle="Land_fort_rampart";
-			skill=0.60000002;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
-		};
-		class Item178
-		{
 			position[]={2827.061,277.65561,8559.1123};
 			azimut=-992.14008;
-			id=334;
+			id=330;
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1E_EP1";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item179
+		class Item175
 		{
 			position[]={2822.9644,277.33444,8571.1875};
 			azimut=-1192.4534;
-			id=335;
+			id=331;
 			side="EMPTY";
 			vehicle="Misc_Cargo1B_military";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item180
+		class Item176
 		{
 			position[]={2825.4014,277.54291,8563.5557};
 			azimut=-1012.4393;
-			id=336;
+			id=332;
 			side="EMPTY";
 			vehicle="Misc_Cargo1Bo_military";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item181
+		class Item177
 		{
 			position[]={2820.8623,277.23022,8575.3477};
 			azimut=-1026.1528;
-			id=337;
+			id=333;
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo1Eo_EP1";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item182
+		class Item178
 		{
 			position[]={2827.4421,277.93271,8551.3037};
 			azimut=-993.01532;
-			id=338;
+			id=334;
 			side="EMPTY";
 			vehicle="Misc_cargo_cont_net3";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item183
+		class Item179
 		{
 			position[]={2826.7891,278.15607,8545.5303};
 			azimut=-993.01532;
-			id=339;
+			id=335;
 			side="EMPTY";
 			vehicle="Misc_cargo_cont_net2";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item184
+		class Item180
 		{
 			position[]={2823.761,277.44952,8567.3145};
 			azimut=-993.01532;
-			id=340;
+			id=336;
 			side="EMPTY";
 			vehicle="Land_Misc_Cargo2E_EP1";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item185
+		class Item181
 		{
 			position[]={2808.2588,279.8475,8528.498};
 			azimut=-1013.785;
-			id=341;
+			id=337;
 			side="EMPTY";
 			vehicle="PowGen_Big";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item186
+		class Item182
 		{
 			position[]={2799.7803,279.89392,8540.6016};
 			azimut=-1011.8274;
-			id=342;
+			id=338;
 			side="EMPTY";
 			vehicle="Land_CncBlock_Stripes";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item187
+		class Item183
 		{
 			position[]={2801.813,280.09595,8533.7178};
 			azimut=-1010.6383;
-			id=343;
+			id=339;
 			side="EMPTY";
 			vehicle="Land_CamoNetVar_EAST";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item188
+		class Item184
 		{
 			position[]={2799.4819,279.9628,8537.8008};
 			azimut=-1282.134;
-			id=344;
+			id=340;
 			side="EMPTY";
 			vehicle="Land_BagFenceLong";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item189
+		class Item185
 		{
 			position[]={2800.4368,280.07455,8533.9014};
 			azimut=-1031.7891;
-			id=345;
+			id=341;
 			side="EMPTY";
 			vehicle="ClutterCutter_small_EP1";
 			skill=0.60000002;
 		};
-		class Item190
+		class Item186
 		{
 			position[]={2798.4412,280.00659,8535.5801};
 			azimut=-860.12146;
-			id=346;
+			id=342;
 			side="EMPTY";
 			vehicle="ClutterCutter_small_EP1";
 			skill=0.60000002;
 		};
-		class Item191
+		class Item187
 		{
 			position[]={2799.4739,280.13614,8531.3281};
 			azimut=-860.12146;
-			id=347;
+			id=343;
 			side="EMPTY";
 			vehicle="ClutterCutter_small_EP1";
 			skill=0.60000002;
 		};
-		class Item192
+		class Item188
 		{
 			position[]={2797.9224,280.07001,8533.0889};
 			azimut=-860.12146;
-			id=348;
+			id=344;
 			side="EMPTY";
 			vehicle="ClutterCutter_small_EP1";
 			skill=0.60000002;
 		};
-		class Item193
+		class Item189
 		{
 			position[]={2793.9265,279.13934,8567.6865};
 			azimut=-923.39044;
-			id=349;
+			id=345;
 			side="EMPTY";
 			vehicle="Land_fort_rampart";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item194
+		class Item190
 		{
 			position[]={9768.7119,172.63391,10482.633};
 			azimut=-1734.1144;
-			id=350;
+			id=346;
 			side="EMPTY";
 			vehicle="FlagCarrierUNO_EP1";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item195
+		class Item191
 		{
 			position[]={9756.8145,173.00159,10482.024};
 			azimut=-179.50203;
-			id=351;
+			id=347;
 			side="EMPTY";
 			vehicle="Land_RedWhiteBarrier";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item196
+		class Item192
 		{
 			position[]={9746.6836,173.48096,10475.393};
 			azimut=-220.06679;
-			id=352;
+			id=348;
 			side="EMPTY";
 			vehicle="ClutterCutter_EP1";
 			leader=1;
 			skill=0.60000002;
 		};
-		class Item197
+		class Item193
 		{
 			position[]={4948.8843,222.49713,4004.967};
 			azimut=-28.437782;
-			id=353;
+			id=349;
 			side="EMPTY";
 			vehicle="FlagCarrierNATO_EP1";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item198
+		class Item194
 		{
 			position[]={4948.8208,222.50238,4005.0364};
 			azimut=-28.437782;
-			id=354;
+			id=350;
 			side="EMPTY";
 			vehicle="Land_tires_EP1";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item199
+		class Item195
 		{
 			position[]={10230.421,56.646168,4016.4067};
 			azimut=-205.81044;
-			id=355;
+			id=351;
 			side="EMPTY";
 			vehicle="ClutterCutter_small_EP1";
 			skill=0.60000002;
 		};
-		class Item200
+		class Item196
 		{
 			position[]={10227.872,56.603092,4015.1094};
 			azimut=-205.81044;
-			id=356;
+			id=352;
 			side="EMPTY";
 			vehicle="ClutterCutter_small_EP1";
 			skill=0.60000002;
 		};
-		class Item201
+		class Item197
 		{
 			position[]={10225.072,56.523052,4013.7151};
 			azimut=-205.81044;
-			id=357;
+			id=353;
 			side="EMPTY";
 			vehicle="ClutterCutter_small_EP1";
 			skill=0.60000002;
 		};
-		class Item202
+		class Item198
 		{
 			position[]={10222.237,56.439896,4012.4951};
 			azimut=-205.81044;
-			id=358;
+			id=354;
 			side="EMPTY";
 			vehicle="ClutterCutter_small_EP1";
 			skill=0.60000002;
 		};
-		class Item203
+		class Item199
 		{
 			position[]={10232.977,57.41975,4028.3518};
 			azimut=431.81607;
-			id=359;
+			id=355;
 			side="EMPTY";
 			vehicle="Land_Ind_BoardsPack1";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item204
+		class Item200
 		{
 			position[]={10236.824,57.521423,4030.8503};
 			azimut=201.65511;
-			id=360;
+			id=356;
 			side="EMPTY";
 			vehicle="Garbage_can";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item205
+		class Item201
 		{
 			position[]={10235.235,57.623604,4030.0369};
 			azimut=40.790058;
-			id=361;
+			id=357;
 			side="EMPTY";
 			vehicle="Misc_palletsfoiled";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item206
+		class Item202
 		{
 			position[]={10246.694,61.227829,4040.4355};
 			azimut=315.2381;
-			id=362;
+			id=358;
 			side="EMPTY";
 			vehicle="Land_Misc_IronPipes_EP1";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item207
+		class Item203
 		{
 			position[]={10238.005,57.587589,4031.4744};
 			azimut=141.44322;
-			id=363;
+			id=359;
 			side="EMPTY";
 			vehicle="FoldChair";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item208
+		class Item204
 		{
 			position[]={10238.998,57.846661,4032.3452};
 			azimut=123.5397;
-			id=364;
+			id=360;
 			side="EMPTY";
 			vehicle="FoldChair";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item209
+		class Item205
 		{
 			position[]={10239.458,58.092213,4033.3728};
 			azimut=103.09354;
-			id=365;
+			id=361;
 			side="EMPTY";
 			vehicle="FoldChair";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item210
+		class Item206
 		{
 			position[]={10240.605,58.563618,4034.0027};
 			azimut=201.65511;
-			id=366;
+			id=362;
 			side="EMPTY";
 			vehicle="Land_Bag_EP1";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item211
+		class Item207
 		{
 			position[]={10235.87,57.607658,4030.5461};
 			azimut=137.80031;
-			id=367;
+			id=363;
 			side="EMPTY";
 			vehicle="Land_Boots_EP1";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item212
+		class Item208
 		{
 			position[]={10237.451,57.759911,4033.2412};
 			azimut=201.65511;
-			id=368;
+			id=364;
 			side="EMPTY";
 			vehicle="Land_Campfire";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item213
+		class Item209
 		{
 			position[]={10256.932,62.51598,4038.9653};
 			azimut=-429.42746;
-			id=369;
+			id=365;
 			side="EMPTY";
 			vehicle="Misc_cargo_cont_net3";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item214
+		class Item210
 		{
 			position[]={10243.857,60.778862,4041.0486};
 			azimut=131.07782;
-			id=370;
+			id=366;
 			side="EMPTY";
 			vehicle="Sign_tape_redwhite";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item215
+		class Item211
 		{
 			position[]={10243.775,60.48037,4038.7136};
 			azimut=222.93993;
-			id=371;
+			id=367;
 			side="EMPTY";
 			vehicle="Sign_tape_redwhite";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item216
+		class Item212
 		{
 			position[]={10246.599,61.096001,4042.5586};
 			azimut=353.38406;
-			id=372;
+			id=368;
 			side="EMPTY";
 			vehicle="Sign_tape_redwhite";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item217
+		class Item213
 		{
 			position[]={10244.889,60.878159,4040.8306};
 			azimut=221.59242;
-			id=373;
+			id=369;
 			side="EMPTY";
 			vehicle="Body";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item218
+		class Item214
 		{
 			position[]={10241.408,59.737473,4036.7495};
 			azimut=550.68896;
-			id=374;
+			id=370;
 			side="EMPTY";
 			vehicle="Barrel1";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item219
+		class Item215
 		{
 			position[]={10241.844,60.109287,4037.387};
 			azimut=550.68896;
-			id=375;
+			id=371;
 			side="EMPTY";
 			vehicle="Barrel5";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item220
+		class Item216
 		{
 			position[]={10242.227,60.38586,4037.9268};
 			azimut=550.68896;
-			id=376;
+			id=372;
 			side="EMPTY";
 			vehicle="Barrel4";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item221
+		class Item217
 		{
 			position[]={10242.629,60.051941,4036.7173};
 			azimut=216.39122;
-			id=377;
+			id=373;
 			side="EMPTY";
 			vehicle="Land_Ind_BoardsPack2";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item222
+		class Item218
 		{
 			position[]={10242.619,58.002445,4016.3589};
 			azimut=-205.81044;
-			id=378;
+			id=374;
 			side="EMPTY";
 			vehicle="ClutterCutter_small_EP1";
+			skill=0.60000002;
+		};
+		class Item219
+		{
+			position[]={10243.676,58.080708,4017.2524};
+			azimut=-205.81044;
+			id=375;
+			side="EMPTY";
+			vehicle="ClutterCutter_small_EP1";
+			skill=0.60000002;
+		};
+		class Item220
+		{
+			position[]={10245.588,58.336674,4019.1118};
+			azimut=-205.81044;
+			id=376;
+			side="EMPTY";
+			vehicle="ClutterCutter_small_EP1";
+			skill=0.60000002;
+		};
+		class Item221
+		{
+			position[]={10241.309,57.840763,4015.1172};
+			azimut=-205.81087;
+			id=377;
+			side="EMPTY";
+			vehicle="ClutterCutter_small_2_EP1";
+			skill=0.60000002;
+		};
+		class Item222
+		{
+			position[]={10240.913,57.730312,4017.6035};
+			azimut=-205.81087;
+			id=378;
+			side="EMPTY";
+			vehicle="ClutterCutter_small_2_EP1";
 			skill=0.60000002;
 		};
 		class Item223
 		{
-			position[]={10243.676,58.080708,4017.2524};
-			azimut=-205.81044;
+			position[]={10239.809,57.562542,4015.2979};
+			azimut=-205.81087;
 			id=379;
 			side="EMPTY";
-			vehicle="ClutterCutter_small_EP1";
+			vehicle="ClutterCutter_small_2_EP1";
 			skill=0.60000002;
 		};
 		class Item224
 		{
-			position[]={10245.588,58.336674,4019.1118};
-			azimut=-205.81044;
+			position[]={10235.768,56.981079,4014.2163};
+			azimut=-205.81087;
 			id=380;
 			side="EMPTY";
-			vehicle="ClutterCutter_small_EP1";
+			vehicle="ClutterCutter_small_2_EP1";
 			skill=0.60000002;
 		};
 		class Item225
 		{
-			position[]={10241.309,57.840763,4015.1172};
+			position[]={10237.375,57.132748,4016.2126};
 			azimut=-205.81087;
 			id=381;
 			side="EMPTY";
@@ -5595,7 +5595,7 @@ class Mission
 		};
 		class Item226
 		{
-			position[]={10240.913,57.730312,4017.6035};
+			position[]={10237.713,57.185513,4016.4553};
 			azimut=-205.81087;
 			id=382;
 			side="EMPTY";
@@ -5604,7 +5604,7 @@ class Mission
 		};
 		class Item227
 		{
-			position[]={10239.809,57.562542,4015.2979};
+			position[]={10238.337,57.309223,4017.0039};
 			azimut=-205.81087;
 			id=383;
 			side="EMPTY";
@@ -5613,7 +5613,7 @@ class Mission
 		};
 		class Item228
 		{
-			position[]={10235.768,56.981079,4014.2163};
+			position[]={10237.99,57.238789,4016.5667};
 			azimut=-205.81087;
 			id=384;
 			side="EMPTY";
@@ -5622,7 +5622,7 @@ class Mission
 		};
 		class Item229
 		{
-			position[]={10237.375,57.132748,4016.2126};
+			position[]={10238.712,57.38298,4017.2991};
 			azimut=-205.81087;
 			id=385;
 			side="EMPTY";
@@ -5631,7 +5631,7 @@ class Mission
 		};
 		class Item230
 		{
-			position[]={10237.713,57.185513,4016.4553};
+			position[]={10236.186,57.084179,4019.7502};
 			azimut=-205.81087;
 			id=386;
 			side="EMPTY";
@@ -5640,7 +5640,7 @@ class Mission
 		};
 		class Item231
 		{
-			position[]={10238.337,57.309223,4017.0039};
+			position[]={10231.808,57.046139,4022.8035};
 			azimut=-205.81087;
 			id=387;
 			side="EMPTY";
@@ -5649,7 +5649,7 @@ class Mission
 		};
 		class Item232
 		{
-			position[]={10237.99,57.238789,4016.5667};
+			position[]={10232.149,57.098873,4023.0427};
 			azimut=-205.81087;
 			id=388;
 			side="EMPTY";
@@ -5658,7 +5658,7 @@ class Mission
 		};
 		class Item233
 		{
-			position[]={10238.712,57.38298,4017.2991};
+			position[]={10232.771,57.206963,4023.5889};
 			azimut=-205.81087;
 			id=389;
 			side="EMPTY";
@@ -5667,7 +5667,7 @@ class Mission
 		};
 		class Item234
 		{
-			position[]={10236.186,57.084179,4019.7502};
+			position[]={10232.42,57.131893,4023.1506};
 			azimut=-205.81087;
 			id=390;
 			side="EMPTY";
@@ -5676,7 +5676,7 @@ class Mission
 		};
 		class Item235
 		{
-			position[]={10231.808,57.046139,4022.8035};
+			position[]={10233.146,57.268578,4023.8857};
 			azimut=-205.81087;
 			id=391;
 			side="EMPTY";
@@ -5685,119 +5685,83 @@ class Mission
 		};
 		class Item236
 		{
-			position[]={10232.149,57.098873,4023.0427};
-			azimut=-205.81087;
-			id=392;
-			side="EMPTY";
-			vehicle="ClutterCutter_small_2_EP1";
-			skill=0.60000002;
-		};
-		class Item237
-		{
-			position[]={10232.771,57.206963,4023.5889};
-			azimut=-205.81087;
-			id=393;
-			side="EMPTY";
-			vehicle="ClutterCutter_small_2_EP1";
-			skill=0.60000002;
-		};
-		class Item238
-		{
-			position[]={10232.42,57.131893,4023.1506};
-			azimut=-205.81087;
-			id=394;
-			side="EMPTY";
-			vehicle="ClutterCutter_small_2_EP1";
-			skill=0.60000002;
-		};
-		class Item239
-		{
-			position[]={10233.146,57.268578,4023.8857};
-			azimut=-205.81087;
-			id=395;
-			side="EMPTY";
-			vehicle="ClutterCutter_small_2_EP1";
-			skill=0.60000002;
-		};
-		class Item240
-		{
 			position[]={9778.0713,172.93121,10492.833};
 			azimut=-54.200813;
-			id=396;
+			id=392;
 			side="EMPTY";
 			vehicle="Land_Ind_BoardsPack1";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item241
+		class Item237
 		{
 			position[]={9776.751,172.7977,10490.131};
 			azimut=-445.22668;
-			id=397;
+			id=393;
 			side="EMPTY";
 			vehicle="Misc_palletsfoiled";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item242
+		class Item238
 		{
 			position[]={9774.4141,172.93971,10490.905};
 			azimut=-284.36206;
-			id=398;
+			id=394;
 			side="EMPTY";
 			vehicle="Land_Bag_EP1";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item243
+		class Item239
 		{
 			position[]={9775.3184,173.11852,10493.844};
 			azimut=-269.62595;
-			id=399;
+			id=395;
 			side="EMPTY";
 			vehicle="Land_Ind_BoardsPack2";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item244
+		class Item240
 		{
 			position[]={9778.0859,173.30321,10497.77};
 			azimut=-252.63857;
-			id=400;
+			id=396;
 			side="EMPTY";
 			vehicle="Land_Misc_IronPipes_EP1";
 			lock="LOCKED";
 			skill=0.60000002;
 			init="this setVariable [""R3F_LOG_disabled"", true]; this addEventHandler[""handledamage"", {false}];";
 		};
-		class Item245
+		class Item241
 		{
 			position[]={9779.1191,173.6514,10502.932};
 			azimut=-1440.8365;
-			id=401;
+			id=397;
 			side="EMPTY";
 			vehicle="ClutterCutter_EP1";
 			leader=1;
 			skill=0.60000002;
 		};
-		class Item246
+		class Item242
 		{
 			position[]={9779.2012,172.96758,10493.882};
 			azimut=-1440.8365;
-			id=402;
+			id=398;
 			side="EMPTY";
 			vehicle="ClutterCutter_EP1";
 			leader=1;
 			skill=0.60000002;
 		};
-		class Item247
+		class Item243
 		{
 			position[]={9777.8018,172.49733,10486.234};
 			azimut=-1440.8365;
-			id=403;
+			id=399;
 			side="EMPTY";
 			vehicle="ClutterCutter_EP1";
 			leader=1;

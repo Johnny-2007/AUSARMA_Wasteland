@@ -18,5 +18,6 @@ player addWeapon "ItemGPS";
 player setVariable["canfood",1,true];
 player setVariable["water",1,true];
 player setVariable["medkits",1,true];
+player setVariable["medbags",1,true];
 player setVariable["fuelEmpty",1,true];
 };

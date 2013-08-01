@@ -19,6 +19,7 @@ refuelVehicle = compile preprocessFileLineNumbers "client\systems\playerMenu\ref
 repairVehicle = compile preprocessFile "client\systems\playerMenu\repair.sqf";
 placeCammoNet = compile preprocessFileLineNumbers "client\systems\playerMenu\placeCammoNet.sqf";
 useMedicalKit = compile preprocessFileLineNumbers "client\systems\playerMenu\useMedicalKit.sqf";
+useMedicalBag = compile preprocessFileLineNumbers "client\systems\playerMenu\useMedicalBag.sqf";
 useEdibleItem = compile preprocessFileLineNumbers "client\systems\playerMenu\useEdibleItem.sqf";
 repairWheels = compile preprocessFile "AUSARMA\repairWheels.sqf";
 
